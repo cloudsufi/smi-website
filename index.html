@@ -24,6 +24,7 @@
 <meta name="twitter:description" content="Custom architectural millwork and casework for commercial contractors and architects across Central Florida. AWI-certified. FSC-compliant.">
 <meta name="twitter:image" content="https://www.smi-cabinetry.com/og-image.jpg">
 <title>SMI Cabinetry — Architectural Millwork & Casework | Since 1984</title>
+<link rel="icon" type="image/png" href="smi-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -294,34 +295,33 @@ hr.divider{height:1px;background:rgba(27,66,32,.12);border:none;margin:0}
   font-style:italic;line-height:1.65;color:var(--forest)}
 .cert-body{font-size:.9rem;line-height:1.78;color:var(--muted);font-weight:300}
 
-/* ── CONTACT ── */
-.contact{display:grid;grid-template-columns:1fr 1fr}
-.contact-left{background:var(--deep);padding:6rem 5vw;position:relative;overflow:hidden}
-.contact-left::before{content:'';position:absolute;inset:0;
-  background:repeating-linear-gradient(135deg,rgba(196,154,40,.04) 0px,rgba(196,154,40,.04) 1px,transparent 1px,transparent 26px)}
-.contact-inner{position:relative;z-index:1}
-.cl-title{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);
-  font-weight:700;color:var(--cream);letter-spacing:-.02em;margin-bottom:2.4rem}
-.cl-title em{font-style:italic;font-weight:400;color:var(--gold-lt)}
-.contact-detail{margin-bottom:1.5rem}
-.contact-lbl{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold);font-weight:600;margin-bottom:.3rem}
-.contact-val{font-size:.94rem;color:var(--cream);font-weight:300;line-height:1.5}
-.contact-right{background:var(--parchment);padding:6rem 5vw}
-.contact-right>p{font-size:.92rem;color:var(--muted);font-weight:300;margin-bottom:2.2rem}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
-.form-group{display:flex;flex-direction:column;gap:.4rem}
-.form-group label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--muted)}
-.form-group input,.form-group select,.form-group textarea{
+/* ── CAREERS ── */
+.careers{padding:6rem 5vw;background:var(--parchment)}
+.careers-inner{max-width:720px;margin:0 auto}
+.careers-intro{font-size:1rem;line-height:1.8;color:var(--muted);font-weight:300;margin-bottom:2.5rem}
+.careers-form{display:flex;flex-direction:column;gap:1.2rem}
+.careers-form .field{display:flex;flex-direction:column;gap:.4rem}
+.careers-form .field label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.careers-form .field input,
+.careers-form .field select{
   background:var(--cream);border:1px solid rgba(107,96,80,.28);padding:11px 14px;
   font-family:var(--sans);font-size:.9rem;color:var(--deep);
-  outline:none;transition:border-color .2s;resize:none}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--forest)}
-.form-full{margin-bottom:1rem}
-.form-submit{margin-top:.6rem;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;
+  outline:none;transition:border-color .2s}
+.careers-form .field input:focus,
+.careers-form .field select:focus{border-color:var(--forest)}
+.careers-form .file-upload{position:relative;display:flex;flex-direction:column;align-items:center;
+  gap:.6rem;padding:2rem;border:2px dashed rgba(107,96,80,.3);background:var(--cream);
+  cursor:pointer;transition:border-color .2s}
+.careers-form .file-upload:hover{border-color:var(--forest)}
+.careers-form .file-upload input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+.careers-form .file-upload .file-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:600;color:var(--muted)}
+.careers-form .file-upload .file-hint{font-size:.75rem;color:rgba(90,79,66,.5);font-weight:300}
+.careers-form .file-name{font-size:.82rem;color:var(--forest);font-weight:500}
+.careers-submit{align-self:flex-start;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;
   font-weight:600;color:var(--cream);background:var(--forest);border:none;
   padding:14px 38px;cursor:pointer;transition:all .2s;font-family:var(--sans)}
-.form-submit:hover{background:var(--deep);transform:translateY(-1px)}
+.careers-submit:hover{background:var(--deep);transform:translateY(-1px)}
 
 /* ── LIGHTBOX ── */
 .lightbox{display:none;position:fixed;inset:0;z-index:999;
@@ -351,10 +351,6 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
 .footer-col a{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
   color:rgba(245,240,232,.3);text-decoration:none;transition:color .2s;font-weight:600;margin-bottom:.55rem}
 .footer-col a:hover{color:var(--gold)}
-.footer-bid{display:inline-block;font-size:.72rem;letter-spacing:.14em;
-  text-transform:uppercase;font-weight:600;color:var(--deep);
-  background:var(--gold);padding:10px 20px;text-decoration:none;transition:background .2s}
-.footer-bid:hover{background:var(--gold-lt)}
 .footer-bottom{background:var(--ink);padding:.8rem 5vw 1.5rem;
   display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
   border-top:1px solid rgba(196,154,40,.08)}
@@ -364,7 +360,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
 @media(max-width:1000px){
   .nav-links{display:none}.nav-hamburger{display:flex}
   .hero-panel{display:none}.hero-stats{grid-template-columns:1fr 1fr}
-  .about,.certifications,.contact{grid-template-columns:1fr}
+  .about,.certifications{grid-template-columns:1fr}
   .cert-left{border-right:none;border-bottom:1px solid rgba(27,66,32,.12)}
   .expertise-body{grid-template-columns:1fr}.expertise-divider{display:none}
   .mkt-grid{grid-template-columns:1fr 1fr 1fr}
@@ -380,7 +376,6 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
   .port-card:first-child{grid-column:span 1}
   .port-card:first-child .port-img-wrap{height:240px}
   .hero-stats{grid-template-columns:1fr 1fr}
-  .form-row{grid-template-columns:1fr}
   .mkt-grid{grid-template-columns:1fr 1fr}
   .lb-prev{left:4px}.lb-next{right:4px}
 }
@@ -461,7 +456,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
     <li><a href="#capabilities">Capabilities</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact" class="nav-cta">Request a Bid</a></li>
+    <li><a href="#careers">Careers</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -472,7 +467,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
   <a href="#capabilities">Capabilities</a>
   <a href="#portfolio">Portfolio</a>
   <a href="#certifications">Certifications</a>
-  <a href="#contact" class="mob-cta">Request a Bid</a>
+  <a href="#careers">Careers</a>
 </div>
 <main id="main-content">
 <section class="hero" id="home">
@@ -482,7 +477,6 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
     <h1>Built for Architects.<br><em>Trusted</em> by Contractors.</h1>
     <p class="hero-body">Four decades of precision manufacturing across 80,000+ square feet in Central Florida. AWI-certified. FSC-compliant. On time, on budget — every project, every time.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Request a Bid</a>
       <a href="#capabilities" class="btn-ghost">Our Capabilities</a>
     </div>
   </div>
@@ -608,130 +602,67 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
     <div class="mission-quote"><p>"To provide our customers superior design solutions, quality workmanship, on-time and on-budget project completion, and direct communication to ensure exceptional client satisfaction."</p></div>
     <p class="cert-body">From single-room fitouts to multi-building institutional programmes — every scope gets the same precision, the same direct communication, and the same team from first drawing to final punch list.</p>
     <div style="margin-top:2.4rem;display:flex;gap:1rem;flex-wrap:wrap">
-      <a href="#contact" class="btn-primary">Request a Bid</a>
       <a href="#about" class="btn-ghost-dark">Learn About SMI</a>
     </div>
   </div>
 </section>
 <hr class="divider">
-<section class="contact" id="contact" style="padding:0">
-  <div class="contact-left">
-    <div class="contact-inner">
-      <div class="section-eyebrow" style="color:var(--gold)">Start Your Project</div>
-      <h2 class="cl-title">Let's <em>Talk</em></h2>
-      <div class="contact-detail">
-        <div class="contact-lbl">Address</div>
-        <div class="contact-val">2525 North Orange Blossom Trail<br>Orlando, FL 32804</div>
+<section class="careers" id="careers">
+  <div class="careers-inner">
+    <div class="section-eyebrow">Career Opportunities</div>
+    <h2 class="section-title">Join Our <em>Team</em></h2>
+    <p class="careers-intro">We are always hiring! Please fill out this form if you are interested in working with us, and we will get back to you ASAP.</p>
+    <form class="careers-form" id="careersForm">
+      <div class="field">
+        <label for="careerName">Name <span style="color:#c0392b">*</span></label>
+        <input type="text" id="careerName" name="name" placeholder="Your full name" required>
       </div>
-      <div class="contact-detail">
-        <div class="contact-lbl">Phone</div>
-        <div class="contact-val"><a href="tel:+14078410292" style="color:inherit;text-decoration:none">(407) 841-0292</a></div>
+      <div class="field">
+        <label for="careerEmail">Email Address <span style="color:#c0392b">*</span></label>
+        <input type="email" id="careerEmail" name="email" placeholder="you@example.com" required>
       </div>
-      <div class="contact-detail">
-        <div class="contact-lbl">Email</div>
-        <div class="contact-val"><a href="/cdn-cgi/l/email-protection#137a7d757c53607e7a3e7072717a7d7667616a3d707c7e" style="color:rgba(196,154,40,.9);text-decoration:none;font-weight:500"><span class="__cf_email__" data-cfemail="660f08000926150b0f4b0507040f080312141f4805090b">[email&#160;protected]</span></a></div>
+      <div class="field">
+        <label for="careerPhone">Phone Number</label>
+        <input type="tel" id="careerPhone" name="phone" placeholder="(000) 000-0000">
       </div>
-      <div class="contact-detail">
-        <div class="contact-lbl">Hours</div>
-        <div class="contact-val">Mon – Fri &nbsp; 8:00 AM – 4:00 PM EST</div>
+      <div class="field">
+        <label for="careerPosition">Position of Interest <span style="color:#c0392b">*</span></label>
+        <select id="careerPosition" name="position" required>
+          <option value="">Select a position...</option>
+          <option>CNC Operator</option>
+          <option>Cabinet Assembler</option>
+          <option>Finish Carpenter</option>
+          <option>Installer</option>
+          <option>Project Manager</option>
+          <option>Estimator</option>
+          <option>Drafting / CAD</option>
+          <option>Warehouse / Shipping</option>
+          <option>Other</option>
+        </select>
       </div>
-      <a href="https://maps.google.com/?q=2525+North+Orange+Blossom+Trail,+Orlando,+FL+32804"
-         target="_blank" rel="noopener noreferrer"
-         style="display:inline-flex;align-items:center;gap:8px;margin-top:1.4rem;font-family:var(--sans);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--deep);background:var(--gold);padding:11px 22px;text-decoration:none;transition:background .2s"
-         onmouseover="this.style.background='var(--gold-lt)'"
-         onmouseout="this.style.background='var(--gold)'">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Get Directions
-      </a>
-    </div>
-  </div>
-  <div class="contact-right">
-    <div class="section-eyebrow">Send Us Details</div>
-    <h2 class="section-title" style="margin-bottom:.5rem">Get a <em>Quote</em></h2>
-    <p>Fill in your project details below and we'll respond within one business day.</p>
-
-    <!-- Formspree: replace YOUR_FORM_ID with your ID from formspree.io/register -->
-    <form id="bidForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="New Bid Request — SMI Cabinetry">
-      <input type="hidden" name="_next" value="https://www.smi-cabinetry.com/#contact">
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name <span style="color:#c0392b">*</span></label>
-          <input type="text" id="fname" name="first_name" placeholder="John" required>
+      <div class="field">
+        <label>Resume <span style="color:#c0392b">*</span></label>
+        <div class="file-upload">
+          <input type="file" id="careerResume" name="resume" accept=".pdf,.doc,.docx,.txt" required>
+          <span class="file-label">Click or drag to upload your resume</span>
+          <span class="file-hint">PDF, DOC, DOCX, or TXT (max 5 MB)</span>
         </div>
-        <div class="form-group">
-          <label for="lname">Last Name <span style="color:#c0392b">*</span></label>
-          <input type="text" id="lname" name="last_name" placeholder="Smith" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Firm Name">
-        </div>
-        <div class="form-group">
-          <label for="role">Role</label>
-          <select id="role" name="role">
-            <option value="">Select role...</option>
-            <option>General Contractor</option>
-            <option>Architect</option>
-            <option>Interior Designer</option>
-            <option>Owner / Developer</option>
-            <option>Other</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-row form-full">
-        <div class="form-group">
-          <label for="email">Email <span style="color:#c0392b">*</span></label>
-          <input type="email" id="email" name="email" placeholder="you@company.com" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000">
-        </div>
-      </div>
-      <div class="form-group form-full" style="margin-bottom:1rem">
-        <label for="project">Project Description <span style="color:#c0392b">*</span></label>
-        <textarea id="project" name="project_description" rows="4"
-          placeholder="Describe your project scope, timeline, and any relevant specifications..." required></textarea>
+        <span class="file-name" id="fileName"></span>
       </div>
 
-      <!-- Success message (hidden by default) -->
-      <div id="formSuccess" style="display:none;padding:1rem 1.2rem;background:rgba(27,66,32,.1);
-           border-left:3px solid var(--forest);margin-bottom:1rem">
+      <div id="careerSuccess" style="display:none;padding:1rem 1.2rem;background:rgba(27,66,32,.1);
+           border-left:3px solid var(--forest)">
         <p style="font-size:.92rem;color:var(--forest);font-weight:500;margin-bottom:.2rem">
-          ✓ Message sent — thank you!
+          Application submitted — thank you!
         </p>
         <p style="font-size:.82rem;color:var(--muted);font-weight:300">
-          Our team will respond within one business day.
+          Our team will review your application and get back to you soon.
         </p>
       </div>
 
-      <!-- Error message (hidden by default) -->
-      <div id="formError" style="display:none;padding:1rem 1.2rem;background:rgba(192,57,43,.08);
-           border-left:3px solid #c0392b;margin-bottom:1rem">
-        <p style="font-size:.92rem;color:#c0392b;font-weight:500;margin-bottom:.2rem">
-          Something went wrong.
-        </p>
-        <p style="font-size:.82rem;color:var(--muted);font-weight:300">
-          Please email us directly at
-          <a href="/cdn-cgi/l/email-protection#92fbfcf4fdd2e1fffbbff1f3f0fbfcf7e6e0ebbcf1fdff" style="color:var(--forest);font-weight:500">
-            <span class="__cf_email__" data-cfemail="8fe6e1e9e0cffce2e6a2eceeede6e1eafbfdf6a1ece0e2">[email&#160;protected]</span>
-          </a>
-        </p>
-      </div>
-
-      <button class="form-submit" type="submit" id="formBtn">
-        Submit Bid Request &rarr;
+      <button class="careers-submit" type="submit" id="careerBtn">
+        Submit Application &rarr;
       </button>
-      <p style="font-size:.72rem;color:var(--muted);margin-top:.8rem;font-weight:300">
-        Or email us directly:
-        <a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9cad4d094dad8dbd0d7dccdcbc097dad6d4" style="color:var(--forest);font-weight:500">
-          <span class="__cf_email__" data-cfemail="5831363e37182b3531753b393a31363d2c2a21763b3735">[email&#160;protected]</span>
-        </a>
-      </p>
     </form>
   </div>
 </section>
@@ -749,7 +680,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
     <a href="#about">About Us</a>
     <a href="#capabilities">Capabilities</a>
     <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
+    <a href="#careers">Careers</a>
   </div>
   <div class="footer-col">
     <div class="footer-col-label">Work</div>
@@ -761,8 +692,17 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
   <div class="footer-col">
     <div class="footer-col-label">Get In Touch</div>
     <span style="font-size:.82rem;color:rgba(245,240,232,.45);font-weight:300;line-height:1.8;display:block;margin-bottom:.5rem">2525 North Orange Blossom Trail<br>Orlando, FL 32804</span>
-    <a href="/cdn-cgi/l/email-protection#82ebece4edc2f1efebafe1e3e0ebece7f6f0fbace1edef" style="font-size:.82rem;color:rgba(196,154,40,.7);font-weight:300;display:block;text-decoration:none;margin-bottom:1.2rem"><span class="__cf_email__" data-cfemail="721b1c141d32011f1b5f1113101b1c1706000b5c111d1f">[email&#160;protected]</span></a>
-    <a href="#contact" class="footer-bid">Request a Bid</a>
+    <a href="tel:+14078410292" style="font-size:.82rem;color:rgba(245,240,232,.45);font-weight:300;display:block;text-decoration:none;margin-bottom:.4rem">(407) 841-0292</a>
+    <a href="mailto:info@smi-cabinetry.com" style="font-size:.82rem;color:rgba(196,154,40,.7);font-weight:300;display:block;text-decoration:none;margin-bottom:.4rem">info@smi-cabinetry.com</a>
+    <span style="font-size:.78rem;color:rgba(245,240,232,.3);font-weight:300;display:block;margin-bottom:1rem">Mon – Fri &nbsp; 8:00 AM – 4:00 PM EST</span>
+    <a href="https://maps.google.com/?q=2525+North+Orange+Blossom+Trail,+Orlando,+FL+32804"
+       target="_blank" rel="noopener noreferrer"
+       style="display:inline-flex;align-items:center;gap:6px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--deep);background:var(--gold);padding:8px 16px;text-decoration:none;transition:background .2s"
+       onmouseover="this.style.background='var(--gold-lt)'"
+       onmouseout="this.style.background='var(--gold)'">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Get Directions
+    </a>
   </div>
 </footer>
 <div class="footer-bottom" role="contentinfo">
@@ -781,41 +721,48 @@ footer{background:var(--ink);border-top:1px solid var(--gold-dim);padding:3.5rem
     </div>
   </div>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Formspree AJAX submit
-  const bidForm = document.getElementById('bidForm');
-  if(bidForm){
-    bidForm.addEventListener('submit', async function(e){
+<script>
+
+  // Career form — file name display
+  const careerResume = document.getElementById('careerResume');
+  const fileName = document.getElementById('fileName');
+  if(careerResume){
+    careerResume.addEventListener('change', function(){
+      if(this.files.length){
+        const f = this.files[0];
+        if(f.size > 5 * 1024 * 1024){
+          fileName.textContent = 'File too large (max 5 MB)';
+          fileName.style.color = '#c0392b';
+          this.value = '';
+        } else {
+          fileName.textContent = f.name;
+          fileName.style.color = '';
+        }
+      } else {
+        fileName.textContent = '';
+      }
+    });
+  }
+
+  // Career form submit
+  const careersForm = document.getElementById('careersForm');
+  if(careersForm){
+    careersForm.addEventListener('submit', function(e){
       e.preventDefault();
-      const btn = document.getElementById('formBtn');
-      const success = document.getElementById('formSuccess');
-      const error = document.getElementById('formError');
-      btn.textContent = 'Sending...';
+      const btn = document.getElementById('careerBtn');
+      const success = document.getElementById('careerSuccess');
+      btn.textContent = 'Submitting...';
       btn.disabled = true;
       btn.style.opacity = '.7';
-      success.style.display = 'none';
-      error.style.display = 'none';
-      try {
-        const res = await fetch(bidForm.action, {
-          method: 'POST',
-          body: new FormData(bidForm),
-          headers: { 'Accept': 'application/json' }
-        });
-        if(res.ok){
-          success.style.display = 'block';
-          bidForm.reset();
-          btn.textContent = 'Submitted ✓';
-          btn.style.background = 'var(--forest)';
-          btn.style.color = 'var(--cream)';
-        } else {
-          throw new Error('Server error');
-        }
-      } catch(err) {
-        error.style.display = 'block';
-        btn.textContent = 'Submit Bid Request →';
-        btn.disabled = false;
-        btn.style.opacity = '1';
-      }
+      // Simulate submission (replace with actual endpoint)
+      setTimeout(function(){
+        success.style.display = 'block';
+        careersForm.reset();
+        fileName.textContent = '';
+        btn.textContent = 'Submitted!';
+        btn.style.background = 'var(--forest)';
+        btn.style.color = 'var(--cream)';
+      }, 800);
     });
   }
 
