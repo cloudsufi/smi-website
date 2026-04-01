@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Millwork Estimating Software: Market & Competitive Analysis 2025–2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --ink: #1a1a1a;
+    --wood: #8B5E3C;
+    --gold: #C9A84C;
+    --cream: #FAF8F4;
+    --light: #F3EFE8;
+    --border: #DDD5C8;
+    --muted: #6B6355;
+    --accent-green: #3A6B4A;
+    --accent-red: #8B2A2A;
+    --accent-blue: #2A4B6B;
+    --section-bg: #FFFFFF;
+    --table-head: #2C2215;
+    --cite-color: #2A4B6B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--cream);
+  }
+
+  /* CITATIONS */
+  sup.cite {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    font-weight: 500;
+    color: var(--cite-color);
+    vertical-align: super;
+    line-height: 0;
+    margin-left: 1px;
+  }
+  sup.cite a {
+    color: var(--cite-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--cite-color);
+  }
+  sup.cite a:hover { background: #E3EBF7; border-radius: 2px; }
+
+  /* HEADER */
+  header {
+    background: var(--table-head);
+    color: var(--cream);
+    padding: 56px 48px 48px;
+    border-bottom: 4px solid var(--gold);
+  }
+  header .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    max-width: 800px;
+  }
+  header .subtitle {
+    font-size: 16px;
+    color: #BEB0A0;
+    max-width: 680px;
+    margin-bottom: 28px;
+  }
+  header .meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  header .meta-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #998880;
+    letter-spacing: 0.1em;
+  }
+  header .meta-item span { color: var(--gold); font-weight: 500; }
+
+  /* NAV */
+  nav {
+    background: var(--light);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav ul { display: flex; list-style: none; gap: 0; overflow-x: auto; }
+  nav li a {
+    display: block;
+    padding: 14px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  nav li a:hover { color: var(--wood); border-bottom-color: var(--wood); }
+
+  /* LAYOUT */
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 48px; }
+
+  /* SECTIONS */
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px;
+  }
+  .section-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 700; color: var(--border); line-height: 1;
+  }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600; color: var(--ink); }
+
+  /* PROSE */
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+
+  /* CALLOUT BOXES */
+  .callout {
+    border-left: 4px solid var(--gold);
+    background: var(--light);
+    padding: 16px 20px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout.green { border-left-color: var(--accent-green); }
+  .callout.red { border-left-color: var(--accent-red); }
+  .callout.blue { border-left-color: var(--accent-blue); }
+  .callout-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 6px;
+  }
+
+  /* TABLES */
+  .table-wrap {
+    width: 100%; overflow-x: auto; margin: 24px 0;
+    border-radius: 6px; border: 1px solid var(--border);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 700px; }
+  thead tr { background: var(--table-head); color: var(--cream); }
+  thead th {
+    padding: 12px 14px; text-align: left; font-weight: 600;
+    font-size: 12px; letter-spacing: 0.04em; white-space: nowrap;
+  }
+  tbody tr:nth-child(even) { background: var(--light); }
+  tbody tr:hover { background: #EDE8DF; }
+  td {
+    padding: 10px 14px; border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.5;
+  }
+  td:first-child { font-weight: 600; }
+
+  /* BADGES */
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 3px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
+  }
+  .badge-green { background: #DFF0E3; color: #1E5630; }
+  .badge-yellow { background: #FEF3CD; color: #7A5C00; }
+  .badge-red { background: #FDE8E8; color: #7A1E1E; }
+  .badge-blue { background: #E3EBF7; color: #1E3A5F; }
+  .badge-gray { background: #EBEBEB; color: #4A4A4A; }
+
+  /* LISTS */
+  ul.report-list { list-style: none; padding: 0; margin: 16px 0; }
+  ul.report-list li {
+    padding: 6px 0 6px 20px; position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  ul.report-list li:last-child { border-bottom: none; }
+  ul.report-list li::before {
+    content: '▸'; position: absolute; left: 0;
+    color: var(--gold); font-size: 12px; top: 8px;
+  }
+  ul.bullet-list { padding-left: 20px; margin: 12px 0; }
+  ul.bullet-list li { padding: 3px 0; list-style: disc; }
+  ul.bullet-list li::marker { color: var(--wood); }
+
+  /* GRID CARDS */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0; }
+  .card { background: var(--section-bg); border: 1px solid var(--border); border-radius: 6px; padding: 20px; }
+  .card-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; margin-bottom: 10px; color: var(--ink); }
+  .card-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+
+  /* SWOT */
+  .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin: 24px 0; }
+  .swot-cell { padding: 20px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .swot-cell:nth-child(2) { border-right: none; }
+  .swot-cell:nth-child(3) { border-bottom: none; }
+  .swot-cell:nth-child(4) { border-right: none; border-bottom: none; }
+  .swot-cell h4 { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; padding: 4px 10px; display: inline-block; border-radius: 3px; }
+  .swot-S h4 { background: #DFF0E3; color: #1E5630; }
+  .swot-W h4 { background: #FDE8E8; color: #7A1E1E; }
+  .swot-O h4 { background: #E3EBF7; color: #1E3A5F; }
+  .swot-T h4 { background: #FEF3CD; color: #7A5C00; }
+
+  /* NUMBERED ITEMS */
+  .numbered-item { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+  .numbered-item:last-child { border-bottom: none; }
+  .item-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--border); line-height: 1; min-width: 40px; padding-top: 2px; }
+  .item-body h4 { font-weight: 600; font-size: 15px; margin-bottom: 6px; color: var(--ink); }
+  .item-body p { font-size: 14px; color: var(--ink); margin-bottom: 6px; }
+  .item-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .item-tag { font-size: 11px; padding: 2px 8px; border-radius: 3px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.03em; }
+
+  /* SCENARIO STACKS */
+  .scenario-stack { border: 1px solid var(--border); border-radius: 6px; margin-bottom: 16px; overflow: hidden; }
+  .scenario-header { background: var(--table-head); color: var(--cream); padding: 12px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; }
+  .scenario-body { padding: 16px 20px; }
+  .scenario-row { display: flex; gap: 12px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .scenario-row:last-child { border-bottom: none; }
+  .scenario-role { min-width: 160px; font-weight: 600; color: var(--muted); font-size: 12px; padding-top: 1px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.03em; }
+
+  /* SOURCES / REFERENCES */
+  #sources { background: #F8F5EF; }
+  .source-list { list-style: none; padding: 0; margin: 16px 0; counter-reset: source-counter; }
+  .source-list li {
+    counter-increment: source-counter;
+    display: flex; gap: 14px; padding: 10px 0;
+    border-bottom: 1px solid var(--border); font-size: 13px; line-height: 1.6;
+  }
+  .source-list li:last-child { border-bottom: none; }
+  .source-list li::before {
+    content: "[" counter(source-counter) "]";
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 600; color: var(--cite-color);
+    min-width: 36px; padding-top: 2px; flex-shrink: 0;
+  }
+  .source-list li a { color: var(--cite-color); text-decoration: none; border-bottom: 1px dotted var(--cite-color); }
+  .source-list li a:hover { background: #E3EBF7; }
+  .source-type { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-left: 6px; }
+  .directional-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    color: var(--muted);
+    background: #EDE8DF;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer { background: var(--table-head); color: #998880; text-align: center; padding: 24px 48px; font-size: 12px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; }
+
+  h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin: 28px 0 14px; color: var(--ink); }
+  h3:first-child { margin-top: 0; }
+  h4 { font-size: 14px; font-weight: 600; margin: 18px 0 8px; }
+
+  @media (max-width: 768px) {
+    header, .container, nav { padding-left: 20px; padding-right: 20px; }
+    header h1 { font-size: 26px; }
+    .section-num { font-size: 36px; }
+    .swot-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Senior Market Research — Confidential Report</div>
+  <h1>Estimating, Takeoff & Fabrication Software for U.S. Architectural Millwork Companies</h1>
+  <p class="subtitle">A deep market study and competitive analysis covering the full workflow from drawing receipt through quantity takeoff, estimating, proposal generation, and fabrication handoff — with full source citations.</p>
+  <div class="meta">
+    <div class="meta-item">DATE <span>April 2026</span></div>
+    <div class="meta-item">SCOPE <span>U.S. Millwork Market</span></div>
+    <div class="meta-item">COVERAGE <span>14 Platforms Analyzed</span></div>
+    <div class="meta-item">SOURCES <span>30 Primary References</span></div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#exec">1 · Executive Summary</a></li>
+    <li><a href="#segments">2 · Market Segmentation</a></li>
+    <li><a href="#competitive">3 · Competitive Landscape</a></li>
+    <li><a href="#bluebeam">4 · Bluebeam Deep Dive</a></li>
+    <li><a href="#workflow">5 · Workflow Comparison</a></li>
+    <li><a href="#asks">6 · Industry Asks</a></li>
+    <li><a href="#painpoints">7 · Pain Points</a></li>
+    <li><a href="#buying">8 · Buying Criteria</a></li>
+    <li><a href="#stacks">9 · Recommended Stacks</a></li>
+    <li><a href="#future">10 · Future Outlook</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================ -->
+<!-- SECTION 1 -->
+<!-- ============================================================ -->
+<section id="exec">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <div class="section-title">Executive Summary</div>
+  </div>
+
+  <p>The U.S. architectural millwork estimating software market sits at a pivotal inflection point. The broader construction estimating software market reached <strong>$2.73 billion in 2025</strong> and is projected to reach <strong>$5.01 billion by 2030</strong> at a 12.89% CAGR,<sup class="cite"><a href="#src1">[1]</a></sup> driven by digitization, material-price volatility, and AI-assisted workflows. Cloud deployment already accounts for <strong>68.7% of the market</strong> as of 2024.<sup class="cite"><a href="#src1">[1]</a></sup> Within this market, millwork companies face a particularly fragmented tooling landscape: they must navigate general construction estimating platforms designed for commodity trades, millwork-native but legacy-era tools, and design-to-production systems that do production brilliantly but estimating poorly. No single platform currently delivers an end-to-end, millwork-native workflow from drawing receipt through takeoff, costing, proposal generation, and shop handoff without meaningful compromise or cobbling.</p>
+
+  <p><strong>Bluebeam Revu</strong> is the most widely adopted drawing markup and PDF-based takeoff tool in the millwork estimating world — and for good reason. It delivers exceptional PDF handling, real-time collaboration, scalable measurement tools, and a well-understood workflow that millwork estimators have learned to trust. Its upcoming <em>Bluebeam Max</em> AI layer (announced for early 2026) will further accelerate drawing review and scope identification.<sup class="cite"><a href="#src2">[2]</a></sup> However, Bluebeam is fundamentally a <em>drawing-interaction and quantity-capture tool</em>, not a costing engine. As one experienced millwork estimator from Towne Millwork noted directly: <em>"Revu isn't the best tool for estimating many of the custom aspects of architectural millwork."</em><sup class="cite"><a href="#src4">[4]</a></sup> It has no native material cost database, no millwork-specific assemblies, no labor rate tables, and no bid proposal generation. For firms that need to move from a measured quantity to a priced proposal, Bluebeam must be paired with another tool — almost always a spreadsheet or a dedicated estimating platform. The most important finding of this analysis: the market's primary gap is <em>not</em> better takeoff, but a seamless, millwork-native path from takeoff quantities to assembly-based costing to a professional proposal — ideally without leaving a single platform.</p>
+
+  <div class="callout">
+    <div class="callout-label">Key Conclusion</div>
+    Bluebeam belongs in every millwork estimator's stack as the drawing interface and takeoff layer. It should not be the estimating engine. The strategic question is what sits beside it or replaces the spreadsheet that today bridges the gap between measurement and money.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 -->
+<!-- ============================================================ -->
+<section id="segments">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <div class="section-title">Market Segmentation</div>
+  </div>
+
+  <p>The millwork-relevant software market is best understood as five overlapping segments.<sup class="cite"><a href="#src1">[1]</a></sup><sup class="cite"><a href="#src19">[19]</a></sup> Companies often need tools that span multiple segments, which is the root cause of today's fragmented multi-tool stacks.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Segment</th>
+          <th>Typical Users</th>
+          <th>Core Job-to-Be-Done</th>
+          <th>Strengths</th>
+          <th>Weaknesses</th>
+          <th>Best-Fit Tools</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PDF Markup & Drawing Takeoff</td>
+          <td>Estimators, PMs, GC subcontractors</td>
+          <td>Measure quantities directly from architectural PDFs; mark scope; collaborate on drawings</td>
+          <td>Speed of measurement, collaboration, PDF workflow, revision tracking</td>
+          <td>No cost engine, no assemblies, no proposal output; downstream export to spreadsheet required</td>
+          <td>Bluebeam Revu <sup class="cite"><a href="#src3">[3]</a></sup>, PlanSwift <sup class="cite"><a href="#src15">[15]</a></sup>, STACK <sup class="cite"><a href="#src16">[16]</a></sup></td>
+        </tr>
+        <tr>
+          <td>General Construction Estimating</td>
+          <td>GCs, multi-trade subcontractors, estimating teams</td>
+          <td>Build line-item cost estimates from quantities; manage bid/proposal pipeline; integrate with accounting</td>
+          <td>Strong cost databases, proposal generation, bid management, Procore/QuickBooks integrations</td>
+          <td>Minimal millwork specificity; no woodwork assemblies out-of-box; designed for horizontal trades</td>
+          <td>ProEst <sup class="cite"><a href="#src17">[17]</a></sup>, STACK <sup class="cite"><a href="#src16">[16]</a></sup>, Sage Estimating</td>
+        </tr>
+        <tr>
+          <td>Millwork-Native Estimating</td>
+          <td>Casework / millwork shops, AWI-member firms</td>
+          <td>Price custom millwork using woodwork-specific labor rates, material variables (species, finish, profile, hardware); generate proposals</td>
+          <td>High specificity for wood products, pre-built millwork logic, fast quoting</td>
+          <td>Often legacy/desktop-only; dated UX; limited drawing import and takeoff; weak collaboration</td>
+          <td>Alliance Millsoft <sup class="cite"><a href="#src14">[14]</a></sup>, BlueDodge, TradeTek <sup class="cite"><a href="#src13">[13]</a></sup></td>
+        </tr>
+        <tr>
+          <td>Design-to-Shop (CAD/CAM + Estimating)</td>
+          <td>Shops with CNC, custom cabinetry manufacturers, fabricators</td>
+          <td>Design product, generate shop drawings, produce cut lists, send to CNC; optionally estimate</td>
+          <td>Seamless design-to-production workflow; CNC code generation; bill of materials automation</td>
+          <td>Estimating is secondary; learning curve is very steep; over-engineered for bid-only use cases</td>
+          <td>Cabinet Vision <sup class="cite"><a href="#src8">[8]</a></sup>, Microvellum <sup class="cite"><a href="#src9">[9]</a></sup>, Mozaik <sup class="cite"><a href="#src11">[11]</a></sup></td>
+        </tr>
+        <tr>
+          <td>End-to-End ERP / MES</td>
+          <td>Mid-to-large millwork manufacturers, shops with 10–200+ employees</td>
+          <td>Manage entire business: estimating → engineering → production scheduling → shop floor tracking → job costing → install</td>
+          <td>Single source of truth; job cost vs. estimate visibility; throughput management; manufacturing integration</td>
+          <td>High implementation cost and time; requires buy-in across departments; overkill for bid-only firms</td>
+          <td>INNERGY <sup class="cite"><a href="#src10">[10]</a></sup>, Cyncly Insight (formerly 2020 Insight)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout blue">
+    <div class="callout-label">Segment Insight</div>
+    Most U.S. architectural millwork companies operate in a gap between segments 2 and 3: they need millwork-specific pricing logic but also general estimating discipline (bid management, proposals, revisions). This gap is precisely where spreadsheets persist and where the strongest product opportunity exists.<sup class="cite"><a href="#src19">[19]</a></sup>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 -->
+<!-- ============================================================ -->
+<section id="competitive">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <div class="section-title">Competitive Landscape</div>
+  </div>
+
+  <p>The following table evaluates 13 platforms across dimensions critical to a millwork company's workflow. Ratings are directional (qualitative descriptors) based on publicly available evidence and industry user feedback. Market share and satisfaction figures cited are directional and sourced from third-party industry analyses.<sup class="cite"><a href="#src7">[7]</a></sup><sup class="cite"><a href="#src8">[8]</a></sup><sup class="cite"><a href="#src26">[26]</a></sup></p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Primary Use Case</th>
+          <th>Estimating Depth</th>
+          <th>Takeoff Strength</th>
+          <th>Millwork Specificity</th>
+          <th>Collaboration</th>
+          <th>Production Linkage</th>
+          <th>Ease of Use</th>
+          <th>Implementation</th>
+          <th>Target Customer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bluebeam Revu <sup class="cite"><a href="#src3">[3]</a></sup></td>
+          <td>PDF Markup / Takeoff</td>
+          <td>Drawing markup, digital takeoff, PDF-based scope management</td>
+          <td><span class="badge badge-yellow">Low — no cost DB</span></td>
+          <td><span class="badge badge-green">Very High</span></td>
+          <td><span class="badge badge-yellow">Generic — fully customizable</span></td>
+          <td><span class="badge badge-green">Excellent (Studio)</span></td>
+          <td><span class="badge badge-red">None native</span></td>
+          <td><span class="badge badge-green">Moderate–High</span></td>
+          <td><span class="badge badge-green">Low–Moderate</span></td>
+          <td>All construction trades, architects, GCs, specialty subs</td>
+        </tr>
+        <tr>
+          <td>PlanSwift <sup class="cite"><a href="#src15">[15]</a></sup></td>
+          <td>Takeoff + Basic Estimating</td>
+          <td>Digital takeoff + line-item cost calculation, Excel-style output</td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-green">High</span></td>
+          <td><span class="badge badge-yellow">Generic; Millwork bundle available</span></td>
+          <td><span class="badge badge-yellow">Basic</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-green">High</span></td>
+          <td><span class="badge badge-green">Low</span></td>
+          <td>Small–mid specialty contractors; trades estimators</td>
+        </tr>
+        <tr>
+          <td>TradeTek <sup class="cite"><a href="#src13">[13]</a></sup></td>
+          <td>Takeoff + Estimating</td>
+          <td>Millwork/trim digital takeoff with assemblies; material lists and bid proposals</td>
+          <td><span class="badge badge-yellow">Moderate (assemblies-based)</span></td>
+          <td><span class="badge badge-green">High</span></td>
+          <td><span class="badge badge-green">Good — Millworks Bundle</span></td>
+          <td><span class="badge badge-yellow">Basic</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-green">Moderate–High</span></td>
+          <td><span class="badge badge-green">Low</span></td>
+          <td>Millwork, trim, window/door contractors; residential/light commercial</td>
+        </tr>
+        <tr>
+          <td>STACK <sup class="cite"><a href="#src16">[16]</a></sup></td>
+          <td>Cloud Takeoff + Estimating</td>
+          <td>Browser-based digital takeoff, cost estimating, team collaboration; API integrations</td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-green">High</span></td>
+          <td><span class="badge badge-yellow">Generic; customizable</span></td>
+          <td><span class="badge badge-green">Strong (cloud-native)</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-green">High</span></td>
+          <td><span class="badge badge-green">Low–Moderate</span></td>
+          <td>Multi-trade GCs and subs; cloud-first teams</td>
+        </tr>
+        <tr>
+          <td>ProEst (Trimble) <sup class="cite"><a href="#src17">[17]</a></sup></td>
+          <td>Enterprise Estimating</td>
+          <td>Cloud estimating platform with CRM, cost DB, proposal generation, Trimble/Procore integration</td>
+          <td><span class="badge badge-green">Very High</span></td>
+          <td><span class="badge badge-yellow">Moderate (integrated)</span></td>
+          <td><span class="badge badge-yellow">Low — requires setup</span></td>
+          <td><span class="badge badge-green">Strong</span></td>
+          <td><span class="badge badge-yellow">Via Trimble ecosystem</span></td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-red">High</span></td>
+          <td>Mid-to-large GCs and multi-trade subs; Trimble ecosystem users</td>
+        </tr>
+        <tr>
+          <td>Alliance Millsoft <sup class="cite"><a href="#src14">[14]</a></sup></td>
+          <td>Millwork-Native Estimating</td>
+          <td>Millwork & casework pricing engine; material/labor variable pricing; proposal generation</td>
+          <td><span class="badge badge-green">High (millwork-specific)</span></td>
+          <td><span class="badge badge-yellow">Via PlanSwift integration</span></td>
+          <td><span class="badge badge-green">Excellent</span></td>
+          <td><span class="badge badge-red">Very Limited</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-yellow">Moderate (legacy UX)</span></td>
+          <td><span class="badge badge-green">Low–Moderate</span></td>
+          <td>Small–mid AWI millwork shops; casework and fixture companies</td>
+        </tr>
+        <tr>
+          <td>Cabinet Vision (Hexagon) <sup class="cite"><a href="#src8">[8]</a></sup></td>
+          <td>Design-to-Manufacture (CAD/CAM)</td>
+          <td>Cabinet and millwork design, rendering, cut lists, CNC output; estimating secondary</td>
+          <td><span class="badge badge-yellow">Moderate (BOM-based)</span></td>
+          <td><span class="badge badge-red">Limited — design-based, not drawing takeoff</span></td>
+          <td><span class="badge badge-green">Very High (residential–mid commercial)</span></td>
+          <td><span class="badge badge-yellow">Basic</span></td>
+          <td><span class="badge badge-green">Excellent (CNC direct)</span></td>
+          <td><span class="badge badge-green">Moderate (intuitive)</span></td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td>Cabinet shops (residential to mid-commercial); ~40% US millwork market share <sup class="cite"><a href="#src7">[7]</a></sup></td>
+        </tr>
+        <tr>
+          <td>Microvellum <sup class="cite"><a href="#src9">[9]</a></sup></td>
+          <td>Design-to-Manufacture (CAD/CAM)</td>
+          <td>AutoCAD-based parametric millwork design, engineering, CNC code, shop drawings; estimating via BOM</td>
+          <td><span class="badge badge-yellow">Moderate (BOM + cost analysis)</span></td>
+          <td><span class="badge badge-red">None — design input, not drawing takeoff</span></td>
+          <td><span class="badge badge-green">Very High (commercial millwork)</span></td>
+          <td><span class="badge badge-yellow">Basic (AutoCAD sharing)</span></td>
+          <td><span class="badge badge-green">Excellent (HOMAG + other CNC)</span></td>
+          <td><span class="badge badge-red">Low — steep AutoCAD/Excel requirement</span></td>
+          <td><span class="badge badge-red">High</span></td>
+          <td>Commercial millwork shops with CNC; ~25% US market share <sup class="cite"><a href="#src7">[7]</a></sup></td>
+        </tr>
+        <tr>
+          <td>Mozaik <sup class="cite"><a href="#src11">[11]</a></sup></td>
+          <td>Design-to-Manufacture (Cabinet-Focused)</td>
+          <td>Cabinet design, cut-list optimization, CNC output; simpler alternative to Cabinet Vision</td>
+          <td><span class="badge badge-yellow">Basic (material estimation)</span></td>
+          <td><span class="badge badge-red">None — design-input only</span></td>
+          <td><span class="badge badge-yellow">Moderate (best for box cabinets, not custom)</span></td>
+          <td><span class="badge badge-red">Very Limited</span></td>
+          <td><span class="badge badge-green">Good (CNC/nesting)</span></td>
+          <td><span class="badge badge-green">High (easiest of the CAD/CAMs)</span></td>
+          <td><span class="badge badge-green">Low</span></td>
+          <td>Small cabinet shops transitioning to CNC; production-first environments</td>
+        </tr>
+        <tr>
+          <td>INNERGY <sup class="cite"><a href="#src10">[10]</a></sup></td>
+          <td>Millwork ERP / MES</td>
+          <td>End-to-end ERP for woodworking: estimating, engineering, production scheduling, shop floor, job cost</td>
+          <td><span class="badge badge-green">High</span></td>
+          <td><span class="badge badge-yellow">Basic (integrated)</span></td>
+          <td><span class="badge badge-green">Very High (built for millwork)</span></td>
+          <td><span class="badge badge-green">Strong (cloud-based)</span></td>
+          <td><span class="badge badge-green">Strong (MES integration)</span></td>
+          <td><span class="badge badge-yellow">Moderate (extensive features)</span></td>
+          <td><span class="badge badge-red">High</span></td>
+          <td>Mid-to-large millwork manufacturers; growth-stage shops seeking one platform</td>
+        </tr>
+        <tr>
+          <td>2020 Design <sup class="cite"><a href="#src11">[11]</a></sup></td>
+          <td>Design / Sales Visualization</td>
+          <td>Kitchen/bath sales visualization, brand catalog rendering; client-facing presentations</td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-yellow">Moderate (kitchen/bath focus)</span></td>
+          <td><span class="badge badge-red">Very Limited</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-green">Very High</span></td>
+          <td><span class="badge badge-green">Very Low</span></td>
+          <td>Kitchen/bath retailers, interior designers, showrooms</td>
+        </tr>
+        <tr>
+          <td>Foundation Software</td>
+          <td>Construction Accounting + Estimating</td>
+          <td>Job cost accounting, payroll, estimating for specialty contractors</td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-red">None native</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-yellow">Basic</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td>Specialty subcontractors needing integrated accounting + estimating</td>
+        </tr>
+        <tr>
+          <td>BlueDodge</td>
+          <td>Millwork Estimating (Niche)</td>
+          <td>Casework and millwork estimating with material library and bid generation</td>
+          <td><span class="badge badge-yellow">Moderate (millwork-focused)</span></td>
+          <td><span class="badge badge-yellow">Basic</span></td>
+          <td><span class="badge badge-green">Good</span></td>
+          <td><span class="badge badge-red">Limited</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td>Small–mid millwork estimating teams; AWI shops</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Key Pros & Cons Summary</h3>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-label">Bluebeam Revu <sup class="cite"><a href="#src3">[3]</a></sup><sup class="cite"><a href="#src4">[4]</a></sup><sup class="cite"><a href="#src5">[5]</a></sup></div>
+      <div class="card-title">The Universal Drawing Layer</div>
+      <p><strong>Pros:</strong> Industry-standard PDF markup; unmatched takeoff speed; Studio collaboration; strong revision handling; AI roadmap (Bluebeam Max 2026); broad ecosystem.</p>
+      <p><strong>Cons:</strong> No cost database; no millwork assemblies; no bid proposal output; estimating is manual export to Excel; requires a second tool for pricing.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Alliance Millsoft <sup class="cite"><a href="#src14">[14]</a></sup><sup class="cite"><a href="#src15">[15]</a></sup></div>
+      <div class="card-title">The Millwork Pricing Engine</div>
+      <p><strong>Pros:</strong> Millwork/casework native pricing logic; dynamic material/labor variables; AWI-aligned; fast setup; USB-key licensed per shop since 1994.</p>
+      <p><strong>Cons:</strong> Legacy UX; desktop-only; no drawing import; collaboration is near zero; depends on PlanSwift integration for takeoff; limited cloud features.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Cabinet Vision (Hexagon) <sup class="cite"><a href="#src7">[7]</a></sup><sup class="cite"><a href="#src8">[8]</a></sup></div>
+      <div class="card-title">The Shop Standard</div>
+      <p><strong>Pros:</strong> ~40% US market share; strong production integration; excellent training; TrueShape nesting; works residential through mid-commercial. 85% user satisfaction rate.<sup class="cite"><a href="#src7">[7]</a></sup></p>
+      <p><strong>Cons:</strong> Estimating is BOM-driven, not drawing-driven; initial cost $5,000–$10,000; limited commercial millwork customization; poor takeoff from architectural PDFs.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Microvellum <sup class="cite"><a href="#src9">[9]</a></sup></div>
+      <div class="card-title">The Commercial Power Tool</div>
+      <p><strong>Pros:</strong> AutoCAD-based parametric precision; ideal for complex commercial millwork; CNC-ready output (HOMAG-certified); ERP-linkage; best for shops that also engineer.</p>
+      <p><strong>Cons:</strong> Requires AutoCAD and Excel fluency; $10,000–$15,000 initial cost;<sup class="cite"><a href="#src7">[7]</a></sup> no drawing takeoff; estimating is secondary and BOM-based; steep onboarding.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">INNERGY <sup class="cite"><a href="#src10">[10]</a></sup><sup class="cite"><a href="#src18">[18]</a></sup></div>
+      <div class="card-title">The Millwork ERP</div>
+      <p><strong>Pros:</strong> True end-to-end platform built for woodworkers; cloud-native; MES on shop floor; benchmarking tool included; strong community and education. Users report switching from "a hodgepodge of software" and "never looking back."<sup class="cite"><a href="#src18">[18]</a></sup></p>
+      <p><strong>Cons:</strong> High implementation effort; INNERGY Design still maturing; best for shops already digitally organized; some companies still use patchwork alongside it.<sup class="cite"><a href="#src18">[18]</a></sup></p>
+    </div>
+    <div class="card">
+      <div class="card-label">STACK <sup class="cite"><a href="#src16">[16]</a></sup></div>
+      <div class="card-title">The Cloud Takeoff & Estimating Layer</div>
+      <p><strong>Pros:</strong> Browser-native; fast onboarding; good collaboration; open API; free tier available; AI features emerging for quantity suggestions in 2026 release.<sup class="cite"><a href="#src17">[17]</a></sup></p>
+      <p><strong>Cons:</strong> Not millwork-specific; weak on complex alternates; cost database requires setup; not a proposal generator by default.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 -->
+<!-- ============================================================ -->
+<section id="bluebeam">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <div class="section-title">Bluebeam Revu — Deep Dive</div>
+  </div>
+
+  <div class="callout green">
+    <div class="callout-label">Bottom Line on Bluebeam</div>
+    Bluebeam is the best drawing interface and takeoff layer for millwork estimators working from PDF architectural sets. It is not — and was not designed to be — a costing, pricing, or proposal tool.<sup class="cite"><a href="#src4">[4]</a></sup><sup class="cite"><a href="#src5">[5]</a></sup>
+  </div>
+
+  <h3>Core Estimating Workflow in Bluebeam</h3>
+  <p>Bluebeam Revu's estimating workflow centers on <strong>quantity capture from PDFs</strong>.<sup class="cite"><a href="#src3">[3]</a></sup> An estimator receives an architect-approved drawing package, imports it as a PDF set, sets page scales, creates a Studio Session for team collaboration, applies custom markup tools to identify millwork scope items (casework runs, panel walls, door openings, trim linear footage, etc.), and exports the Markups List to Excel where costing occurs.</p>
+  <p>A widely-documented millwork-specific technique applies Bluebeam's <em>Spaces</em> feature — originally a punch-list tool — to create room-by-room scope containers. As Towne Millwork estimator Doug McLean documented: <em>"Next, I just move through the job, dropping the various tools into the Spaces as I need them, all the while letting Bluebeam and the Markups list build my scope list for me."</em><sup class="cite"><a href="#src4">[4]</a></sup> Custom Columns in the Markups List are used to add labor estimates and cost formulas directly into the markup metadata. This produces a usable scope list and rough cost framework, but it is a workaround, not a native estimating workflow.</p>
+
+  <h3>Measurement & Takeoff Capabilities</h3>
+  <ul class="bullet-list">
+    <li><strong>Measurement types:</strong> Linear length, polylength, perimeter, area, volume, wall area, count, arc, angle, radius, depth — all from PDF drawings<sup class="cite"><a href="#src3">[3]</a></sup></li>
+    <li><strong>Dynamic Fill:</strong> Fills irregular shapes to auto-calculate perimeter and area — highly useful for panel and wall cladding takeoffs<sup class="cite"><a href="#src3">[3]</a></sup></li>
+    <li><strong>VisualSearch:</strong> AI-assisted — show a symbol (door tag, cabinet elevation, hardware) and Bluebeam counts all instances across the set<sup class="cite"><a href="#src2">[2]</a></sup></li>
+    <li><strong>Scale calibration:</strong> Applies to individual pages; critical for multi-scale drawing packages<sup class="cite"><a href="#src3">[3]</a></sup></li>
+    <li><strong>Snap-to-content:</strong> Locks measurements to drawing geometry for accuracy<sup class="cite"><a href="#src5">[5]</a></sup></li>
+    <li><strong>Custom Tool Chests:</strong> Save and reuse custom markup tools across projects (the foundation for workflow repeatability)<sup class="cite"><a href="#src4">[4]</a></sup></li>
+    <li><strong>Layers and Subjects:</strong> Organize takeoff by category (casework, trim, paneling, doors) for filtered reporting<sup class="cite"><a href="#src4">[4]</a></sup></li>
+  </ul>
+
+  <h3>Pricing (As of 2025–2026)</h3>
+  <p>Bluebeam offers three annual subscription tiers.<sup class="cite"><a href="#src20">[20]</a></sup><sup class="cite"><a href="#src21">[21]</a></sup> Basics costs <strong>$260/user/year</strong>; Core costs <strong>$330/user/year</strong> (includes full measurement and takeoff tools); Complete costs <strong>$440/user/year</strong> (adds advanced automation, Dynamic Fill, scripting, and Excel live-link). A late-2024 price adjustment raised rates by approximately 10% industry-wide.<sup class="cite"><a href="#src21">[21]</a></sup> Bluebeam Max, the new AI-powered premium tier announced for early 2026, will be priced separately with details forthcoming.<sup class="cite"><a href="#src2">[2]</a></sup></p>
+
+  <h3>PDF & Document Workflow</h3>
+  <ul class="bullet-list">
+    <li>Industry-leading PDF management: combine, split, flatten, batch-process, compare revisions, stamp, and flatten drawing sets<sup class="cite"><a href="#src3">[3]</a></sup></li>
+    <li>Hyperlink pages and create Sets for navigating large drawing packages efficiently<sup class="cite"><a href="#src4">[4]</a></sup></li>
+    <li>OCR to make scanned PDFs text-searchable<sup class="cite"><a href="#src2">[2]</a></sup></li>
+    <li>PDF-to-DWG conversion available<sup class="cite"><a href="#src22">[22]</a></sup></li>
+    <li>Document version control via Studio file locking and comparison tools<sup class="cite"><a href="#src3">[3]</a></sup></li>
+  </ul>
+
+  <h3>Collaboration Workflow</h3>
+  <ul class="bullet-list">
+    <li><strong>Studio Sessions:</strong> Real-time collaborative markup — multiple estimators or team members mark up the same drawing simultaneously<sup class="cite"><a href="#src20">[20]</a></sup></li>
+    <li><strong>Studio Projects:</strong> Cloud-based document management; share with GCs, owners, or subcontractors<sup class="cite"><a href="#src20">[20]</a></sup></li>
+    <li><strong>Bluebeam Cloud:</strong> Web and mobile access to Studio files without desktop app install<sup class="cite"><a href="#src2">[2]</a></sup></li>
+    <li>GCs frequently require Bluebeam access and Studio links for pre-bid leveling — making it a communication standard, not just an internal tool<sup class="cite"><a href="#src4">[4]</a></sup></li>
+  </ul>
+
+  <h3>Limits for Millwork Estimating</h3>
+  <ul class="report-list">
+    <li>No native material cost database — species, grade, sheet goods, hardware pricing must all live elsewhere<sup class="cite"><a href="#src4">[4]</a></sup></li>
+    <li>No millwork-specific assemblies — no pre-built logic for "drawer bank with soft-close," "raised panel door," "reveal overlay face frame," etc.</li>
+    <li>No labor rate tables tied to millwork operations (fabrication, finishing, install)</li>
+    <li>No bid proposal or quote generation — output is data, not a deliverable</li>
+    <li>No production handoff — quantities extracted don't flow into shop orders, cut lists, or CNC programs</li>
+    <li>Custom Column formulas are fragile and individual-dependent; not a scalable estimating engine<sup class="cite"><a href="#src4">[4]</a></sup></li>
+    <li>Support quality has declined per user feedback — a growing operational concern<sup class="cite"><a href="#src22">[22]</a></sup><sup class="cite"><a href="#src23">[23]</a></sup></li>
+  </ul>
+
+  <h3>Bluebeam SWOT Analysis</h3>
+  <div class="swot-grid">
+    <div class="swot-cell swot-S">
+      <h4>Strengths</h4>
+      <ul class="bullet-list">
+        <li>Industry-standard for AEC PDF workflow<sup class="cite"><a href="#src3">[3]</a></sup></li>
+        <li>Fastest and most accurate digital takeoff<sup class="cite"><a href="#src3">[3]</a></sup></li>
+        <li>Studio collaboration is best-in-class<sup class="cite"><a href="#src20">[20]</a></sup></li>
+        <li>Deep customization through Tool Chests and Custom Columns<sup class="cite"><a href="#src4">[4]</a></sup></li>
+        <li>GCs expect and request Bluebeam files<sup class="cite"><a href="#src4">[4]</a></sup></li>
+        <li>VisualSearch AI for symbol counting<sup class="cite"><a href="#src2">[2]</a></sup></li>
+        <li>Strong revision and drawing comparison tools<sup class="cite"><a href="#src3">[3]</a></sup></li>
+      </ul>
+    </div>
+    <div class="swot-cell swot-W">
+      <h4>Weaknesses</h4>
+      <ul class="bullet-list">
+        <li>No cost database or pricing engine<sup class="cite"><a href="#src4">[4]</a></sup></li>
+        <li>No millwork assemblies or labor rate tables</li>
+        <li>No proposal/quote generation</li>
+        <li>No production linkage</li>
+        <li>Support quality declining per user feedback<sup class="cite"><a href="#src22">[22]</a></sup><sup class="cite"><a href="#src23">[23]</a></sup></li>
+        <li>Estimating "workflow" is largely a workaround using Custom Columns<sup class="cite"><a href="#src4">[4]</a></sup></li>
+        <li>Subscription pricing: $260–$440/user/year and rising<sup class="cite"><a href="#src20">[20]</a></sup><sup class="cite"><a href="#src21">[21]</a></sup></li>
+      </ul>
+    </div>
+    <div class="swot-cell swot-O">
+      <h4>Opportunities</h4>
+      <ul class="bullet-list">
+        <li>Bluebeam Max (2026): Claude AI-powered scope analysis<sup class="cite"><a href="#src2">[2]</a></sup></li>
+        <li>VisualSearch expansion for millwork symbols<sup class="cite"><a href="#src2">[2]</a></sup></li>
+        <li>API integration with millwork ERPs (INNERGY, etc.)</li>
+        <li>Studio as a GC communication hub for millwork submittals</li>
+        <li>BIM/3D integration roadmap<sup class="cite"><a href="#src2">[2]</a></sup></li>
+      </ul>
+    </div>
+    <div class="swot-cell swot-T">
+      <h4>Threats</h4>
+      <ul class="bullet-list">
+        <li>STACK and ProEst offering integrated takeoff + estimating in one platform<sup class="cite"><a href="#src17">[17]</a></sup></li>
+        <li>AI-native tools (Togal.ai, Kreo) that auto-extract quantities from drawings<sup class="cite"><a href="#src29">[29]</a></sup></li>
+        <li>INNERGY maturing its takeoff integration<sup class="cite"><a href="#src10">[10]</a></sup></li>
+        <li>Customer support failures creating churn risk<sup class="cite"><a href="#src22">[22]</a></sup><sup class="cite"><a href="#src23">[23]</a></sup></li>
+        <li>Pricing pressure as cloud-native tools offer free tiers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 -->
+<!-- ============================================================ -->
+<section id="workflow">
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <div class="section-title">Competitive Comparison by Workflow</div>
+  </div>
+
+  <p>Rating scale: <span class="badge badge-green">★★★★★ Excellent</span> <span class="badge badge-blue">★★★★ Good</span> <span class="badge badge-yellow">★★★ Moderate</span> <span class="badge badge-gray">★★ Weak</span> <span class="badge badge-red">★ Not applicable</span>. Ratings derived from product documentation, vendor sites, and user reviews cited in this report's source list.<sup class="cite"><a href="#src3">[3]</a></sup><sup class="cite"><a href="#src8">[8]</a></sup><sup class="cite"><a href="#src9">[9]</a></sup><sup class="cite"><a href="#src10">[10]</a></sup><sup class="cite"><a href="#src13">[13]</a></sup><sup class="cite"><a href="#src14">[14]</a></sup><sup class="cite"><a href="#src16">[16]</a></sup><sup class="cite"><a href="#src17">[17]</a></sup></p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Workflow Step</th>
+          <th>Bluebeam</th>
+          <th>PlanSwift</th>
+          <th>TradeTek</th>
+          <th>Microvellum</th>
+          <th>Mozaik</th>
+          <th>STACK</th>
+          <th>ProEst</th>
+          <th>Alliance Millsoft</th>
+          <th>INNERGY</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Drawing Import & Markup</td>
+          <td><span class="badge badge-green">★★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-red">★ (CAD native)</span></td>
+          <td><span class="badge badge-red">★ (design input)</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-red">★ (via PlanSwift)</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+        </tr>
+        <tr>
+          <td>Quantity Takeoff</td>
+          <td><span class="badge badge-green">★★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-red">★ (BOM only)</span></td>
+          <td><span class="badge badge-red">★ (design only)</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+        </tr>
+        <tr>
+          <td>Assembly-Based Estimating</td>
+          <td><span class="badge badge-red">★ (workaround)</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★ (BOM)</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-green">★★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+        </tr>
+        <tr>
+          <td>Price/Cost Database</td>
+          <td><span class="badge badge-red">★ (none)</span></td>
+          <td><span class="badge badge-yellow">★★★ (generic)</span></td>
+          <td><span class="badge badge-yellow">★★★ (configurable)</span></td>
+          <td><span class="badge badge-yellow">★★★ (material library)</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-yellow">★★★ (generic)</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-green">★★★★★ (millwork-native)</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+        </tr>
+        <tr>
+          <td>Bid / Proposal Generation</td>
+          <td><span class="badge badge-red">★ (none)</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-green">★★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+        </tr>
+        <tr>
+          <td>Collaboration</td>
+          <td><span class="badge badge-green">★★★★★</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-red">★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-red">★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+        </tr>
+        <tr>
+          <td>Revision Handling</td>
+          <td><span class="badge badge-green">★★★★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-gray">★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+        </tr>
+        <tr>
+          <td>Reporting & Exports</td>
+          <td><span class="badge badge-blue">★★★★ (to Excel/PDF)</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-yellow">★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-green">★★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+          <td><span class="badge badge-blue">★★★★</span></td>
+        </tr>
+        <tr>
+          <td>Production Integration</td>
+          <td><span class="badge badge-red">★</span></td>
+          <td><span class="badge badge-red">★</span></td>
+          <td><span class="badge badge-red">★</span></td>
+          <td><span class="badge badge-green">★★★★★ (CNC)</span></td>
+          <td><span class="badge badge-blue">★★★★ (CNC)</span></td>
+          <td><span class="badge badge-red">★</span></td>
+          <td><span class="badge badge-red">★</span></td>
+          <td><span class="badge badge-red">★</span></td>
+          <td><span class="badge badge-green">★★★★★ (MES)</span></td>
+        </tr>
+        <tr>
+          <td>Learning Curve</td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-green">Easy</span></td>
+          <td><span class="badge badge-green">Easy–Moderate</span></td>
+          <td><span class="badge badge-red">Very Steep <sup class="cite"><a href="#src9">[9]</a></sup></span></td>
+          <td><span class="badge badge-green">Easy</span></td>
+          <td><span class="badge badge-green">Easy</span></td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-yellow">Moderate</span></td>
+          <td><span class="badge badge-red">Steep <sup class="cite"><a href="#src18">[18]</a></sup></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 6 -->
+<!-- ============================================================ -->
+<section id="asks">
+  <div class="section-header">
+    <div class="section-num">6</div>
+    <div class="section-title">Industry Asks — Top 10 Capabilities Millwork Companies Want</div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">01</div>
+    <div class="item-body">
+      <h4>Millwork-Native Assembly-Based Estimating</h4>
+      <p><strong>Why it matters:</strong> Millwork pricing is not linear footage × rate. It involves species, core material, finish type, hardware selections, door style, profile complexity, and labor routing. Generic assemblies don't capture this nuance.<sup class="cite"><a href="#src14">[14]</a></sup></p>
+      <p><strong>Current satisfaction:</strong> Alliance Millsoft and INNERGY address this; general tools (Bluebeam, STACK, ProEst) do not without heavy configuration.<sup class="cite"><a href="#src14">[14]</a></sup><sup class="cite"><a href="#src10">[10]</a></sup></p>
+      <div class="item-meta">
+        <span class="item-tag badge-red">Gap: High</span>
+        <span class="item-tag badge-yellow">Best current: Alliance Millsoft / INNERGY</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">02</div>
+    <div class="item-body">
+      <h4>Seamless Takeoff-to-Pricing Flow Without Spreadsheet Re-Entry</h4>
+      <p><strong>Why it matters:</strong> Every time data is re-keyed (from Bluebeam markup to Excel to estimating tool), errors multiply and time is lost. The market's most common complaint is this manual handoff.<sup class="cite"><a href="#src19">[19]</a></sup></p>
+      <p><strong>Current satisfaction:</strong> The PlanSwift + Alliance Millsoft integration partially addresses it, enabling an estimated 20% reduction in takeoff time.<sup class="cite"><a href="#src15">[15]</a></sup> No single platform solves it end-to-end for millwork.</p>
+      <div class="item-meta">
+        <span class="item-tag badge-red">Gap: Critical</span>
+        <span class="item-tag badge-yellow">Partial: PlanSwift+Millsoft, INNERGY</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">03</div>
+    <div class="item-body">
+      <h4>Scope Identification & Extraction from Architectural Drawings</h4>
+      <p><strong>Why it matters:</strong> Millwork estimators spend enormous time reading through full architectural sets to identify what is and isn't in their scope. Automating this "scope discovery" step from drawing notes, legends, and specifications is a top-priority time saver.<sup class="cite"><a href="#src24">[24]</a></sup></p>
+      <p><strong>Current satisfaction:</strong> Bluebeam VisualSearch is a partial answer.<sup class="cite"><a href="#src2">[2]</a></sup> AI tools like Togal.ai target this for general construction.<sup class="cite"><a href="#src29">[29]</a></sup> Bluebeam Max will advance it in 2026.<sup class="cite"><a href="#src2">[2]</a></sup></p>
+      <div class="item-meta">
+        <span class="item-tag badge-red">Gap: High — no tool fully solves this for millwork</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">04</div>
+    <div class="item-body">
+      <h4>Professional, Branded Proposal Generation</h4>
+      <p><strong>Why it matters:</strong> Most millwork firms submit bids as Excel spreadsheets or Word documents. GCs expect professional, clearly formatted proposals. A fast, branded proposal generator signals company maturity and reduces scope disputes.<sup class="cite"><a href="#src19">[19]</a></sup></p>
+      <p><strong>Current satisfaction:</strong> ProEst and TradeTek are strongest here.<sup class="cite"><a href="#src17">[17]</a></sup><sup class="cite"><a href="#src13">[13]</a></sup> Alliance Millsoft has basic capability. Bluebeam has none.</p>
+      <div class="item-meta">
+        <span class="item-tag badge-yellow">Gap: Moderate</span>
+        <span class="item-tag badge-blue">Best current: ProEst, TradeTek, INNERGY</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">05</div>
+    <div class="item-body">
+      <h4>Real-Time Material Pricing & Supplier Linkage</h4>
+      <p><strong>Why it matters:</strong> Lumber, panel goods, hardware, and architectural profiles fluctuate significantly. Firms that bid on static price lists get burned when material costs spike between bid and award. AI-enabled platforms in general construction now deliver 85–90% price-forecast accuracy.<sup class="cite"><a href="#src1">[1]</a></sup></p>
+      <p><strong>Current satisfaction:</strong> No tool currently offers live wood commodity pricing. INNERGY and Alliance Millsoft support user-maintained cost databases but require manual updates.<sup class="cite"><a href="#src10">[10]</a></sup><sup class="cite"><a href="#src14">[14]</a></sup></p>
+      <div class="item-meta">
+        <span class="item-tag badge-red">Gap: High — live pricing feeds do not yet exist for millwork</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">06</div>
+    <div class="item-body">
+      <h4>Revision & Addendum Management Tied to Estimate Impact</h4>
+      <p><strong>Why it matters:</strong> Architectural sets are rarely static. Addenda arrive mid-bid. Firms need to identify what changed, update takeoff, and know the cost delta without re-doing the entire estimate.<sup class="cite"><a href="#src24">[24]</a></sup></p>
+      <p><strong>Current satisfaction:</strong> Bluebeam excels at identifying drawing changes visually.<sup class="cite"><a href="#src3">[3]</a></sup> No tool cleanly propagates a drawing change to a cost delta in millwork.</p>
+      <div class="item-meta">
+        <span class="item-tag badge-red">Gap: High on the cost-propagation side</span>
+        <span class="item-tag badge-green">Takeoff: Bluebeam is best</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">07</div>
+    <div class="item-body">
+      <h4>Bid Pipeline & Win/Loss Tracking</h4>
+      <p><strong>Why it matters:</strong> Estimating teams bid dozens of jobs. Without pipeline visibility, firms over-invest in low-probability bids and underbid high-probability ones. Win/loss history informs markup strategy.</p>
+      <p><strong>Current satisfaction:</strong> ProEst (via built-in CRM) and INNERGY address this well.<sup class="cite"><a href="#src17">[17]</a></sup><sup class="cite"><a href="#src10">[10]</a></sup> Bluebeam, PlanSwift, and most millwork-specific tools do not.</p>
+      <div class="item-meta">
+        <span class="item-tag badge-yellow">Gap: Moderate</span>
+        <span class="item-tag badge-blue">Best: ProEst CRM, INNERGY</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">08</div>
+    <div class="item-body">
+      <h4>Estimate-to-Shop Handoff Without Re-Entry</h4>
+      <p><strong>Why it matters:</strong> When a job is awarded, the scope and quantities from the estimate should flow directly into shop routing, cut lists, and production schedules — not be re-entered by engineering.<sup class="cite"><a href="#src10">[10]</a></sup></p>
+      <p><strong>Current satisfaction:</strong> INNERGY handles this for shops using their full stack.<sup class="cite"><a href="#src10">[10]</a></sup><sup class="cite"><a href="#src18">[18]</a></sup> Microvellum and Cabinet Vision do this from a design-first model.<sup class="cite"><a href="#src8">[8]</a></sup><sup class="cite"><a href="#src9">[9]</a></sup> For estimating-first firms, this gap is nearly universal.</p>
+      <div class="item-meta">
+        <span class="item-tag badge-red">Gap: Critical for integrated shops</span>
+        <span class="item-tag badge-blue">Best: INNERGY, Microvellum</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">09</div>
+    <div class="item-body">
+      <h4>Alternates, Options, and Value Engineering Support</h4>
+      <p><strong>Why it matters:</strong> Architects frequently request alternate pricing (e.g., MDF vs. solid wood core; paint-grade vs. stain-grade; Grade A vs. Grade B AWI). Preparing and presenting alternates is a competitive differentiator.</p>
+      <p><strong>Current satisfaction:</strong> Most tools handle this poorly; it typically requires manual Excel manipulation. ProEst has some alternates functionality but is not millwork-tuned.<sup class="cite"><a href="#src17">[17]</a></sup></p>
+      <div class="item-meta">
+        <span class="item-tag badge-red">Gap: High</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">10</div>
+    <div class="item-body">
+      <h4>Cloud-Based Multi-Estimator Collaboration with Role-Based Access</h4>
+      <p><strong>Why it matters:</strong> Larger firms have multiple estimators working different sections of the same project. Without version control and concurrent access, estimates merge badly. About two-thirds of estimating software purchases in 2025 were cloud deals, confirming this is now the market norm.<sup class="cite"><a href="#src17">[17]</a></sup></p>
+      <p><strong>Current satisfaction:</strong> Bluebeam (Studio), STACK, and ProEst are strongest.<sup class="cite"><a href="#src2">[2]</a></sup><sup class="cite"><a href="#src16">[16]</a></sup><sup class="cite"><a href="#src17">[17]</a></sup> Legacy desktop tools (Alliance Millsoft) are essentially single-user.<sup class="cite"><a href="#src14">[14]</a></sup></p>
+      <div class="item-meta">
+        <span class="item-tag badge-yellow">Gap: Moderate overall; severe for legacy desktop tools</span>
+        <span class="item-tag badge-green">Best: Bluebeam, STACK, INNERGY</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 7 -->
+<!-- ============================================================ -->
+<section id="painpoints">
+  <div class="section-header">
+    <div class="section-num">7</div>
+    <div class="section-title">Pain Points — Top 10 Frustrations with Current Software</div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">01</div>
+    <div class="item-body">
+      <h4>The Excel Bridge — Data Re-Entry Between Takeoff and Estimating</h4>
+      <p><strong>Root cause:</strong> No single platform handles both millwork-native takeoff and millwork-specific costing. ProEst's integrated takeoff is cited as a direct solution to "no more switching between Bluebeam or PlanSwift and then manually typing numbers into Excel."<sup class="cite"><a href="#src17">[17]</a></sup></p>
+      <p><strong>Business impact:</strong> Wasted estimator hours; transcription errors; scope items that exist in the takeoff but never make it into pricing; delays in bid submission.</p>
+      <div class="item-meta"><span class="item-tag badge-red">Product Gap</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">02</div>
+    <div class="item-body">
+      <h4>Scope Misses from Complex Drawing Packages</h4>
+      <p><strong>Root cause:</strong> Architectural millwork scope is scattered across floor plans, elevations, sections, specs, schedules, and addenda. No tool auto-aggregates this into a scope list. Bluebeam's Spaces feature is the most practical workaround currently available.<sup class="cite"><a href="#src4">[4]</a></sup></p>
+      <p><strong>Business impact:</strong> Missed scope items lead to change order disputes, underbid projects, and margin erosion. McKinsey research cited in the industry puts large construction projects 80% over budget on average — poor scope capture is a leading contributor.<sup class="cite"><a href="#src24">[24]</a></sup></p>
+      <div class="item-meta"><span class="item-tag badge-red">Product + Process Gap</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">03</div>
+    <div class="item-body">
+      <h4>Estimator Knowledge Lock-In</h4>
+      <p><strong>Root cause:</strong> Millwork pricing logic lives in estimators' heads or personal spreadsheets, not in transferable systems. Alliance Millsoft's dynamic variable pricing system was specifically designed to address this by embedding logic into the software itself, not in the estimator's personal formulas.<sup class="cite"><a href="#src14">[14]</a></sup></p>
+      <p><strong>Business impact:</strong> Business continuity risk; inability to scale estimating capacity; inconsistent bids across estimators.</p>
+      <div class="item-meta"><span class="item-tag badge-yellow">Process + Product Gap</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">04</div>
+    <div class="item-body">
+      <h4>Revision Rework — Mid-Bid Drawing Changes</h4>
+      <p><strong>Root cause:</strong> Addenda are received mid-bid. Estimators must re-review all affected sheets, update takeoff, and recalculate costs. No tool does this automatically. Digital estimation tools help streamline these updates,<sup class="cite"><a href="#src24">[24]</a></sup> but full automation of cost impact does not yet exist for millwork.</p>
+      <p><strong>Business impact:</strong> Hours lost per revision cycle; missed changes if team is already deep in the bid; scope disputes post-award when the estimator worked from a superseded sheet.</p>
+      <div class="item-meta"><span class="item-tag badge-red">Product Gap</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">05</div>
+    <div class="item-body">
+      <h4>Stale Material Pricing Databases</h4>
+      <p><strong>Root cause:</strong> Most tools use static, user-maintained cost libraries. No millwork estimating platform currently offers live commodity price feeds for wood species, panel goods, or hardware.<sup class="cite"><a href="#src1">[1]</a></sup> AI-enabled platforms in general construction now model "supplier performance trends, regional inflation, and logistics constraints," but this has not yet reached the wood products market.<sup class="cite"><a href="#src1">[1]</a></sup></p>
+      <p><strong>Business impact:</strong> Bids submitted with last year's lumber pricing; awarded jobs that are immediately underwater; pricing inconsistency across the team.</p>
+      <div class="item-meta"><span class="item-tag badge-red">Product Gap</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">06</div>
+    <div class="item-body">
+      <h4>Software That Requires Experts to Use</h4>
+      <p><strong>Root cause:</strong> Microvellum, for instance, demands fluency in both AutoCAD and Excel — a substantial barrier for most shop-floor-to-estimating transitions.<sup class="cite"><a href="#src9">[9]</a></sup> INNERGY's steep learning curve is acknowledged even by enthusiastic users, who note it "often requires continuous staff training."<sup class="cite"><a href="#src18">[18]</a></sup></p>
+      <p><strong>Business impact:</strong> High implementation costs and timelines; resistance from estimating staff; poor adoption rates; firms default back to Excel after a failed rollout.</p>
+      <div class="item-meta"><span class="item-tag badge-yellow">Product + Training Gap</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">07</div>
+    <div class="item-body">
+      <h4>Disconnect Between Estimate and Production</h4>
+      <p><strong>Root cause:</strong> Estimating tools output a cost document; production tools need a material list and work order. INNERGY is the primary tool attempting to bridge this for millwork, with its MES (Manufacturing Execution System) connecting shop floor tracking to estimates.<sup class="cite"><a href="#src10">[10]</a></sup> For the majority of firms not on an ERP, the gap is manual and universal.</p>
+      <p><strong>Business impact:</strong> Engineering must rebuild the job from scratch after award; discrepancies between what was bid and what was made; delayed production starts.</p>
+      <div class="item-meta"><span class="item-tag badge-red">Product Gap (ecosystem fragmentation)</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">08</div>
+    <div class="item-body">
+      <h4>Poor Mobile Access for Field Review</h4>
+      <p><strong>Root cause:</strong> Many millwork estimating tools are desktop-only or have limited tablet/phone apps. Bluebeam Cloud provides mobile access but is limited compared to the full desktop application.<sup class="cite"><a href="#src2">[2]</a></sup> Alliance Millsoft requires a USB security key inserted in the active computer — precluding tablet use entirely.<sup class="cite"><a href="#src14">[14]</a></sup></p>
+      <p><strong>Business impact:</strong> Notes taken in the field don't make it into the estimate; field clarifications are lost; additional site visits needed.</p>
+      <div class="item-meta"><span class="item-tag badge-yellow">Product Gap</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">09</div>
+    <div class="item-body">
+      <h4>No Standardized Scope Language for GC Proposals</h4>
+      <p><strong>Root cause:</strong> Each estimator formats proposals differently; GCs receive inconsistent scope language that makes leveling difficult. The Bluebeam Spaces workflow helps produce scope documentation for pre-bid leveling, specifically cited as a GC requirement by Towne Millwork estimators,<sup class="cite"><a href="#src4">[4]</a></sup> but proposal language standardization remains a process problem most tools don't solve.</p>
+      <p><strong>Business impact:</strong> GCs level bids incorrectly; firms lose jobs on scope misunderstanding, not price; rework post-award when scope is contested.</p>
+      <div class="item-meta"><span class="item-tag badge-yellow">Process + Product Gap</span></div>
+    </div>
+  </div>
+
+  <div class="numbered-item">
+    <div class="item-num">10</div>
+    <div class="item-body">
+      <h4>Customer Support Failures at Critical Bid Moments</h4>
+      <p><strong>Root cause:</strong> Bluebeam has received escalating user complaints about support responsiveness. Reviews explicitly state: "Bluebeam Has Great Features, But Terrible Support — Look Elsewhere" and describe subscriptions that "stop working" with tickets going "unanswered."<sup class="cite"><a href="#src22">[22]</a></sup><sup class="cite"><a href="#src23">[23]</a></sup> This pattern is not unique to Bluebeam but is particularly acute given its central role in bid-day workflows.</p>
+      <p><strong>Business impact:</strong> Missed bid deadlines; lost bids; team frustration; churn away from platforms despite switching costs.</p>
+      <div class="item-meta"><span class="item-tag badge-yellow">Vendor Service Gap</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 8 -->
+<!-- ============================================================ -->
+<section id="buying">
+  <div class="section-header">
+    <div class="section-num">8</div>
+    <div class="section-title">Buying Criteria & Decision Framework</div>
+  </div>
+
+  <p>Typical millwork estimating software is priced between <strong>$50–$200/user/month</strong> for cloud solutions, with implementation fees ranging from $500–$5,000 depending on complexity.<sup class="cite"><a href="#src26">[26]</a></sup> CAD/CAM tools like Cabinet Vision ($5,000–$10,000 initial) and Microvellum ($10,000–$15,000 initial) carry higher upfront costs with ongoing support fees.<sup class="cite"><a href="#src7">[7]</a></sup></p>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-label">Small Millwork Firms (1–5 estimators, under $5M revenue)</div>
+      <div class="card-title">Prioritize speed, low cost, minimal IT</div>
+      <ul class="bullet-list">
+        <li>Primary tool: <strong>Bluebeam Revu</strong> (Core, $330/yr/user)<sup class="cite"><a href="#src20">[20]</a></sup> for takeoff + Alliance Millsoft for pricing<sup class="cite"><a href="#src14">[14]</a></sup></li>
+        <li>Or: <strong>TradeTek</strong> as a simpler all-in-one for trim/millwork<sup class="cite"><a href="#src13">[13]</a></sup></li>
+        <li>Avoid: INNERGY, ProEst, Microvellum (over-engineered and over-priced)</li>
+        <li>Spreadsheet exit path: PlanSwift + Alliance Millsoft is the easiest migration from Excel<sup class="cite"><a href="#src15">[15]</a></sup></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Mid-Size Millwork Firms (5–20 employees, $5M–$25M revenue)</div>
+      <div class="card-title">Prioritize workflow integration and team collaboration</div>
+      <ul class="bullet-list">
+        <li>Primary: <strong>Bluebeam</strong> (takeoff/markup) + <strong>INNERGY</strong><sup class="cite"><a href="#src10">[10]</a></sup> (estimating/ERP) or ProEst<sup class="cite"><a href="#src17">[17]</a></sup> (estimating)</li>
+        <li>If shop-linked: evaluate INNERGY or Microvellum depending on CNC equipment<sup class="cite"><a href="#src9">[9]</a></sup></li>
+        <li>Key criteria: Cloud collaboration, multi-estimator support, bid pipeline tracking, producible proposals</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Large Commercial Millwork Firms (20+ employees, $25M+)</div>
+      <div class="card-title">Prioritize integration, reporting, and production linkage</div>
+      <ul class="bullet-list">
+        <li>Full stack: <strong>Bluebeam</strong> + <strong>INNERGY</strong><sup class="cite"><a href="#src10">[10]</a></sup> + <strong>Microvellum or Cabinet Vision</strong><sup class="cite"><a href="#src8">[8]</a></sup><sup class="cite"><a href="#src9">[9]</a></sup> (design/production)</li>
+        <li>Key criteria: ERP integration, job cost vs. estimate tracking, shop floor visibility, cloud access</li>
+        <li>Require: structured implementation plan, staff training program, change management</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Shops That Also Fabricate (with CNC)</div>
+      <div class="card-title">Prioritize design-to-production continuity</div>
+      <ul class="bullet-list">
+        <li>Cabinet/residential: <strong>Cabinet Vision</strong> (design + CNC)<sup class="cite"><a href="#src8">[8]</a></sup> + Bluebeam (drawing takeoff when needed)</li>
+        <li>Commercial millwork with CNC: <strong>Microvellum</strong><sup class="cite"><a href="#src9">[9]</a></sup> (design + CNC) + INNERGY</li>
+        <li>Smaller shops transitioning to CNC: <strong>Mozaik</strong> for simplicity — note its limitations for custom architectural work;<sup class="cite"><a href="#src12">[12]</a></sup> one experienced commercial millwork user reports Cabinet Vision takes "half the time" for custom work<sup class="cite"><a href="#src12">[12]</a></sup></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Teams Currently Using Bluebeam</div>
+      <div class="card-title">Build around Bluebeam — add what's missing</div>
+      <ul class="bullet-list">
+        <li>Keep Bluebeam for takeoff and drawing markup; it is best-in-class for this<sup class="cite"><a href="#src3">[3]</a></sup></li>
+        <li>Add: Alliance Millsoft (millwork pricing)<sup class="cite"><a href="#src14">[14]</a></sup> or INNERGY ERP (full platform)<sup class="cite"><a href="#src10">[10]</a></sup></li>
+        <li>Watch: Bluebeam Max (2026) for AI-assisted scope identification<sup class="cite"><a href="#src2">[2]</a></sup></li>
+        <li>Do not attempt to force Bluebeam into a full estimating role via Custom Columns alone at scale<sup class="cite"><a href="#src4">[4]</a></sup></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Firms Moving from Spreadsheets</div>
+      <div class="card-title">Prioritize adoption over perfection</div>
+      <ul class="bullet-list">
+        <li>Best first step: <strong>TradeTek</strong><sup class="cite"><a href="#src13">[13]</a></sup> or <strong>STACK</strong><sup class="cite"><a href="#src16">[16]</a></sup> — low learning curve, fast ROI</li>
+        <li>If millwork-specific pricing is the bottleneck: <strong>Alliance Millsoft</strong> with PlanSwift integration<sup class="cite"><a href="#src15">[15]</a></sup></li>
+        <li>Success driver: assign an internal champion; run parallel with spreadsheets for first 2–3 bids; don't go live solo on a major bid</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Vendor Selection Checklist</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Criterion</th><th>Questions to Ask</th><th>Weight (Millwork)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Millwork Specificity</td><td>Does it have woodwork assemblies, material variables (species, finish, profile), and millwork labor rate logic out of the box?<sup class="cite"><a href="#src14">[14]</a></sup></td><td><span class="badge badge-red">Critical</span></td></tr>
+        <tr><td>Drawing Import & Takeoff</td><td>Can I measure directly from PDF architectural sets? Is it fast and accurate?<sup class="cite"><a href="#src3">[3]</a></sup></td><td><span class="badge badge-red">Critical</span></td></tr>
+        <tr><td>Takeoff-to-Estimate Flow</td><td>Do quantities from takeoff automatically populate line items? Or is there a manual export step?<sup class="cite"><a href="#src17">[17]</a></sup></td><td><span class="badge badge-red">Critical</span></td></tr>
+        <tr><td>Proposal Output</td><td>Can I generate a professional, branded bid proposal directly from the estimate?<sup class="cite"><a href="#src13">[13]</a></sup></td><td><span class="badge badge-blue">High</span></td></tr>
+        <tr><td>Revision Handling</td><td>Can I identify what changed between drawing revisions and update affected takeoff?<sup class="cite"><a href="#src3">[3]</a></sup></td><td><span class="badge badge-blue">High</span></td></tr>
+        <tr><td>Collaboration</td><td>Can multiple estimators work concurrently? Can GCs or PMs be given read access?<sup class="cite"><a href="#src20">[20]</a></sup></td><td><span class="badge badge-blue">High</span></td></tr>
+        <tr><td>Production Integration</td><td>Can awarded estimates feed shop orders, cut lists, or ERP production modules?<sup class="cite"><a href="#src10">[10]</a></sup></td><td><span class="badge badge-yellow">Moderate–High (if shop integrated)</span></td></tr>
+        <tr><td>Implementation Time</td><td>How many weeks to go live and produce first real bid?<sup class="cite"><a href="#src26">[26]</a></sup></td><td><span class="badge badge-blue">High</span></td></tr>
+        <tr><td>Pricing / TCO</td><td>What is the per-seat cost, implementation fee, and annual support cost?<sup class="cite"><a href="#src26">[26]</a></sup></td><td><span class="badge badge-yellow">Moderate</span></td></tr>
+        <tr><td>Support Quality</td><td>Is support responsive? Is there a millwork-experienced support team?<sup class="cite"><a href="#src22">[22]</a></sup></td><td><span class="badge badge-blue">High</span></td></tr>
+        <tr><td>Cloud vs. Desktop</td><td>Does the team need remote/tablet access? Is offline access required?<sup class="cite"><a href="#src1">[1]</a></sup></td><td><span class="badge badge-yellow">Moderate (firm-specific)</span></td></tr>
+        <tr><td>AWI Alignment</td><td>Does the platform understand AWI grade standards, AWI manual references, and typical millwork spec language?<sup class="cite"><a href="#src14">[14]</a></sup></td><td><span class="badge badge-yellow">Moderate</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 9 -->
+<!-- ============================================================ -->
+<section id="stacks">
+  <div class="section-header">
+    <div class="section-num">9</div>
+    <div class="section-title">Recommended Software Stacks by Scenario</div>
+  </div>
+
+  <div class="scenario-stack">
+    <div class="scenario-header">📐 Scenario A — Estimating-Only Millwork Contractor (No Shop)</div>
+    <div class="scenario-body">
+      <div class="scenario-row">
+        <div class="scenario-role">DRAWING LAYER</div>
+        <div>Bluebeam Revu<sup class="cite"><a href="#src3">[3]</a></sup> — PDF import, takeoff, scope markup, revision management, GC collaboration via Studio</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">ESTIMATING LAYER</div>
+        <div>Alliance Millsoft<sup class="cite"><a href="#src14">[14]</a></sup> (millwork-native pricing logic) or INNERGY ERP Estimating module<sup class="cite"><a href="#src10">[10]</a></sup> for teams ready for a full platform</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">PROPOSAL LAYER</div>
+        <div>Alliance Millsoft proposal export OR TradeTek<sup class="cite"><a href="#src13">[13]</a></sup> for firms that prefer an integrated takeoff-to-proposal tool</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">BID MANAGEMENT</div>
+        <div>Simple spreadsheet tracker or ProEst CRM<sup class="cite"><a href="#src17">[17]</a></sup> if bid volume is high enough to justify the cost</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-stack">
+    <div class="scenario-header">🏗️ Scenario B — Millwork Contractor with Production Shop (No CNC)</div>
+    <div class="scenario-body">
+      <div class="scenario-row">
+        <div class="scenario-role">DRAWING LAYER</div>
+        <div>Bluebeam Revu<sup class="cite"><a href="#src3">[3]</a></sup> — all drawing work, takeoff, and GC communication</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">ESTIMATING + ERP</div>
+        <div>INNERGY<sup class="cite"><a href="#src10">[10]</a></sup> — covers estimating, engineering handoff, production scheduling, and job cost tracking in one platform. Real users confirm switching from a "hodgepodge of software" and not looking back<sup class="cite"><a href="#src18">[18]</a></sup></div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">ACCOUNTING</div>
+        <div>QuickBooks or Sage — integrate via INNERGY connectors<sup class="cite"><a href="#src10">[10]</a></sup></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-stack">
+    <div class="scenario-header">🔩 Scenario C — Cabinet Shop with CNC (Residential / Light Commercial)</div>
+    <div class="scenario-body">
+      <div class="scenario-row">
+        <div class="scenario-role">DRAWING LAYER</div>
+        <div>Bluebeam Revu for when architectural PDFs are received; otherwise design begins in CAD/CAM tool</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">DESIGN + PRODUCTION</div>
+        <div>Cabinet Vision<sup class="cite"><a href="#src8">[8]</a></sup> — design, rendering, cut lists, TrueShape nesting, S2M CNC output. Holds ~40% of US cabinet software market<sup class="cite"><a href="#src7">[7]</a></sup> and 85% user satisfaction rate<sup class="cite"><a href="#src7">[7]</a></sup></div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">ESTIMATING</div>
+        <div>Cabinet Vision BOM-based cost estimate (basic) OR Alliance Millsoft<sup class="cite"><a href="#src14">[14]</a></sup> for more rigorous pre-design quoting from drawings</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">ALTERNATIVE</div>
+        <div>Smaller shops or CNC beginners: Mozaik CNC Complete<sup class="cite"><a href="#src11">[11]</a></sup> — faster to learn, lower cost, adequate for production cabinets but limited on custom architectural millwork per experienced commercial users<sup class="cite"><a href="#src12">[12]</a></sup></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-stack">
+    <div class="scenario-header">🏢 Scenario D — Large Commercial Casework / Millwork Firm</div>
+    <div class="scenario-body">
+      <div class="scenario-row">
+        <div class="scenario-role">DRAWING LAYER</div>
+        <div>Bluebeam Revu<sup class="cite"><a href="#src3">[3]</a></sup> — enterprise license; Studio for all GC/owner drawing coordination; multiple estimators on Studio Sessions simultaneously</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">ESTIMATING + ERP</div>
+        <div>INNERGY<sup class="cite"><a href="#src10">[10]</a></sup> (preferred for millwork-native ERP) OR ProEst<sup class="cite"><a href="#src17">[17]</a></sup> + INNERGY in a hybrid where ProEst manages CRM/pipeline and INNERGY handles production</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">DESIGN + ENGINEERING</div>
+        <div>Microvellum<sup class="cite"><a href="#src9">[9]</a></sup> — AutoCAD-based; best for complex commercial millwork with custom profiles, unique geometry, HOMAG or other commercial CNC integration. ~25% of US market<sup class="cite"><a href="#src7">[7]</a></sup></div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">ACCOUNTING</div>
+        <div>Sage 300 or Epicor — connected via INNERGY or direct integration<sup class="cite"><a href="#src14">[14]</a></sup></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario-stack">
+    <div class="scenario-header">🏛️ Scenario E — General Contractor Managing Millwork Subcontractors</div>
+    <div class="scenario-body">
+      <div class="scenario-row">
+        <div class="scenario-role">DRAWING PLATFORM</div>
+        <div>Bluebeam Revu<sup class="cite"><a href="#src3">[3]</a></sup> — universal coordination medium; GC creates Studio Sessions and invites millwork subs for collaborative drawing review and RFI management</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">ESTIMATING / BUDGET</div>
+        <div>ProEst or Sage Estimating<sup class="cite"><a href="#src17">[17]</a></sup> — GC-level budget tracking for millwork scope as a line item</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-role">SUBCONTRACTOR MGMT</div>
+        <div>Procore or Autodesk Build — for subcontract management, RFIs, submittals; integrates with Bluebeam Studio<sup class="cite"><a href="#src3">[3]</a></sup></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 10 -->
+<!-- ============================================================ -->
+<section id="future">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title">Future Outlook — The Next 3–5 Years</div>
+  </div>
+
+  <h3>AI in Takeoff and Estimating</h3>
+  <p>Artificial intelligence is moving from a marketing claim to a measurable operational tool in construction estimating. AI-enabled platforms now deliver <strong>85–90% price-forecast accuracy</strong> and trim bid preparation time by <strong>up to 40%</strong> for general construction.<sup class="cite"><a href="#src1">[1]</a></sup> Early adopters using computer-vision-powered takeoff tools report dramatic efficiency gains: in one documented case, AI reduced takeoff time from 30 hours to 4 hours per week, enabling a contractor to increase bid volume from 4 to 12 projects per month — a 40% revenue increase without adding staff.<sup class="cite"><a href="#src28">[28]</a></sup> For millwork specifically, AI value will be highest in:</p>
+  <ul class="bullet-list">
+    <li>Auto-identifying all millwork elevations across a drawing set and flagging them for estimator review</li>
+    <li>Extracting door and casework schedules from drawing notes and cross-referencing with plan locations</li>
+    <li>Counting instances of repeating elements (cabinet runs, trim profiles, panel sections) across multiple sheets</li>
+    <li>Detecting scope conflicts or ambiguities between drawing notes and elevations<sup class="cite"><a href="#src2">[2]</a></sup></li>
+  </ul>
+  <p><strong>Bluebeam Max (announced for early 2026)</strong> integrates Anthropic's Claude AI model to allow prompt-based interaction with drawing content.<sup class="cite"><a href="#src2">[2]</a></sup> Users will be able to scan construction documents for design issues, scope gaps, and discrepancies, with results delivered as AI-generated markups, dashboards, and trackable issues.<sup class="cite"><a href="#src2">[2]</a></sup></p>
+
+  <div class="callout blue">
+    <div class="callout-label">AI Reality Check</div>
+    AI-powered takeoff reduces time on the quantity-counting step but does not yet handle the millwork-specific complexity of species selection, finish variables, hardware configuration, or assembly-based pricing. The estimating judgment layer remains human. Treat AI as a first-pass assistant, not an estimator replacement.<sup class="cite"><a href="#src28">[28]</a></sup>
+  </div>
+
+  <h3>Scope Extraction from Architect Sets</h3>
+  <p>AWS and industry partners have already demonstrated computer vision and LLM systems that process thousands of architectural drawings with high accuracy to reduce construction risk.<sup class="cite"><a href="#src30">[30]</a></sup> As of 2025, about 70% of the construction industry still uses drawings in paper or PDF form.<sup class="cite"><a href="#src30">[30]</a></sup> Within 2–3 years, AI tools will be able to read an architect's full drawing package, cross-reference specifications (CSI Division 06), and produce a preliminary millwork scope list automatically. The challenge is millwork's high variability — the same "casework" note can mean commodity melamine or custom hardwood depending on the spec section.</p>
+
+  <h3>Quote Automation</h3>
+  <p>Simple, repeatable millwork scopes (standard office casework packages, door/hardware schedules, paint-grade trim) are strong candidates for automated quote generation within 3–5 years. Togal.ai already offers "the industry's most advanced pre-construction technology fine-tuned for automatically detecting, measuring, comparing and labeling project spaces and features on architectural drawings."<sup class="cite"><a href="#src29">[29]</a></sup> Complex architectural millwork (custom profiles, library millwork, hospitality feature walls) will remain human-intensive for the foreseeable future.</p>
+
+  <h3>Cloud Collaboration Trends</h3>
+  <p>Cloud-first is the clear direction. <strong>68.7% of construction estimating software revenue in 2024 came from cloud deployments</strong>, growing at an 11.4% CAGR.<sup class="cite"><a href="#src1">[1]</a></sup> For millwork firms, this means desktop-only tools like Alliance Millsoft face adoption headwinds among growth-stage firms,<sup class="cite"><a href="#src14">[14]</a></sup> while INNERGY's cloud-native design and Bluebeam's Studio platform are structurally advantaged.</p>
+
+  <h3>Market Evolution — 2025 to 2030</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Trend</th><th>Current State (2025–2026)</th><th>Projected State (2028–2030)</th><th>Impact on Millwork Firms</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI Takeoff <sup class="cite"><a href="#src2">[2]</a></sup><sup class="cite"><a href="#src28">[28]</a></sup><sup class="cite"><a href="#src29">[29]</a></sup></td>
+          <td>VisualSearch (Bluebeam), Togal.ai, Kreo — symbol counting and area measurement</td>
+          <td>Full scope extraction from mixed drawing sets with 85–90%+ accuracy for standard elements</td>
+          <td>Dramatic reduction in takeoff time; estimators shift to verification and judgment roles</td>
+        </tr>
+        <tr>
+          <td>AI Estimating Assist <sup class="cite"><a href="#src1">[1]</a></sup><sup class="cite"><a href="#src17">[17]</a></sup></td>
+          <td>ProEst AI 2026 suggests assemblies and flags quantity gaps; STACK quantity suggestions</td>
+          <td>AI-suggested millwork assemblies, alternates, and VE options based on historical data</td>
+          <td>Faster bid prep; institutional knowledge embedded in AI, not just in estimators' heads</td>
+        </tr>
+        <tr>
+          <td>ERP Consolidation <sup class="cite"><a href="#src10">[10]</a></sup><sup class="cite"><a href="#src18">[18]</a></sup></td>
+          <td>Fragmented: Bluebeam + spreadsheet + Microvellum/Alliance Millsoft + QuickBooks</td>
+          <td>Platform consolidation; INNERGY-style all-in-one dominates growth firms; point tools survive in SMB</td>
+          <td>Fewer platforms per firm; lower data re-entry risk; higher upfront implementation investment</td>
+        </tr>
+        <tr>
+          <td>Cloud & Mobile <sup class="cite"><a href="#src1">[1]</a></sup></td>
+          <td>Bluebeam Cloud, STACK, INNERGY cloud; most tools have mobile limitations</td>
+          <td>Full mobile estimating and field verification standard; 68.7% → 80%+ cloud share</td>
+          <td>Faster RFI response; real-time bid updates; distributed estimating teams possible</td>
+        </tr>
+        <tr>
+          <td>BIM Integration <sup class="cite"><a href="#src24">[24]</a></sup></td>
+          <td>Limited for millwork; BIM adoption can reduce project costs by up to 20% per NIBS research</td>
+          <td>BIM-linked quantity extraction for millwork elements becomes viable on public/large commercial jobs</td>
+          <td>Firms that invest in BIM literacy gain speed advantages on large-scale commercial bids</td>
+        </tr>
+        <tr>
+          <td>Live Pricing Feeds <sup class="cite"><a href="#src1">[1]</a></sup></td>
+          <td>No live wood commodity pricing in any estimating tool; general construction tools now embed price-forecast AI</td>
+          <td>Construction material pricing APIs begin integrating into estimating platforms</td>
+          <td>Bids priced at current market; escalation clauses become more precise; margin protection improves</td>
+        </tr>
+        <tr>
+          <td>New Entrants / AI-Native Tools <sup class="cite"><a href="#src29">[29]</a></sup><sup class="cite"><a href="#src30">[30]</a></sup></td>
+          <td>General AI tools entering construction (Togal.ai, Kreo); no millwork-specific AI estimator yet</td>
+          <td>Millwork-native AI estimating tool emerges — likely from a well-funded startup or major platform acquisition</td>
+          <td>Major disruption potential; early adopters gain competitive advantage; late adopters face margin compression</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The Product Opportunity — What a Next-Generation Millwork Estimating Tool Would Do</h3>
+  <p>No platform currently delivers all of these capabilities. The firm — or startup — that builds this for the U.S. architectural millwork market will find a large, underserved, and willing-to-pay audience. The market is ready; the product does not yet exist.<sup class="cite"><a href="#src1">[1]</a></sup><sup class="cite"><a href="#src19">[19]</a></sup></p>
+  <ul class="report-list">
+    <li><strong>AI scope extraction:</strong> Ingest an architect's drawing package and auto-identify all millwork-relevant elements across floor plans, elevations, sections, schedules, and spec sections<sup class="cite"><a href="#src2">[2]</a></sup><sup class="cite"><a href="#src30">[30]</a></sup></li>
+    <li><strong>Millwork-native assembly engine:</strong> Pre-built assemblies for casework, paneling, trim, doors, and custom millwork with parametric variables (species, grade, finish, hardware, profile) aligned with AWI standards<sup class="cite"><a href="#src14">[14]</a></sup></li>
+    <li><strong>Seamless takeoff-to-price:</strong> Quantities from drawing analysis automatically populate assembly pricing — zero manual re-entry<sup class="cite"><a href="#src17">[17]</a></sup></li>
+    <li><strong>Live or regularly updated material pricing:</strong> Integration with supplier price lists or commodity indices for lumber, panels, hardware<sup class="cite"><a href="#src1">[1]</a></sup></li>
+    <li><strong>Alternates and VE builder:</strong> One-click generation of alternate bid scenarios (Grade A vs. Grade B; solid wood vs. MDF core; etc.)</li>
+    <li><strong>Professional proposal generator:</strong> Branded, scope-clear proposals formatted for GC leveling requirements<sup class="cite"><a href="#src13">[13]</a></sup></li>
+    <li><strong>Revision management:</strong> When a new drawing set arrives, auto-detect changes and flag affected line items for estimator review<sup class="cite"><a href="#src3">[3]</a></sup></li>
+    <li><strong>Estimate-to-production bridge:</strong> Award-ready export to shop ERP, cut list format, or CNC input<sup class="cite"><a href="#src10">[10]</a></sup></li>
+    <li><strong>Cloud-native collaboration:</strong> Multi-estimator concurrent access; GC Studio-style collaboration; mobile-ready for site walks<sup class="cite"><a href="#src1">[1]</a></sup></li>
+    <li><strong>Bid intelligence:</strong> Win/loss tracking; historical data to inform markup strategy; comparable project cost benchmarking<sup class="cite"><a href="#src17">[17]</a></sup></li>
+  </ul>
+
+  <div class="callout">
+    <div class="callout-label">Market Gap Summary</div>
+    The construction estimating software market is growing at 12.89% CAGR to $5.01B by 2030.<sup class="cite"><a href="#src1">[1]</a></sup> The specialty contractor segment — which includes millwork — is growing fastest at 10.5% CAGR driven by SaaS pricing, simpler onboarding, and competitive pressure to digitize.<sup class="cite"><a href="#src1">[1]</a></sup> The firm that solves the millwork-specific workflow gap will capture a disproportionate share of this growth.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SOURCES -->
+<!-- ============================================================ -->
+<section id="sources">
+  <div class="section-header">
+    <div class="section-num" style="color:#C9A84C">S</div>
+    <div class="section-title">Sources & References</div>
+  </div>
+
+  <div class="directional-note">
+    ⚠ Directional Note: Market size figures, market share percentages, and satisfaction ratings are sourced from third-party industry analyses and vendor-cited user surveys as noted. They should be treated as directional estimates unless independently validated. Pricing figures reflect publicly available information as of early 2026 and are subject to change. Product capability assessments are based on vendor documentation, user reviews, and published industry analyses. This report does not represent an exhaustive audit of any individual platform.
+  </div>
+
+  <ol class="source-list">
+    <li id="src1">
+      Mordor Intelligence. "Construction Estimating Software Market Size, Growth &amp; Share Report 2030." 2025–2026. Market size, CAGR, cloud share, AI accuracy, specialty contractor CAGR, AI forecast data. <a href="https://www.mordorintelligence.com/industry-reports/construction-estimating-software-market" target="_blank">mordorintelligence.com</a> <span class="source-type">Market Research Report</span>
+    </li>
+    <li id="src2">
+      Bluebeam. "AI and Innovation — Bluebeam Construction Software." Product page, 2026. Bluebeam Max announcement, VisualSearch, Claude/Anthropic AI integration, OCR, Dynamic Fill. <a href="https://www.bluebeam.com/product/ai-and-innovation/" target="_blank">bluebeam.com</a> <span class="source-type">Vendor Website</span>
+    </li>
+    <li id="src3">
+      Bluebeam. "Construction Takeoff Software — Digital Solutions for Accurate Estimation." Product page, 2022–2026. Takeoff measurement types, scale calibration, Dynamic Fill, collaboration, integrations. <a href="https://www.bluebeam.com/workflows/takeoffs-and-estimation/" target="_blank">bluebeam.com</a> <span class="source-type">Vendor Website</span>
+    </li>
+    <li id="src4">
+      McLean, Doug (Towne Millwork) / UChapter2. "Creating a Detailed Scope List for Millwork Estimates Using Bluebeam Revu." October 2024. First-hand millwork estimator workflow; Spaces technique; quote on Revu's limitations for custom millwork. <a href="https://uchapter2.com/creating-a-detailed-scope-list-for-millwork-estimates-using-bluebeam-revu-guest-post-by-doug-mclean-of-towne-millwork/" target="_blank">uchapter2.com</a> <span class="source-type">Industry Case Study / Practitioner Article</span>
+    </li>
+    <li id="src5">
+      DeGroot, Troy / Built (Bluebeam Blog). "How Estimates for Assemblies Are Possible in Revu." October 2024. Custom assembly creation, Snap-to-Content, custom tool workflow for specialty contractors. <a href="https://blog.bluebeam.com/creating-assemblies-in-revu/" target="_blank">blog.bluebeam.com</a> <span class="source-type">Vendor-Published Practitioner Guide</span>
+    </li>
+    <li id="src6">
+      A2Z Millwork Design. "Millwork Estimate &amp; Quantity Take Off." 2023–2025. Bluebeam for millwork estimation; measurement tools; document management; collaboration. <a href="https://a2zmillwork.com/services/estimation-quantity-take-off/" target="_blank">a2zmillwork.com</a> <span class="source-type">Industry Services Provider</span>
+    </li>
+    <li id="src7">
+      A2Z Millwork Design. "What is Better: Microvellum or Cabinet Vision?" July 2025. Cabinet Vision ~40% US market share; Microvellum ~25%; satisfaction rates 85%/75%; pricing $5,000–$10,000 (CV) and $10,000–$15,000 (Microvellum). <a href="https://a2zmillwork.com/blog/what-is-better-microvellum-or-cabinet-vision/" target="_blank">a2zmillwork.com</a> <span class="source-type">Industry Analysis (Directional)</span>
+    </li>
+    <li id="src8">
+      iNNOVIAN. "Mozaik vs Other Cabinet Software: Which One Boosts Manufacturing the Most?" June 2025. Cabinet Vision (Hexagon) features: TrueShape Nesting, S2M Center, parametric control, training. Comparison with Mozaik, Microvellum, 2020 Design, CAD+T. <a href="https://www.innovianes.com/blogs/post/mozaik-vs-other-cabinet-software" target="_blank">innovianes.com</a> <span class="source-type">Industry Comparison Article</span>
+    </li>
+    <li id="src9">
+      Hitechcaddservices. "Microvellum vs Cabinet Vision: Best Millwork Design Tool." September 2025. Microvellum AutoCAD integration, parametric modeling, HOMAG CNC, complex geometry. Cabinet Vision ease of use, limited customization. <a href="https://www.hitechcaddservices.com/news/microvellum-vs-cabinet-vision-millwork-design/" target="_blank">hitechcaddservices.com</a> <span class="source-type">Industry Comparison Article</span>
+    </li>
+    <li id="src10">
+      INNERGY. Official website and product pages, 2024–2026. ERP features, INNERGY Design, MES, cloud-native, estimating to install workflow, Bottleneck Report. <a href="https://www.innergy.com" target="_blank">innergy.com</a> <span class="source-type">Vendor Website</span>
+    </li>
+    <li id="src11">
+      Woodshop News Magazine. "The next big leap." June 2014. Mozaik product suite: Design, Manufacturing, Optimization, CNC Complete. Vectric. Microvellum background (1991). <a href="https://www.woodshopnews.com/features/the-next-big-leap" target="_blank">woodshopnews.com</a> <span class="source-type">Trade Publication</span>
+    </li>
+    <li id="src12">
+      WOODWEB CNC Forum. "Mozaik versus CabinetVision." User-generated discussion. Commercial millwork practitioner (30 years) comparing Mozaik and Cabinet Vision: "I could do my job in half the time with CV." <a href="https://www.woodweb.com/forum_fdse_files/cnc/843629.html" target="_blank">woodweb.com</a> <span class="source-type">Industry Forum / User Testimonial</span>
+    </li>
+    <li id="src13">
+      TradeTek Software. "Millworks Estimating Software." Product page. Millworks Bundle, digital takeoff assemblies, database lists, bid proposal generation, Excel/PDF/CSV export, ERP integration. <a href="https://www.tradeteksoftware.com/millworks-estimating-software" target="_blank">tradeteksoftware.com</a> <span class="source-type">Vendor Website</span>
+    </li>
+    <li id="src14">
+      Alliance Millsoft. Official website, FAQ, and company information pages, 1994–2022. AWI membership (since 1994), dynamic variable pricing, USB security key licensing, PlanSwift integration, Excel export, millwork/casework specificity. <a href="https://alliancemillsoft.com" target="_blank">alliancemillsoft.com</a> <span class="source-type">Vendor Website</span>
+    </li>
+    <li id="src15">
+      Alliance Millsoft. "Alliance Millsoft integrates with Planswift Takeoff Software." 2013. PlanSwift integration; estimated 20% takeoff time savings and printing cost reduction. <a href="https://alliancemillsoft.com/planswift-integration/" target="_blank">alliancemillsoft.com</a> <span class="source-type">Vendor Integration Page</span>
+    </li>
+    <li id="src16">
+      STACK Construction Technologies. "Millwork Estimating Software for Construction Takeoff." Product page, November 2024. Digital takeoff tools, cost database integration, bid reporting, cloud collaboration, scalability. <a href="https://www.stackct.com/millwork-takeoff-estimating-construction-software/" target="_blank">stackct.com</a> <span class="source-type">Vendor Website</span>
+    </li>
+    <li id="src17">
+      Exeleon Magazine. "8 Construction Estimating Software Tools Ranked By ERP Integration Depth." February 2026. ProEst $300/user/month; AI engine 2026; STACK free tier, open API; cloud 65%+ of purchases in 2025; Trimble/Ryvit acquisition; ProEst integrated takeoff vs. Bluebeam/PlanSwift workflow. <a href="https://exeleonmagazine.com/8-construction-estimating-software-tools/" target="_blank">exeleonmagazine.com</a> <span class="source-type">Industry Analysis Article</span>
+    </li>
+    <li id="src18">
+      WOODWEB Business &amp; Management Forum. "ERP Software for whole company; anyone using these?" August 2024 / February 2025. INNERGY user testimonial ("never looking back"); criticism of steep learning curve and patchwork usage alongside INNERGY. <a href="https://woodweb.com/cgi-bin/forums/business.pl?read=872371" target="_blank">woodweb.com</a> <span class="source-type">Industry Forum / User Testimonials</span>
+    </li>
+    <li id="src19">
+      BreakingAC. "The Future of Millwork Estimating Services in the UK &amp; US Construction Industry." March 2026. Industry trends: digital workflows, outsourcing, revision management, talent gap, cloud platforms. <a href="https://breakingac.com/news/2026/mar/05/future-millwork-estimating-services-uk-us-construction-industry/" target="_blank">breakingac.com</a> <span class="source-type">Industry News Article</span>
+    </li>
+    <li id="src20">
+      Software Finder / SoftwareFinder.com. "Bluebeam Revu: Reviews, Demo &amp; Pricing." 2026. Pricing tiers: Basics $260, Core $330, Complete $440/user/year; Studio Sessions; collaboration features; user reviews. <a href="https://softwarefinder.com/project-management-software/bluebeam-revu" target="_blank">softwarefinder.com</a> <span class="source-type">Software Review Aggregator</span>
+    </li>
+    <li id="src21">
+      ThePricer.org. "How Much Does Bluebeam Cost?" September 2025, reviewed March 2026. Pricing: Basics $260, Core $330, Complete $440 per user per year. Late-2024 price increase (~10%). Plan comparisons and inclusions. <a href="https://www.thepricer.org/how-much-does-bluebeam-cost/" target="_blank">thepricer.org</a> <span class="source-type">Pricing Research</span>
+    </li>
+    <li id="src22">
+      SoftwareAdvice. "Bluebeam Revu Software Reviews." 2024–2026. User review: "Bluebeam Has Great Features, But Terrible Support — Look Elsewhere"; tickets going unanswered; subscriptions stopping working; support failures. <a href="https://www.softwareadvice.com/cms/bluebeam-revu-profile/" target="_blank">softwareadvice.com</a> <span class="source-type">User Review Aggregator</span>
+    </li>
+    <li id="src23">
+      SoftwareFinder. "Bluebeam Revu: An All-in-One Construction Project Management Tool Review." 2026. User reviews: subscription license expiry problems; support failures; performance issues with large files; mobile limitations. <a href="https://softwarefinder.com/project-management-software/bluebeam-revu/reviews" target="_blank">softwarefinder.com</a> <span class="source-type">User Review Aggregator</span>
+    </li>
+    <li id="src24">
+      BreakingAC. "The Future of Millwork Estimating Services in the UK &amp; US Construction Industry." March 2026. McKinsey reference: large projects 80% over budget; BIM reducing costs up to 20% (NIBS); revision management challenges. <a href="https://breakingac.com/news/2026/mar/05/future-millwork-estimating-services-uk-us-construction-industry/" target="_blank">breakingac.com</a> <span class="source-type">Industry News Article</span>
+    </li>
+    <li id="src25">
+      Breakline Solutions. "Microvellum or Cabinet Vision — Millwork Drafting Tools." August 2025. Microvellum: complex geometry, stability concerns; Cabinet Vision: user-friendly, 85% satisfaction. Supplemental market share figures. <a href="https://breaklinedrafting.com/blog/microvellum-or-cabinet-vision-millwork-drafting-tools" target="_blank">breaklinedrafting.com</a> <span class="source-type">Industry Comparison Article</span>
+    </li>
+    <li id="src26">
+      CountBricks.com. "Millwork Estimating Software Guide." February 2026. Pricing: $50–$200/user/month; implementation fees $500–$5,000; annual contract discounts 10–20%; selection checklist. <a href="https://www.countbricks.com/software/millwork-estimating-software-guide" target="_blank">countbricks.com</a> <span class="source-type">Software Buyer Guide</span>
+    </li>
+    <li id="src27">
+      SoftwareAdvice. "INNERGY Software Reviews, Demo &amp; Pricing." 2026. INNERGY ERP features: 3D CAD/CAM, MES, cloud-based, collaborative design, job cost visibility, production scheduling. <a href="https://www.softwareadvice.com/erp/innergy-profile/" target="_blank">softwareadvice.com</a> <span class="source-type">Software Review Aggregator</span>
+    </li>
+    <li id="src28">
+      Nedes Estimating. "How AI is transforming material takeoffs in 2026." January 2026. AI case study: contractor reduced takeoff from 30 hours to 4 hours/week; bid volume from 4 to 12/month; 40% revenue increase without additional staff. <a href="https://nedesestimating.com/how-ai-is-transforming-material-takeoffs-in-2026/" target="_blank">nedesestimating.com</a> <span class="source-type">Industry Article (Directional Case Study)</span>
+    </li>
+    <li id="src29">
+      Togal.ai. Official website. "Construction Takeoff Software for Estimators." AI for automatically detecting, measuring, comparing and labeling project spaces and features on architectural drawings. <a href="https://www.togal.ai" target="_blank">togal.ai</a> <span class="source-type">Vendor Website — Emerging AI Tool</span>
+    </li>
+    <li id="src30">
+      AWS Spatial Computing Blog. "AI-Powered Construction Document Analysis by Leveraging Computer Vision and Large Language Models." February 2025. TwinKnowledge + AWS PACE: scalable CV + LLM processing thousands of architectural drawings. 70%+ of industry still uses paper/PDF blueprints. <a href="https://aws.amazon.com/blogs/spatial/ai-powered-construction-document-analysis-by-leveraging-computer-vision-and-large-language-models/" target="_blank">aws.amazon.com</a> <span class="source-type">Technical Research / Case Study</span>
+    </li>
+  </ol>
+</section>
+
+</div><!-- END CONTAINER -->
+
+<footer>
+  MILLWORK ESTIMATING SOFTWARE — MARKET &amp; COMPETITIVE ANALYSIS 2025–2026 &nbsp;|&nbsp; 30 SOURCES CITED &nbsp;|&nbsp; DIRECTIONAL DATA LABELED WHERE APPLICABLE &nbsp;|&nbsp; APRIL 2026
+</footer>
+
+</body>
+</html>
