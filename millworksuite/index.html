@@ -199,7 +199,7 @@ nav.scrolled{border-bottom-color:var(--border)}
 .int-left h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.1;color:var(--text);margin-bottom:1.2rem}
 .int-left h2 em{font-style:italic;color:var(--teal)}
 .int-left p{font-size:.96rem;line-height:1.8;color:var(--muted);font-weight:300;margin-bottom:2rem}
-.int-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-s)}
+.int-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border-s)}
 .int-card{background:var(--panel);padding:2rem 1.8rem;transition:background .2s;
   display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
 .int-card:hover{background:var(--raise)}
@@ -305,7 +305,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       AI Estimating · Direct to Drafting
     </div>
     <h1>Stop estimating manually.<br><em>Start closing faster.</em></h1>
-    <p class="hero-sub">MillworkSuite is the AI-powered platform built exclusively for millwork and casework estimating. Upload any set of architectural drawings and get a complete, priced scope of work — in minutes, not hours. Export directly to Excel or your CAD system and start shop drawings immediately.</p>
+    <p class="hero-sub">MillworkSuite is the AI-powered platform built exclusively for millwork and casework estimating. Upload any set of PDF architectural drawings and create a complete, priced scope of work — in minutes, not hours. Export directly to Excel for pricing or CAD system to jump start your shop drawings immediately.</p>
     <div class="hero-actions">
       <a href="#demo" class="btn-primary">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -314,10 +314,8 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       <a href="#features" class="btn-secondary">Explore Features</a>
     </div>
     <div class="hero-stats">
-      <div class="h-stat"><div class="h-stat-num">14+</div><div class="h-stat-label">Elevations detected per sheet</div></div>
-      <div class="h-stat"><div class="h-stat-num">AI</div><div class="h-stat-label">Scale-calibrated measurement</div></div>
-      <div class="h-stat"><div class="h-stat-num">1-click</div><div class="h-stat-label">Scope of work export</div></div>
-      <div class="h-stat"><div class="h-stat-num">2 CAD</div><div class="h-stat-label">Microvellum &amp; CabinetVision</div></div>
+      <div class="h-stat"><div class="h-stat-num">AI</div><div class="h-stat-label">Processing — On Demand or Batch</div></div>
+      <div class="h-stat"><div class="h-stat-num">CAD</div><div class="h-stat-label">Export — Microvellum &amp; CabinetVision</div></div>
     </div>
   </div>
 </section>
@@ -325,15 +323,15 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
   <div class="reveal">
     <div class="section-tag">The Problem</div>
     <h2>Manual millwork<br>estimating is <em>broken.</em></h2>
-    <p class="problem-body">Every millwork estimator knows the drill: download a 300-page PDF, manually sort and rename every sheet, hunt through floor plans for elevation callouts, flip back and forth between pages, transcribe dimensions by hand — then do it all again when the drawings are revised.</p>
-    <p class="problem-body">It takes hours. It introduces errors. And it delays your ability to submit competitive bids on time.</p>
+    <p class="problem-body">Every millwork estimator knows the drill: download a 300-page PDF, manually sort and rename every sheet, hunt through floor plans for elevation callouts, flip back and forth between pages, manually measure all the casework items — then do it all again when the drawings are revised.</p>
+    <p class="problem-body">It takes days-to-weeks. It introduces errors. And it delays your ability to submit competitive bids on time.</p>
   </div>
   <div class="pain-list reveal rd2">
-    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Hours sorting and renaming drawing sheets</strong> — manually organising revision sets before any work can begin.</div></div>
+    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Hours sorting and renaming drawing sheets</strong> — manually organizing drawing sets before any work can begin.</div></div>
     <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Hunting elevation callouts across dozens of pages</strong> — no connection between floor plan markers and detail sheets.</div></div>
-    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Manual dimension transcription errors</strong> — scaling by hand introduces mistakes that compound through the estimate.</div></div>
-    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Re-entering data into CAD</strong> — after estimating, every cabinet item typed manually into Microvellum or CabinetVision from scratch.</div></div>
-    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Slow bid cycle</strong> — the longer it takes to estimate, the fewer bids you can submit and the less competitive your pricing.</div></div>
+    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Manual dimension transcription errors</strong> — scaling by hand introduces mistakes that compound errors throughout your estimate.</div></div>
+    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Re-entering data into CAD</strong>— after estimating, every cabinet item manually entered into Microvellum or CabinetVision from scratch.</div></div>
+    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Slow bid cycle</strong> — the longer it takes to estimate, the fewer bids you can submit and the less time you can spend on closing the deal.</div></div>
   </div>
 </section>
 <section class="features" id="features">
@@ -346,8 +344,8 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
     <div class="feat-card reveal">
       <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10"/><path d="M16 18l2 2 4-4" stroke-width="1.8"/></svg></div>
       <div class="feat-num">Feature 01</div>
-      <div class="feat-name">Auto Page Organisation</div>
-      <p class="feat-desc">Load any architectural PDF and every page is instantly renamed and organised by drawing set. No manual sorting, no renaming, regardless of how many sheets or revisions the set contains.</p>
+      <div class="feat-name">Auto Page Organization</div>
+      <p class="feat-desc">Load any architectural PDF and every page is instantly renamed and organized by drawing set. No manual sorting, no renaming, regardless of how many sheets or revisions the set contains.</p>
     </div>
     <div class="feat-card reveal rd1">
       <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M2 12h4l3-7 4 14 3-7h6"/><circle cx="19" cy="5" r="2" stroke-width="1.4"/></svg></div>
@@ -359,25 +357,25 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 3v18M3 9h6M3 15h6"/></svg></div>
       <div class="feat-num">Feature 03</div>
       <div class="feat-name">Floor Plan Intelligence</div>
-      <p class="feat-desc">The AI scans floor plans to detect rooms, walls, and elevation markers. Colour-coded symbols identify identical rooms for quantity estimates. Yellow markers link directly to the elevation — every callout connected to its detail sheet.</p>
+      <p class="feat-desc">The AI scans floor plans to detect rooms and elevation markers. Color-coded symbols count identical rooms for quantity estimates. Page and Elevation markers link directly to the page or elevation — every callout connected to its detail sheet.</p>
     </div>
     <div class="feat-card reveal">
       <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><path d="M13 17h9M17 13v9"/></svg></div>
       <div class="feat-num">Feature 04</div>
       <div class="feat-name">Linked Detail &amp; Split View</div>
-      <p class="feat-desc">Click any room to open its elevation alongside the floor plan — dimensions, material callouts, and cross-references all in one view. Floor plans and elevations linked side by side in real time.</p>
+      <p class="feat-desc">Click any Room or Elevation to open its elevation alongside the floor plan and scope items — products, dimensions, notes and cross-references all in one view. Floor plans, elevations, and scope linked side by side in real time.</p>
     </div>
     <div class="feat-card reveal rd1">
       <div class="feat-icon"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><path d="M3 7l2 5-2 5M21 7l-2 5 2 5"/><line x1="9" y1="5" x2="9" y2="19" stroke-width="1.1"/><line x1="15" y1="5" x2="15" y2="19" stroke-width="1.1"/></svg></div>
       <div class="feat-num">Feature 05</div>
-      <div class="feat-name">Calibrated Measure Tool</div>
-      <p class="feat-desc">Verify dimensions and calculate areas directly on the drawing. Distances computed automatically using the page scale — no manual conversion, no scale errors. Confirm every dimension before it enters your estimate.</p>
+      <div class="feat-name">Calibrated Measurement Tool</div>
+      <p class="feat-desc">Verify dimensions and calculate areas directly on the drawing. Totalize values across multiple pages. Distances computed automatically using the page scale — no manual conversion, no scale errors. Confirm every dimension before it enters your estimate.</p>
     </div>
     <div class="feat-card reveal rd2">
       <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
       <div class="feat-num">Feature 06</div>
       <div class="feat-name">Scope Export to Excel &amp; CAD</div>
-      <p class="feat-desc">Export to Excel with built-in pricing formulas ready for cost review. Or push directly to Microvellum or CabinetVision — cabinet layouts auto-matched to your user-defined libraries, ready to start shop drawings immediately.</p>
+      <p class="feat-desc">Export to Excel with your company's pricing rates ready for cost review. Or push directly to Microvellum or CabinetVision — cabinet layouts auto-matched to your user-defined libraries, jump start your shop drawings immediately.</p>
     </div>
   </div>
 </section>
@@ -390,7 +388,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
     <div class="wf-step reveal">
       <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
       <div class="wf-title">Upload Drawing Set</div>
-      <p class="wf-desc">Load your architectural PDF. Pages renamed and organised by drawing set automatically.</p>
+      <p class="wf-desc">Load your PDF architectural drawings. Drawing Sheets renamed and organized by drawing set automatically.</p>
     </div>
     <div class="wf-step reveal rd1">
       <div class="wf-dot"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
@@ -400,7 +398,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
     <div class="wf-step reveal rd2">
       <div class="wf-dot"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><path d="M2 13h9v9H2zM13 17h9M17 13v9"/></svg></div>
       <div class="wf-title">Review &amp; Verify</div>
-      <p class="wf-desc">Split view and calibrated measure tool to cross-reference elevations, floor plans, and dimensions.</p>
+      <p class="wf-desc">Split view and calibrated measurement tool to cross-reference elevations, floor plans, and dimensions.</p>
     </div>
     <div class="wf-step reveal rd3">
       <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
@@ -410,7 +408,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
     <div class="wf-step reveal rd4">
       <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
       <div class="wf-title">Export to Excel or CAD</div>
-      <p class="wf-desc">Excel with pricing formulas, or direct push to Microvellum / CabinetVision — libraries pre-matched.</p>
+      <p class="wf-desc">Excel with your company's pricing rates, or direct push to Microvellum/CabinetVision — libraries pre-matched.</p>
     </div>
   </div>
 </section>
@@ -419,17 +417,16 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
     <div class="int-left reveal">
       <div class="section-tag">Integrations &amp; Export</div>
       <h2>Direct connections to the<br>tools your team <em>already uses.</em></h2>
-      <p>Export your complete scope with one click. Pricing formulas are built into the Excel output. Cabinet layouts are automatically matched to your user-defined libraries in Microvellum or CabinetVision — start shop drawings without re-entering a single item.</p>
+      <p>Export your complete scope with one click. Your Company's Pricing is automatically entered into the Excel output. Cabinet layouts are automatically matched to your user-defined libraries in Microvellum or CabinetVision — shop drawings ready to fine tune without re-entering a single item.</p>
       <a href="#demo" class="btn-primary">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         Schedule a Demo
       </a>
     </div>
     <div class="int-grid reveal rd2">
-      <div class="int-card"><div class="int-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10"/><path d="M16 18l2 2 4-4" stroke-width="1.8"/></svg></div><div><div class="int-name">Microsoft Excel</div><div class="int-sub">Complete scope with built-in pricing formulas — ready for cost review and bid submission.</div></div></div>
-      <div class="int-card"><div class="int-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 3v18M2 9h6M2 15h6"/><path d="M12 9h8M12 13h8M12 17h5"/></svg></div><div><div class="int-name">Microvellum</div><div class="int-sub">Cabinet layouts auto-matched to your Microvellum libraries — shop drawings start immediately.</div></div></div>
-      <div class="int-card"><div class="int-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/><path d="M9 12h6M12 8v4"/></svg></div><div><div class="int-name">CabinetVision</div><div class="int-sub">Exports directly to CabinetVision with cabinet inputs pre-populated to your configured libraries.</div></div></div>
-      <div class="int-card"><div class="int-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h8"/></svg></div><div><div class="int-name">Architectural PDF Sets</div><div class="int-sub">Works with any architectural PDF — any size, any revision set, any firm's drawing standards.</div></div></div>
+      <div class="int-card"><div class="int-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h10"/><path d="M16 18l2 2 4-4" stroke-width="1.8"/></svg></div><div><div class="int-name">Microsoft Excel</div><div class="int-sub">Complete scope with your Company's pricing — ready for cost review and bid submission.</div></div></div>
+      <div class="int-card"><div class="int-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 3v18M2 9h6M2 15h6"/><path d="M12 9h8M12 13h8M12 17h5"/></svg></div><div><div class="int-name">Microvellum or CabinetVision</div><div class="int-sub">Cabinet layouts auto-matched to your company libraries — shop drawings ready to adjust.</div></div></div>
+      <div class="int-card"><div class="int-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h8"/></svg></div><div><div class="int-name">Architectural PDF Sets</div><div class="int-sub">Works with any architectural PDF — any size, any number of pages, any firm's drawing standards.</div></div></div>
     </div>
   </div>
 </section>
@@ -440,7 +437,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       Get Started
     </div>
     <h2 class="reveal">See MillworkSuite<br><em>in action.</em></h2>
-    <p class="reveal rd1">Schedule a personalised demo and see how MillworkSuite transforms your estimating workflow — from drawing upload to export-ready scope — in under 15 minutes.</p>
+    <p class="reveal rd1">Schedule a personalized demo and see how MillworkSuite optimizes your estimating workflow — from drawing upload to export-ready scope — in minutes or hours, instead of days or weeks.</p>
     <div class="demo-form reveal rd2">
       <input class="demo-input" type="email" placeholder="Enter your work email">
       <a href="mailto:info@millworksuite.com" class="btn-primary">
@@ -448,7 +445,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
         Request Demo
       </a>
     </div>
-    <p class="demo-note reveal rd3">No commitment required · Responds within 1 business day</p>
+    <p class="demo-note reveal rd3">No commitment required</p>
   </div>
 </section>
 <footer>
@@ -474,7 +471,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&#169; 2025 MillworkSuite</span>
+    <span>&#169; 2026 MillworkSuite</span>
     <span>Orlando, Florida &middot; AI Estimating &middot; Direct to Drafting</span>
   </div>
 </footer>
