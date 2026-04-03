@@ -255,20 +255,27 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
 .ba-header h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.4rem);
   font-weight:400;line-height:1.1;color:var(--text);margin-top:1rem}
 .ba-header h2 em{font-style:italic;color:var(--teal)}
-.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1100px;margin:0 auto 5rem}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1100px;margin:0 auto 5rem}
 .ba-card{border:1px solid var(--border-s);border-radius:3px;overflow:hidden;position:relative}
 .ba-card-head{padding:1.2rem 2rem;font-family:var(--display);font-size:.68rem;letter-spacing:.2em;
   text-transform:uppercase;font-weight:700}
 .ba-card.old .ba-card-head{background:rgba(200,60,60,.08);color:rgba(220,80,80,.8);border-bottom:1px solid rgba(200,60,60,.15)}
 .ba-card.new .ba-card-head{background:rgba(40,200,115,.08);color:var(--teal);border-bottom:1px solid var(--border)}
-.ba-card-body{padding:2rem}
-.ba-flow{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
-.ba-step{font-family:var(--display);font-size:.72rem;letter-spacing:.04em;font-weight:500;
-  padding:.5rem 1rem;border-radius:2px;white-space:nowrap}
-.ba-card.old .ba-step{background:rgba(200,60,60,.06);color:rgba(232,240,234,.5);border:1px solid rgba(200,60,60,.12)}
-.ba-card.new .ba-step{background:var(--glowx);color:var(--text);border:1px solid var(--border)}
-.ba-arrow{color:var(--dim);font-size:.7rem}
-.ba-summary{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--border-s);
+.ba-card-body{padding:1.6rem 2rem}
+.ba-flow{display:flex;flex-direction:column;gap:0}
+.ba-row{display:flex;align-items:center;gap:.8rem;position:relative;padding:.55rem 0}
+.ba-num{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:.56rem;font-weight:700;flex-shrink:0;position:relative;z-index:1}
+.ba-card.old .ba-num{background:rgba(200,60,60,.1);color:rgba(220,80,80,.7);border:1px solid rgba(200,60,60,.18)}
+.ba-card.new .ba-num{background:var(--glowx);color:var(--teal);border:1px solid var(--border)}
+.ba-step{font-family:var(--display);font-size:.74rem;letter-spacing:.04em;font-weight:500}
+.ba-card.old .ba-step{color:rgba(232,240,234,.45)}
+.ba-card.new .ba-step{color:var(--text)}
+.ba-row:not(:last-child)::before{content:'';position:absolute;left:11.5px;top:calc(50% + 12px);
+  width:1px;height:calc(100% - 12px)}
+.ba-card.old .ba-row:not(:last-child)::before{background:rgba(200,60,60,.15)}
+.ba-card.new .ba-row:not(:last-child)::before{background:var(--border)}
+.ba-summary{margin-top:.8rem;padding-top:1rem;border-top:1px solid var(--border-s);
   font-family:var(--display);font-size:.76rem;letter-spacing:.06em;font-weight:600}
 .ba-card.old .ba-summary{color:rgba(220,80,80,.6)}
 .ba-card.new .ba-summary{color:var(--teal)}
@@ -482,15 +489,15 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       <div class="ba-card-head">The Old Way</div>
       <div class="ba-card-body">
         <div class="ba-flow">
-          <span class="ba-step">Open PDF</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Sort 300 pages</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Open markup tool</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Hyperlink callouts</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Measure manually</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Export to Excel</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Re-enter in pricing tool</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Copy to Word</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Re-enter in CAD</span>
+          <div class="ba-row"><span class="ba-num">1</span><span class="ba-step">Open PDF</span></div>
+          <div class="ba-row"><span class="ba-num">2</span><span class="ba-step">Sort 300 pages manually</span></div>
+          <div class="ba-row"><span class="ba-num">3</span><span class="ba-step">Open markup tool</span></div>
+          <div class="ba-row"><span class="ba-num">4</span><span class="ba-step">Hyperlink callouts by hand</span></div>
+          <div class="ba-row"><span class="ba-num">5</span><span class="ba-step">Measure manually</span></div>
+          <div class="ba-row"><span class="ba-num">6</span><span class="ba-step">Export to Excel</span></div>
+          <div class="ba-row"><span class="ba-num">7</span><span class="ba-step">Re-enter in pricing tool</span></div>
+          <div class="ba-row"><span class="ba-num">8</span><span class="ba-step">Copy to Word for proposal</span></div>
+          <div class="ba-row"><span class="ba-num">9</span><span class="ba-step">Re-enter in CAD</span></div>
         </div>
         <div class="ba-summary">5+ tools. Days of work. Errors at every handoff.</div>
       </div>
@@ -499,12 +506,12 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       <div class="ba-card-head">With MillworkSuite</div>
       <div class="ba-card-body">
         <div class="ba-flow">
-          <span class="ba-step">Upload PDF</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">AI organizes &amp; detects</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Review &amp; verify</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">AI inputs your pricing</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Generate proposal</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Export to CAD</span>
+          <div class="ba-row"><span class="ba-num">1</span><span class="ba-step">Upload PDF</span></div>
+          <div class="ba-row"><span class="ba-num">2</span><span class="ba-step">AI organizes &amp; detects scope</span></div>
+          <div class="ba-row"><span class="ba-num">3</span><span class="ba-step">Review &amp; verify</span></div>
+          <div class="ba-row"><span class="ba-num">4</span><span class="ba-step">AI inputs your pricing</span></div>
+          <div class="ba-row"><span class="ba-num">5</span><span class="ba-step">Generate proposal</span></div>
+          <div class="ba-row"><span class="ba-num">6</span><span class="ba-step">Export to CAD</span></div>
         </div>
         <div class="ba-summary">One platform. One session. Zero re-entry.</div>
       </div>
