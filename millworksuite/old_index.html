@@ -25,7 +25,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
 /* REVEAL — guaranteed fallback */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
 .reveal.in{opacity:1;transform:none}
-.rd1{transition-delay:.08s}.rd2{transition-delay:.16s}.rd3{transition-delay:.24s}.rd4{transition-delay:.32s}.rd5{transition-delay:.40s}
+.rd1{transition-delay:.08s}.rd2{transition-delay:.16s}.rd3{transition-delay:.24s}.rd4{transition-delay:.32s}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 
 /* NAV */
@@ -154,7 +154,7 @@ nav.scrolled{border-bottom-color:var(--border)}
   font-weight:400;line-height:1.1;color:var(--text);margin-top:1rem}
 .features-header h2 em{font-style:italic;color:var(--teal)}
 .features-header p{font-size:.96rem;line-height:1.78;color:var(--muted);font-weight:300;margin-top:1.2rem}
-.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);
   gap:1px;background:var(--border-s);border:1px solid var(--border-s)}
 .feat-card{background:var(--surface);padding:2.8rem 2.4rem;
   position:relative;overflow:hidden;transition:background .3s}
@@ -179,18 +179,18 @@ nav.scrolled{border-bottom-color:var(--border)}
 .workflow-header h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.4rem);
   font-weight:400;line-height:1.1;color:var(--text);margin-top:.8rem}
 .workflow-header h2 em{font-style:italic;color:var(--teal)}
-.workflow-steps{display:grid;grid-template-columns:repeat(6,1fr);position:relative}
+.workflow-steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative}
 .workflow-steps::before{content:'';position:absolute;top:28px;
-  left:calc(8% + 28px);right:calc(8% + 28px);height:1px;
+  left:calc(10% + 28px);right:calc(10% + 28px);height:1px;
   background:linear-gradient(90deg,transparent,var(--border),var(--border),transparent);z-index:0}
-.wf-step{text-align:center;padding:0 .6rem;position:relative;z-index:1}
+.wf-step{text-align:center;padding:0 .8rem;position:relative;z-index:1}
 .wf-dot{width:58px;height:58px;border-radius:50%;border:1px solid var(--border);
   background:var(--bg);display:flex;align-items:center;justify-content:center;
   margin:0 auto 1.6rem;transition:border-color .3s,box-shadow .3s,background .3s}
 .wf-dot svg{width:20px;height:20px;stroke:var(--teal);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .wf-step:hover .wf-dot{border-color:var(--teal);background:var(--glowx);box-shadow:0 0 20px rgba(40,200,115,.2)}
-.wf-title{font-family:var(--display);font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:.5rem;letter-spacing:.02em}
-.wf-desc{font-size:.76rem;line-height:1.62;color:var(--dim);font-weight:300}
+.wf-title{font-family:var(--display);font-size:.86rem;font-weight:600;color:var(--text);margin-bottom:.5rem;letter-spacing:.02em}
+.wf-desc{font-size:.78rem;line-height:1.62;color:var(--dim);font-weight:300}
 
 /* INTEGRATIONS */
 .integrations{padding:8rem 5vw;background:var(--surface);
@@ -247,48 +247,9 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
 .footer-bottom{padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-bottom span{font-family:var(--display);font-size:.62rem;letter-spacing:.1em;color:var(--dim)}
 
-/* BEFORE & AFTER */
-.before-after{padding:8rem 5vw;background:var(--surface);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;overflow:hidden}
-.before-after::before{content:'';position:absolute;top:-200px;left:-200px;width:600px;height:600px;
-  background:radial-gradient(ellipse at center,rgba(40,200,115,.06) 0%,transparent 65%);pointer-events:none}
-.ba-header{text-align:center;max-width:680px;margin:0 auto 4rem}
-.ba-header h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.4rem);
-  font-weight:400;line-height:1.1;color:var(--text);margin-top:1rem}
-.ba-header h2 em{font-style:italic;color:var(--teal)}
-.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1100px;margin:0 auto 5rem}
-.ba-card{border:1px solid var(--border-s);border-radius:3px;overflow:hidden;position:relative}
-.ba-card-head{padding:1.2rem 2rem;font-family:var(--display);font-size:.68rem;letter-spacing:.2em;
-  text-transform:uppercase;font-weight:700}
-.ba-card.old .ba-card-head{background:rgba(200,60,60,.08);color:rgba(220,80,80,.8);border-bottom:1px solid rgba(200,60,60,.15)}
-.ba-card.new .ba-card-head{background:rgba(40,200,115,.08);color:var(--teal);border-bottom:1px solid var(--border)}
-.ba-card-body{padding:2rem}
-.ba-flow{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
-.ba-step{font-family:var(--display);font-size:.72rem;letter-spacing:.04em;font-weight:500;
-  padding:.5rem 1rem;border-radius:2px;white-space:nowrap}
-.ba-card.old .ba-step{background:rgba(200,60,60,.06);color:rgba(232,240,234,.5);border:1px solid rgba(200,60,60,.12)}
-.ba-card.new .ba-step{background:var(--glowx);color:var(--text);border:1px solid var(--border)}
-.ba-arrow{color:var(--dim);font-size:.7rem}
-.ba-summary{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--border-s);
-  font-family:var(--display);font-size:.76rem;letter-spacing:.06em;font-weight:600}
-.ba-card.old .ba-summary{color:rgba(220,80,80,.6)}
-.ba-card.new .ba-summary{color:var(--teal)}
-
-/* ROI STATS */
-.roi-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:0;
-  border:1px solid var(--border);border-radius:3px;overflow:hidden;max-width:700px;margin:0 auto}
-.roi-stat{padding:2.4rem 2rem;text-align:center;border-right:1px solid var(--border);background:var(--panel)}
-.roi-stat:last-child{border-right:none}
-.roi-num{font-family:var(--serif);font-size:2.4rem;color:var(--teal);line-height:1;margin-bottom:.5rem}
-.roi-label{font-family:var(--display);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text);font-weight:600;margin-bottom:.5rem}
-.roi-desc{font-size:.78rem;line-height:1.6;color:var(--dim);font-weight:300}
-
 /* RESPONSIVE */
 @media(max-width:1000px){
   .problem,.integrations-inner{grid-template-columns:1fr;gap:4rem}
-  .ba-grid{grid-template-columns:1fr}
-  .roi-stats{grid-template-columns:1fr}
-  .roi-stat{border-right:none;border-bottom:1px solid var(--border)}
-  .roi-stat:last-child{border-bottom:none}
   .feat-grid{grid-template-columns:1fr 1fr}
   .workflow-steps{grid-template-columns:1fr 1fr;gap:3rem}
   .workflow-steps::before{display:none}
@@ -369,8 +330,6 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
     <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Hours sorting and renaming drawing sheets</strong> — manually organizing drawing sets before any work can begin.</div></div>
     <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Hunting elevation callouts across dozens of pages</strong> — no connection between floor plan markers and detail sheets.</div></div>
     <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Manual dimension transcription errors</strong> — scaling by hand introduces mistakes that compound errors throughout your estimate.</div></div>
-    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Re-entering scope into pricing spreadsheets</strong> — every item manually typed into Excel or a custom spreadsheet. One tool for takeoff, another for pricing — nothing connected.</div></div>
-    <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Copy-pasting proposals in Word or InDesign</strong> — after pricing, the scope gets reformatted again for GC submission. Three tools, three manual handoffs, three chances to miss something.</div></div>
     <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Re-entering data into CAD</strong>— after estimating, every cabinet item manually entered into Microvellum or CabinetVision from scratch.</div></div>
     <div class="pain-item"><div class="pain-x"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div><div class="pain-text"><strong>Slow bid cycle</strong> — the longer it takes to estimate, the fewer bids you can submit and the less time you can spend on closing the deal.</div></div>
   </div>
@@ -400,33 +359,21 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       <div class="feat-name">Floor Plan Intelligence</div>
       <p class="feat-desc">The AI scans floor plans to detect rooms and elevation markers. Color-coded symbols count identical rooms for quantity estimates. Page and Elevation markers link directly to the page or elevation — every callout connected to its detail sheet.</p>
     </div>
-    <div class="feat-card reveal rd3">
+    <div class="feat-card reveal">
       <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><path d="M13 17h9M17 13v9"/></svg></div>
       <div class="feat-num">Feature 04</div>
       <div class="feat-name">Linked Detail &amp; Split View</div>
       <p class="feat-desc">Click any Room or Elevation to open its elevation alongside the floor plan and scope items — products, dimensions, notes and cross-references all in one view. Floor plans, elevations, and scope linked side by side in real time.</p>
     </div>
-    <div class="feat-card reveal">
+    <div class="feat-card reveal rd1">
       <div class="feat-icon"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><path d="M3 7l2 5-2 5M21 7l-2 5 2 5"/><line x1="9" y1="5" x2="9" y2="19" stroke-width="1.1"/><line x1="15" y1="5" x2="15" y2="19" stroke-width="1.1"/></svg></div>
       <div class="feat-num">Feature 05</div>
       <div class="feat-name">Calibrated Measurement Tool</div>
       <p class="feat-desc">Verify dimensions and calculate areas directly on the drawing. Totalize values across multiple pages. Distances computed automatically using the page scale — no manual conversion, no scale errors. Confirm every dimension before it enters your estimate.</p>
     </div>
-    <div class="feat-card reveal rd1">
-      <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="5"/></svg></div>
-      <div class="feat-num">Feature 06</div>
-      <div class="feat-name">User-Defined Pricing Engine</div>
-      <p class="feat-desc">Input your own pricing data &mdash; material rates, labor rates, overhead &mdash; and apply them to the detected scope. Customize discounts per line item, per category, or globally. Your numbers, your rules. No generic cost databases.</p>
-    </div>
     <div class="feat-card reveal rd2">
-      <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg></div>
-      <div class="feat-num">Feature 07</div>
-      <div class="feat-name">Proposal Generation</div>
-      <p class="feat-desc">Your priced estimate generates directly into a professional scope of work proposal ready for GC submission. No re-entry, no copy-paste. Branded and formatted for client delivery &mdash; all from the same session.</p>
-    </div>
-    <div class="feat-card reveal rd3">
       <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-      <div class="feat-num">Feature 08</div>
+      <div class="feat-num">Feature 06</div>
       <div class="feat-name">Scope Export to Excel &amp; CAD</div>
       <p class="feat-desc">Export to Excel with your company's pricing rates ready for cost review. Or push directly to Microvellum or CabinetVision — cabinet layouts auto-matched to your user-defined libraries, jump start your shop drawings immediately.</p>
     </div>
@@ -454,76 +401,17 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       <p class="wf-desc">Split view and calibrated measurement tool to cross-reference elevations, floor plans, and dimensions.</p>
     </div>
     <div class="wf-step reveal rd3">
-      <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/><circle cx="12" cy="12" r="5"/></svg></div>
-      <div class="wf-title">Price the Scope</div>
-      <p class="wf-desc">Apply your material rates, labor rates, and overhead. Customize discounts per item or globally.</p>
-    </div>
-    <div class="wf-step reveal rd4">
       <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
       <div class="wf-title">Build Scope of Work</div>
       <p class="wf-desc">All items compiled into a structured, priced, fully cross-referenced scope document.</p>
     </div>
-    <div class="wf-step reveal rd5">
+    <div class="wf-step reveal rd4">
       <div class="wf-dot"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
       <div class="wf-title">Export to Excel or CAD</div>
       <p class="wf-desc">Excel with your company's pricing rates, or direct push to Microvellum/CabinetVision — libraries pre-matched.</p>
     </div>
   </div>
 </section>
-
-<!-- BEFORE & AFTER + ROI -->
-<section class="before-after" id="comparison">
-  <div class="ba-header">
-    <div class="section-tag-c reveal">Why Firms Switch</div>
-    <h2 class="reveal">The old way vs.<br><em>the MillworkSuite way.</em></h2>
-  </div>
-  <div class="ba-grid">
-    <div class="ba-card old reveal">
-      <div class="ba-card-head">The Old Way</div>
-      <div class="ba-card-body">
-        <div class="ba-flow">
-          <span class="ba-step">Open PDF</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Sort 300 pages</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Open markup tool</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Hyperlink callouts</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Measure manually</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Export to Excel</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Re-enter in pricing tool</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Copy to Word</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Re-enter in CAD</span>
-        </div>
-        <div class="ba-summary">5+ tools. Days of work. Errors at every handoff.</div>
-      </div>
-    </div>
-    <div class="ba-card new reveal rd1">
-      <div class="ba-card-head">With MillworkSuite</div>
-      <div class="ba-card-body">
-        <div class="ba-flow">
-          <span class="ba-step">Upload PDF</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">AI organizes &amp; detects</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Review &amp; verify</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Input pricing</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Generate proposal</span><span class="ba-arrow">&rarr;</span>
-          <span class="ba-step">Export to CAD</span>
-        </div>
-        <div class="ba-summary">One platform. One session. Zero re-entry.</div>
-      </div>
-    </div>
-  </div>
-  <div class="roi-stats reveal rd2">
-    <div class="roi-stat">
-      <div class="roi-num">6 hrs</div>
-      <div class="roi-label">Saved Per Drawing Package</div>
-      <div class="roi-desc">2 hrs intake, 2 hrs scope, 1 hr pricing, 1 hr proposal formatting</div>
-    </div>
-    <div class="roi-stat">
-      <div class="roi-num">120 hrs</div>
-      <div class="roi-label">Recaptured Monthly</div>
-      <div class="roi-desc">At 20 drawing packages per month, per estimator</div>
-    </div>
-  </div>
-</section>
-
 <section class="integrations" id="integrations">
   <div class="integrations-inner">
     <div class="int-left reveal">
@@ -548,7 +436,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7L2 9h7z"/></svg>
       Get Started
     </div>
-    <h2 class="reveal">From 300-page PDF to<br>submitted proposal.<br><em>See it happen live.</em></h2>
+    <h2 class="reveal">See MillworkSuite<br><em>in action.</em></h2>
     <p class="reveal rd1">Schedule a personalized demo and see how MillworkSuite optimizes your estimating workflow — from drawing upload to export-ready scope — in minutes or hours, instead of days or weeks.</p>
     <div class="demo-form reveal rd2">
       <input class="demo-input" type="email" placeholder="Enter your work email">
@@ -580,10 +468,6 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
       <div class="footer-col-label">Company</div>
       <a href="mailto:info@millworksuite.com">Contact Us</a>
       <a href="#demo">Get in Touch</a>
-      <a href="https://www.linkedin.com/company/millworksuite/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;margin-top:.4rem">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="color:var(--teal)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -601,7 +485,7 @@ footer{background:var(--surface);border-top:1px solid var(--border-s);padding:4r
     ham.addEventListener('click', () => { mob.classList.toggle('open'); ham.classList.toggle('open'); });
   }
 
-  const sectionIds = ['home','problem','features','workflow','comparison','integrations','demo'];
+  const sectionIds = ['home','problem','features','workflow','integrations','demo'];
   const navObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if(e.isIntersecting){
