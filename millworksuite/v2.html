@@ -1,0 +1,2528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MillworkSuite — The Production Excellence Suite for Commercial Millwork</title>
+<meta name="description" content="MillworkSuite is the Production Excellence Suite for commercial millwork — AI scope discovery, direct-to-CAD drafting, and revision-aware bidding. From any architectural PDF to Microvellum or Cabinet Vision, without re-entry.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="theme-color" content="#060D08">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MillworkSuite — The Production Excellence Suite for Commercial Millwork">
+<meta property="og:description" content="AI scope discovery, direct-to-CAD drafting, and revision-aware bidding for commercial millwork. From any architectural PDF to Microvellum or Cabinet Vision — without re-entry.">
+<meta property="og:url" content="https://millworksuite.com">
+<meta property="og:image" content="https://millworksuite.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MillworkSuite — Production Excellence Suite for Commercial Millwork">
+<meta name="twitter:description" content="AI scope discovery, direct-to-CAD drafting, and revision-aware bidding — from any architectural PDF to Microvellum or Cabinet Vision.">
+<meta name="twitter:image" content="https://millworksuite.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Barlow:wght@300;400;500&family=Epilogue:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* Backgrounds */
+  --bg:#070A08;--surface:#0C1310;--panel:#111A16;--raise:#172319;--hover:#1C2C20;
+  /* Bone — problem section parchment */
+  --bone:#EBE3CE;--bone-surface:#E3D9C0;--bone-text:#1A1610;
+  --bone-muted:#5C5445;--bone-dim:#8A7F70;--bone-rule:rgba(26,22,16,.12);
+  /* Teal */
+  --teal:#28C873;--teal-d:#1FA85E;--teal-bright:#40E888;
+  --glow:rgba(40,200,115,.22);--glowx:rgba(40,200,115,.05);
+  --border:rgba(40,200,115,.18);--border-s:rgba(40,200,115,.07);
+  --teal-bg:rgba(40,200,115,.06);
+  /* Semantic */
+  --warn:#FFB432;--warn-bg:rgba(255,180,50,.08);--red:#E25C5C;--red-bg:rgba(226,92,92,.08);
+  /* Text */
+  --text:#ECF2EE;--muted:rgba(236,242,238,.65);--dim:rgba(236,242,238,.42);--faint:rgba(236,242,238,.22);
+  /* Rules */
+  --rule:rgba(236,242,238,.08);--rule-strong:rgba(236,242,238,.15);
+  /* Typography */
+  --serif:'Barlow Condensed','Barlow',sans-serif;
+  --display:'Barlow Condensed','Barlow',sans-serif;
+  --body:'Epilogue',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  /* Layout */
+  --container:1360px;--gutter:5vw;
+  --section-y:clamp(5rem,10vw,8rem);--gap-x:clamp(2rem,5vw,5rem);
+  /* Z-index */
+  --z-grain:9999;--z-modal:1000;--z-sticky-cta:200;--z-back-top:190;
+  --z-announce:101;--z-nav:100;--z-mobile-menu:99;--z-scrim:97;
+  /* Motion */
+  --dur-fast:120ms;--dur-base:220ms;--dur-slow:380ms;
+  --ease-out:cubic-bezier(.2,.8,.2,1);
+  --ease-spring:cubic-bezier(.34,1.56,.64,1);
+  --ease-settle:cubic-bezier(.16,1,.3,1);
+  --ease-draw:cubic-bezier(.65,0,.35,1);
+  /* Theme-switching vars — dark defaults */
+  --nav-bg:rgba(6,13,8,.86);
+  --nav-bg-scrolled:rgba(6,13,8,.96);
+  --mobile-menu-bg:rgba(6,13,8,.98);
+  --sticky-cta-bg:rgba(6,13,8,.97);
+  --modal-backdrop-color:rgba(6,13,8,.78);
+  --scrim-color:rgba(0,0,0,.45);
+  --grain-opacity:.6;
+  --grain-blend:overlay;
+  --action-bg:var(--teal);
+  --action-text:var(--bg);
+  --svg-line-a:rgba(236,242,238,.1);
+  --svg-line-b:rgba(236,242,238,.06);
+}
+
+/* ================== LIGHT THEME OVERRIDES ================== */
+html[data-theme="light"]{
+  color-scheme:light;
+  /* Backgrounds */
+  --bg:#FAF7ED;--surface:#F0E8D0;--panel:#E2D6B8;--raise:#FDFAF4;--hover:#CEC39E;
+  /* Bone — dark contrast section */
+  --bone:#0D1910;--bone-surface:#0A150D;--bone-text:#E6F2EA;
+  --bone-muted:#72B09E;--bone-dim:#4A7260;--bone-rule:rgba(120,200,160,.16);
+  /* Teal — accessible dark emerald */
+  --teal:#0A7850;--teal-d:#086440;--teal-bright:#0D9862;
+  --teal-vivid:#1DC86A;--teal-vivid-bright:#2AD87A;
+  --glow:rgba(29,200,106,.30);--glowx:rgba(29,200,106,.12);
+  --border:rgba(10,120,80,.30);--border-s:rgba(10,120,80,.16);
+  --teal-bg:rgba(29,200,106,.13);
+  /* Semantic */
+  --warn:#8A6200;--warn-bg:rgba(138,98,0,.10);--red:#AA2828;--red-bg:rgba(170,40,40,.10);
+  /* Text */
+  --text:#0E1C12;--muted:rgba(14,28,18,.62);--dim:rgba(14,28,18,.40);--faint:rgba(14,28,18,.26);
+  /* Rules */
+  --rule:rgba(58,38,8,.11);--rule-strong:rgba(58,38,8,.20);
+  /* Theme-switching vars — light values */
+  --nav-bg:rgba(250,247,237,.86);
+  --nav-bg-scrolled:rgba(250,247,237,.96);
+  --mobile-menu-bg:rgba(250,247,237,.98);
+  --sticky-cta-bg:rgba(250,247,237,.97);
+  --modal-backdrop-color:rgba(174,216,192,.70);
+  --scrim-color:rgba(0,0,0,.22);
+  --grain-opacity:.22;
+  --grain-blend:multiply;
+  --action-bg:var(--teal-vivid);
+  --action-text:var(--text);
+  --svg-line-a:rgba(16,28,20,.10);
+  --svg-line-b:rgba(16,28,20,.06);
+}
+
+html{scroll-behavior:smooth;color-scheme:dark}
+body{font-family:var(--body);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;touch-action:manipulation;-webkit-tap-highlight-color:transparent;font-feature-settings:'ss01' 1,'cv01' 1}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font:inherit;color:inherit}
+::selection{background:var(--teal);color:var(--bg)}
+
+/* ================== SMOOTH THEME TRANSITION ================== */
+body,nav.site-nav,.mobile-menu,.sticky-cta,.announce-bar,.modal-backdrop,.modal{
+  transition:background-color .25s ease,color .25s ease,border-color .25s ease
+}
+
+/* ================== SKIP LINK ================== */
+.skip-link{position:absolute;left:-9999px;z-index:10000;padding:.55rem 1.2rem;
+  background:var(--teal);color:var(--bg);font-family:var(--mono);font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;font-weight:700;text-decoration:none;top:1rem}
+.skip-link:focus{left:1rem}
+
+/* ================== FOCUS ================== */
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.btn-primary:focus-visible,.btn-link:focus-visible,.nav-demo:focus-visible,.mf-submit:focus-visible{
+  outline:2px solid var(--teal);outline-offset:4px;box-shadow:0 0 0 5px rgba(40,200,115,.14)}
+.mf-field input:focus-visible,.mf-field select:focus-visible,.mf-field textarea:focus-visible{
+  border-color:var(--teal);box-shadow:0 0 0 3px rgba(40,200,115,.14);outline:none}
+
+/* ================== GRAIN OVERLAY ================== */
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");opacity:var(--grain-opacity);mix-blend-mode:var(--grain-blend)}
+
+/* ================== REVEAL ================== */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .65s cubic-bezier(.2,.8,.2,1),transform .65s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.rd1{transition-delay:.06s}.rd2{transition-delay:.12s}.rd3{transition-delay:.18s}.rd4{transition-delay:.24s}.rd5{transition-delay:.30s}.rd6{transition-delay:.36s}.rd7{transition-delay:.42s}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .pipe-step{transition:none!important;opacity:1!important;transform:none!important}
+  .rev-log-row{transition:none!important;opacity:1!important;transform:none!important}
+  .det-fill{animation:none!important}
+  .hero-mock-bar .mb-dot.live,.modal-bar .mb-l .dot{animation:none!important;opacity:1}
+  .step-icon::after{transition:none!important}
+  .contrast-row:hover .c-x svg{transform:none}
+}
+
+/* ================== PRIMITIVES ================== */
+.container{max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter);width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+.eyebrow::before{content:'';display:inline-block;width:16px;height:1px;background:currentColor;flex-shrink:0}
+.eyebrow-mute{font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.h2{font-family:var(--display);font-size:clamp(2.2rem,4.8vw,3.8rem);font-weight:700;line-height:1.0;letter-spacing:-.02em;color:var(--text);text-wrap:balance;text-transform:uppercase}
+.h2 em{font-style:italic;color:var(--teal);font-weight:600;text-transform:none}
+.lead{font-family:var(--body);font-size:clamp(.97rem,1.1vw,1.05rem);line-height:1.78;color:var(--muted);font-weight:300;max-width:62ch}
+/* Landmark display — used once per page for max drama */
+.landmark{font-family:var(--display);font-size:clamp(4rem,10vw,9rem);font-weight:800;line-height:.88;letter-spacing:-.03em;text-transform:uppercase;color:var(--text)}
+.landmark em{font-style:italic;color:var(--teal);font-weight:700}
+.app-title,.manifesto-l h3,.rev-text h3,.modal-title,.pilot h2,.pull-body blockquote{text-wrap:balance}
+.stat-num,.app-stat-num,.pilot-term-num,.hmf strong,.rlf strong,.hml-row .ct,.pipe-num,.rev-log-row .qty{font-variant-numeric:tabular-nums}
+
+/* Section Head — used everywhere for consistency */
+.sec-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.95fr);gap:var(--gap-x);align-items:end;margin-bottom:clamp(2.6rem,5vw,4.2rem)}
+.sec-head-l{min-width:0;display:flex;flex-direction:column;gap:1rem}
+.sec-head-l .eyebrow{align-self:flex-start}
+.sec-head-l .h2{margin:0}
+.sec-head-r{min-width:0;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:.5rem}
+.sec-head .lead{margin:0}
+.sec-head .h2{max-width:20ch}
+@media(max-width:900px){
+  .sec-head{grid-template-columns:1fr;gap:1.4rem;align-items:start}
+  .sec-head-r{padding-bottom:0;justify-content:flex-start}
+}
+
+/* ================== ANNOUNCE BAR ================== */
+.announce-bar{position:fixed;top:0;left:0;right:0;z-index:101;
+  display:flex;align-items:center;justify-content:center;gap:1.4rem;flex-wrap:wrap;
+  padding:7px var(--gutter);background:var(--surface);
+  border-bottom:1px solid var(--rule)}
+.announce-item{display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.announce-item a,.announce-item button{color:var(--teal);font-weight:600;border:none;border-bottom:1px solid rgba(40,200,115,.3);padding-bottom:1px;transition:color .2s,border-color .2s;background:none;cursor:pointer;font:inherit;letter-spacing:inherit}
+.announce-item a:hover,.announce-item button:hover{color:var(--teal-bright);border-color:var(--teal)}
+.announce-badge{display:inline-block;padding:2px 8px;font-family:var(--mono);
+  font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  background:rgba(40,200,115,.14);color:var(--teal);border:1px solid var(--border)}
+.announce-sep{width:1px;height:14px;background:var(--rule-strong)}
+@media(max-width:780px){
+  .announce-bar{padding:6px var(--gutter);gap:.9rem}
+  .announce-sep{display:none}
+  .announce-item{font-size:.6rem;letter-spacing:.12em}
+}
+
+/* Light theme announce bar overrides */
+html[data-theme="light"] .announce-bar{
+  background:var(--teal-vivid);
+  border-bottom:2px solid rgba(14,28,18,.14);
+  padding:8px var(--gutter)
+}
+html[data-theme="light"] .announce-item{color:rgba(14,28,18,.75)}
+html[data-theme="light"] .announce-item a,
+html[data-theme="light"] .announce-item button{
+  color:var(--text);font-weight:700;border-bottom:2px solid rgba(14,28,18,.25)
+}
+html[data-theme="light"] .announce-item a:hover,
+html[data-theme="light"] .announce-item button:hover{opacity:.8;border-color:rgba(14,28,18,.5);color:var(--text)}
+html[data-theme="light"] .announce-badge{
+  background:rgba(14,28,18,.16);color:var(--text);border:1px solid rgba(14,28,18,.22);font-weight:700
+}
+
+/* ================== NAV ================== */
+nav.site-nav{position:fixed;top:32px;left:0;right:0;z-index:100;height:64px;
+  display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);
+  background:var(--nav-bg);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--rule);transition:border-color .25s,background .25s}
+nav.site-nav.scrolled{border-bottom-color:var(--rule-strong);background:var(--nav-bg-scrolled);box-shadow:0 8px 40px rgba(0,0,0,.4)}
+html[data-theme="light"] nav.site-nav.scrolled{box-shadow:0 6px 28px rgba(0,0,0,.07)}
+.nav-logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.nav-icon{height:32px;width:auto;display:block}
+.nav-wordmark{font-family:var(--display);font-size:1.02rem;font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1}
+.nav-wordmark span{color:var(--teal)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:500;color:var(--muted);position:relative;transition:color .2s;padding:6px 0}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:100%;height:1px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
+.nav-demo{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:600;color:var(--action-text);background:var(--action-bg);padding:11px 22px;
+  display:inline-flex;align-items:center;gap:9px;line-height:1;border:none;cursor:pointer;
+  transition:background .2s,box-shadow .2s,transform .2s}
+.nav-demo::after{content:'→';font-family:var(--body);font-size:.95rem;line-height:1;transition:transform .2s}
+.nav-demo:hover{background:var(--teal-bright);box-shadow:0 0 28px var(--glow);transform:translateY(-1px)}
+html[data-theme="light"] .nav-demo:hover{background:var(--teal-vivid-bright);box-shadow:0 0 24px rgba(40,200,115,.3)}
+.nav-demo:hover::after{transform:translateX(2px)}
+.nav-hamburger{display:none;background:none;border:1px solid var(--rule-strong);cursor:pointer;width:38px;height:38px;flex-direction:column;gap:4px;align-items:center;justify-content:center}
+.nav-hamburger span{display:block;width:18px;height:1.5px;background:var(--text);transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
+
+/* ================== THEME TOGGLE ================== */
+.theme-toggle{
+  width:36px;height:36px;background:none;border:1px solid var(--rule-strong);
+  cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;
+  transition:color .2s,border-color .2s,background .2s;flex-shrink:0
+}
+.theme-toggle:hover{color:var(--teal);border-color:var(--border);background:var(--teal-bg)}
+html:not([data-theme="light"]) .theme-toggle .icon-sun{display:block}
+html:not([data-theme="light"]) .theme-toggle .icon-moon{display:none}
+html[data-theme="light"] .theme-toggle .icon-sun{display:none}
+html[data-theme="light"] .theme-toggle .icon-moon{display:block}
+
+.mob-theme-toggle{
+  margin-top:.5rem;background:none;border:1px solid var(--rule-strong);
+  color:var(--muted);font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;
+  text-transform:uppercase;padding:.7rem 1rem;cursor:pointer;text-align:left;width:100%;
+  transition:color .2s,border-color .2s
+}
+.mob-theme-toggle:hover{color:var(--teal);border-color:var(--border)}
+
+.mobile-menu{display:flex;flex-direction:column;position:fixed;top:96px;left:0;right:0;z-index:99;
+  background:var(--mobile-menu-bg);border-bottom:1px solid var(--rule-strong);
+  padding:1rem var(--gutter) 1.6rem;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px);
+  transition:opacity .28s cubic-bezier(.2,.8,.2,1),visibility .28s,transform .28s cubic-bezier(.2,.8,.2,1)}
+.mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+@media(prefers-reduced-motion:reduce){.mobile-menu{transition:none}}
+.mobile-menu a{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:500;color:var(--muted);padding:.85rem 0;
+  border-bottom:1px solid var(--rule);transition:color .2s}
+.mobile-menu a:hover{color:var(--text)}
+.mob-demo{margin-top:1rem;background:var(--action-bg);color:var(--action-text);font-weight:600;
+  padding:.95rem 1.2rem;text-align:center;border:none;letter-spacing:.18em;
+  width:100%;display:block;cursor:pointer;font-family:var(--mono);font-size:.74rem;text-transform:uppercase}
+@media(max-width:1100px){.nav-links{gap:1.4rem}}
+@media(max-width:980px){
+  .nav-links,.nav-right .nav-demo{display:none}
+  .nav-hamburger{display:flex}
+}
+
+/* ================== HERO ================== */
+.hero{min-height:100vh;padding:clamp(6.5rem,11vw,9rem) var(--gutter) 0;position:relative;overflow:hidden;
+  display:flex;flex-direction:column}
+.hero-grid{position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--rule) 1px,transparent 1px),
+    linear-gradient(90deg,var(--rule) 1px,transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 35%,black 30%,transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 35%,black 30%,transparent 100%)}
+.hero-glow{position:absolute;left:50%;top:15%;transform:translateX(-50%);width:1500px;height:800px;pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(40,200,115,.26) 0%,rgba(40,200,115,.10) 38%,transparent 68%);filter:blur(22px)}
+.hero-corner{position:absolute;width:24px;height:24px;border:1px solid var(--teal);opacity:.45;pointer-events:none}
+.hero-corner.tl{top:6.5rem;left:var(--gutter);border-right:none;border-bottom:none}
+.hero-corner.tr{top:6.5rem;right:var(--gutter);border-left:none;border-bottom:none}
+.hero-corner.bl{bottom:1.4rem;left:var(--gutter);border-right:none;border-top:none}
+.hero-corner.br{bottom:1.4rem;right:var(--gutter);border-left:none;border-top:none}
+
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.hero-content{position:relative;z-index:2;max-width:var(--container);margin:0 auto;width:100%;
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--gap-x);align-items:center}
+.hero-l{min-width:0}
+.hero-r{min-width:0}
+@media(max-width:1080px){
+  .hero-content{grid-template-columns:1fr;gap:2.5rem;align-items:start}
+}
+
+.hero-eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;padding:4px 0;margin-bottom:2.2rem}
+.hero-eyebrow::before{content:'';display:inline-block;width:22px;height:1px;background:currentColor;flex-shrink:0}
+.hero h1{font-family:var(--display);font-size:clamp(3.4rem,8vw,7.2rem);font-weight:800;line-height:.88;letter-spacing:-.025em;color:var(--text);text-transform:uppercase;margin-bottom:1.8rem}
+.hero h1 .em-line{display:block;font-style:italic;color:var(--teal);font-weight:700}
+.hero-sub{font-family:var(--body);font-size:clamp(.98rem,1.2vw,1.1rem);line-height:1.72;color:var(--muted);font-weight:300;max-width:52ch;margin-bottom:2.4rem}
+.hero-actions{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.btn-primary{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--action-text);background:var(--action-bg);padding:16px 28px;display:inline-flex;align-items:center;gap:14px;line-height:1;cursor:pointer;border:none;transition:background .2s,box-shadow .2s,transform .2s}
+.btn-primary::after{content:'→';font-family:var(--body);font-size:1rem;line-height:1;transition:transform .2s}
+.btn-primary:hover{background:var(--teal-bright);box-shadow:0 8px 32px var(--glow);transform:translateY(-2px)}
+html[data-theme="light"] .btn-primary:hover{background:var(--teal-vivid-bright);box-shadow:0 8px 32px rgba(29,200,106,.36)}
+.btn-primary:hover::after{transform:translateX(3px)}
+.btn-link{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--text);padding:14px 0;display:inline-flex;align-items:center;gap:10px;line-height:1;cursor:pointer;background:none;border:none;border-bottom:1px solid var(--rule-strong);transition:border-color .2s,color .2s}
+.btn-link::before{content:'▸';color:var(--teal);font-size:.65rem}
+.btn-link:hover{color:var(--teal);border-bottom-color:var(--teal)}
+
+/* HERO SUITE PILLS */
+.hero-suite{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;
+  margin-top:2.4rem;padding-top:1.6rem;border-top:1px dashed var(--rule)}
+.hero-suite-tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-right:.3rem;display:inline-flex;align-items:center;gap:.55rem}
+.hero-suite-tag::after{content:'';display:inline-block;width:14px;height:1px;background:var(--rule-strong)}
+.hsp{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text);font-weight:600;
+  padding:7px 13px;border:1px solid var(--rule-strong);background:var(--surface);
+  display:inline-flex;align-items:center;line-height:1;transition:border-color .2s,color .2s}
+.hsp:hover{border-color:var(--border);color:var(--teal)}
+.hsa{color:var(--teal);font-size:.95rem;margin:0 .15rem;opacity:.6;font-family:var(--body);line-height:1}
+.hsl{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:700;
+  padding:7px 13px;border:1px solid var(--border);background:rgba(40,200,115,.08);
+  display:inline-flex;align-items:center;line-height:1}
+@media(max-width:540px){
+  .hero-suite{gap:.4rem}
+  .hero-suite-tag{display:none}
+  .hsp,.hsl{padding:6px 10px;font-size:.6rem;letter-spacing:.16em}
+}
+
+/* LIVE SCAN PANEL */
+.hero-scan-wrap{position:relative}
+.hero-scan-glow{position:absolute;inset:-30% -20%;background:radial-gradient(ellipse at 55% 45%,rgba(40,200,115,.18) 0%,transparent 62%);pointer-events:none;filter:blur(28px)}
+.hero-scan{border:1px solid var(--rule-strong);background:var(--surface);position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(40,200,115,.08),0 40px 80px rgba(0,0,0,.5)}
+.scan-bar{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;border-bottom:1px solid var(--rule);background:var(--bg);font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.scan-bar-l{display:flex;align-items:center;gap:8px}
+.scan-bar-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 6px var(--teal);animation:pulse 1.8s infinite}
+.scan-bar-status{color:var(--teal);font-weight:600}
+.scan-counter{display:flex;align-items:center;gap:6px}
+.scan-count{color:var(--teal);font-weight:700;font-variant-numeric:tabular-nums}
+/* SVG scan boxes */
+.scan-box{fill:rgba(40,200,115,.09);stroke:var(--teal);stroke-width:.7;opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.85);transition:opacity .2s var(--ease-out),transform .25s var(--ease-spring)}
+.scan-box.on{opacity:1;transform:scale(1)}
+.scan-lbl{font-family:monospace;font-size:4.5px;fill:var(--teal);opacity:0;transition:opacity .25s .08s}
+.scan-box.on~.scan-lbl,.scan-item.on .scan-lbl{opacity:1}
+.scan-item .scan-box{transition:opacity .2s var(--ease-out),transform .25s var(--ease-spring)}
+.scan-item.on .scan-box{opacity:1;transform:scale(1)}
+.scan-item.on .scan-lbl{opacity:1}
+.scan-foot{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid var(--rule)}
+.scan-foot-cell{padding:.75rem .9rem;border-right:1px solid var(--rule);font-family:var(--mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.scan-foot-cell:last-child{border-right:none}
+.scan-foot-cell strong{display:block;color:var(--text);font-family:var(--display);font-size:1.05rem;font-weight:700;letter-spacing:-.01em;margin-bottom:1px;text-transform:none}
+.scan-foot-cell strong .u{color:var(--teal)}
+/* Keep existing HML for scan list */
+.hml-wrap{padding:0 .2rem 0 .9rem;border-left:1px solid var(--rule);display:flex;flex-direction:column;justify-content:flex-start}
+.hml-head{font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:.55rem;padding-bottom:.45rem;border-bottom:1px dashed var(--rule);display:flex;justify-content:space-between;align-items:center}
+.hml-head span:last-child{color:var(--teal)}
+.hml-row{display:grid;grid-template-columns:auto 1fr auto;gap:7px;align-items:center;font-family:var(--mono);font-size:.6rem;color:var(--muted);padding:.34rem 0;border-bottom:1px dashed var(--rule);letter-spacing:.04em}
+.hml-row:last-child{border-bottom:none}
+.hml-row .ty{color:var(--teal);font-weight:600;font-size:.56rem;letter-spacing:.1em;width:22px}
+.hml-row .nm{color:var(--text)}.hml-row .ct{color:var(--dim);font-size:.58rem}
+
+/* HERO PIPELINE */
+.hero-pipeline{position:relative;z-index:2;max-width:var(--container);width:100%;
+  margin:clamp(3rem,6vw,5rem) auto 1.4rem;
+  padding:1.4rem 0 1.8rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.pipeline-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:1rem;display:flex;justify-content:space-between}
+.pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;align-items:stretch}
+.pipe-step{display:flex;align-items:center;gap:.75rem;position:relative;padding:.4rem 1.6rem .4rem 0;opacity:0;transform:translateX(-6px);transition:opacity .5s ease,transform .5s ease}
+.pipeline.active .pipe-step{opacity:1;transform:none}
+.pipeline.active .pipe-step:nth-child(1){transition-delay:.1s}
+.pipeline.active .pipe-step:nth-child(2){transition-delay:.3s}
+.pipeline.active .pipe-step:nth-child(3){transition-delay:.5s}
+.pipeline.active .pipe-step:nth-child(4){transition-delay:.7s}
+.pipeline.active .pipe-step:nth-child(5){transition-delay:.9s}
+.pipe-num{font-family:var(--mono);font-size:.6rem;color:var(--teal);letter-spacing:.1em;font-weight:600;flex-shrink:0}
+.pipe-text{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text);font-weight:500;line-height:1.2}
+.pipe-arrow{position:absolute;right:.4rem;top:50%;transform:translateY(-50%);color:var(--teal);font-size:.85rem;opacity:.55}
+.pipe-step:last-child .pipe-arrow{display:none}
+@media(max-width:1100px){.pipe-text{font-size:.62rem;letter-spacing:.08em}.pipe-step{padding-right:1rem}}
+@media(max-width:780px){
+  .pipeline{grid-template-columns:1fr;gap:0}
+  .pipe-arrow{display:none}
+  .pipe-step{padding:.5rem 0;border-bottom:1px solid var(--rule)}
+  .pipe-step:last-child{border-bottom:none}
+}
+
+/* ================== DIVIDER ================== */
+.divider{padding-block:0;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);
+  background:var(--bg)}
+.divider .container{display:flex;align-items:center;gap:1.4rem;
+  height:60px;border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule)}
+.divider .dv-num{color:var(--teal);font-weight:700;font-size:.62rem;letter-spacing:.2em;flex-shrink:0}
+.divider .dv-line{flex:1;height:1px;background:var(--rule)}
+.divider .dv-tag{color:var(--text);font-weight:600;flex-shrink:0}
+@media(max-width:600px){.divider .container{height:54px;gap:.8rem}.divider .dv-tag{font-size:.6rem}}
+
+/* ================== SCROLL OFFSET ================== */
+#problem,#manifesto,#platform,#revisions,#how,#proof,#integrations,#icp,#faq,#pilot,#main-content{
+  scroll-margin-top:104px;
+}
+
+/* ================== SECTION BASES ================== */
+.section{padding:var(--section-y) 0;position:relative}
+.section-light{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+
+/* ================== PROBLEM ================== */
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border:1px solid var(--rule-strong);background:var(--surface)}
+.pain-col{padding:2.4rem 2rem;position:relative;display:flex;flex-direction:column;transition:background .25s,box-shadow .25s}
+.pain-col:hover{background:var(--hover);box-shadow:inset 0 0 0 1px rgba(40,200,115,.2)}
+.pain-col + .pain-col{border-left:1px solid var(--rule-strong)}
+.pain-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.4rem;padding-bottom:1.2rem;border-bottom:1px dashed var(--rule)}
+.pain-num{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--faint);font-weight:600}
+.pain-label{font-family:var(--mono);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text);font-weight:600}
+.pain-x{margin-left:auto;width:18px;height:18px;border:1px solid var(--red);background:var(--red-bg);display:flex;align-items:center;justify-content:center}
+.pain-x svg{width:9px;height:9px;stroke:var(--red);fill:none;stroke-width:2}
+.pain-body{font-size:.95rem;line-height:1.78;color:var(--muted);font-weight:300}
+.pain-body strong{color:var(--text);font-weight:500}
+.problem-foot{margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.problem-foot-text{font-family:var(--serif);font-size:clamp(1.15rem,1.8vw,1.5rem);font-style:italic;color:var(--text);line-height:1.4;max-width:50ch}
+.problem-foot-text em{color:var(--teal);font-style:italic}
+.problem-foot-tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);display:inline-flex;align-items:center;gap:8px}
+.problem-foot-tag::after{content:'↓'}
+@media(max-width:900px){
+  .pain-grid{grid-template-columns:1fr}
+  .pain-col{padding:1.8rem 1.4rem}
+  .pain-col + .pain-col{border-left:none;border-top:1px solid var(--rule-strong)}
+}
+
+/* ================== MANIFESTO ================== */
+.manifesto-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.1fr);gap:0;
+  border:1px solid var(--rule-strong);background:var(--surface)}
+.manifesto-l{padding:2.6rem 2.4rem;border-right:1px solid var(--rule-strong);display:flex;flex-direction:column}
+.manifesto-l .ml-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px dashed var(--border)}
+.manifesto-l .ml-tag::before{content:'';width:18px;height:1px;background:var(--teal)}
+.manifesto-l h3{font-family:var(--serif);font-size:clamp(1.55rem,2.8vw,2.25rem);font-weight:400;line-height:1.18;color:var(--text);margin-bottom:1.6rem;letter-spacing:-.012em}
+.manifesto-l h3 em{font-style:italic;color:var(--teal)}
+.manifesto-l p{font-size:.96rem;line-height:1.78;color:var(--muted);font-weight:300;margin-bottom:1.1rem}
+.manifesto-l p strong{color:var(--text);font-weight:500}
+.manifesto-l p:last-child{margin-bottom:0}
+
+.manifesto-r{padding:1.8rem 1.8rem;background:var(--bg);display:flex;flex-direction:column}
+.contrast-bar{display:grid;grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr);gap:0;
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  padding:.8rem 0;margin-bottom:.2rem;border-bottom:1px solid var(--rule-strong);align-items:center}
+.contrast-bar .cb-w{color:var(--red);padding-right:1rem}
+.contrast-bar .cb-x{text-align:center;color:var(--faint)}
+.contrast-bar .cb-a{color:var(--teal);padding-left:1rem}
+.contrast-row{display:grid;grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr);gap:0;align-items:center;
+  padding:1.05rem 0;border-bottom:1px solid var(--rule);transition:background .25s ease}
+.contrast-row:last-of-type{border-bottom:none}
+.contrast-row .c-w{font-family:var(--body);font-size:.92rem;color:var(--muted);font-weight:300;padding-right:1rem;line-height:1.45}
+.contrast-row .c-w span{text-decoration:line-through;text-decoration-color:rgba(226,92,92,.5);text-decoration-thickness:1px;text-underline-offset:2px}
+.contrast-row .c-x{font-family:var(--mono);color:var(--teal);font-weight:600;display:flex;align-items:center;justify-content:center;line-height:1}
+.contrast-row .c-x svg{width:22px;height:10px;stroke:var(--teal);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.contrast-row .c-a{font-family:var(--body);font-size:.94rem;color:var(--text);font-weight:500;padding-left:1rem;line-height:1.45}
+.contrast-row:hover{background:rgba(40,200,115,.04)}
+.contrast-row:hover .c-x svg{transform:translateX(2px)}
+
+.manifesto-tagline{margin-top:2rem;padding:1.2rem 1.4rem;background:rgba(40,200,115,.05);
+  border:1px solid var(--border);
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;line-height:1.7;color:var(--text);font-weight:400}
+.manifesto-tagline strong{color:var(--teal);font-weight:600;display:block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:.4rem}
+
+@media(max-width:1000px){
+  .manifesto-grid{grid-template-columns:1fr}
+  .manifesto-l{border-right:none;border-bottom:1px solid var(--rule-strong);padding:2rem 1.6rem}
+  .manifesto-r{padding:1.6rem}
+}
+@media(max-width:520px){
+  .contrast-bar,.contrast-row{grid-template-columns:1fr 36px 1fr}
+  .contrast-row .c-w,.contrast-row .c-a{font-size:.84rem;padding:0 .5rem}
+  .contrast-bar{font-size:.54rem;letter-spacing:.14em}
+}
+
+/* ================== PLATFORM ================== */
+.platform{position:relative;overflow:hidden}
+.platform-note{display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+  padding:8px 14px;border:1px solid var(--rule-strong);background:var(--bg);margin-bottom:1.4rem}
+.platform-note .pn-tag{color:var(--teal);font-weight:600;padding-right:12px;border-right:1px solid var(--rule-strong)}
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule-strong);background:var(--bg);position:relative}
+.app-grid > .app-block + .app-block{border-left:1px solid var(--rule-strong)}
+.app-block{padding:2.4rem 2.2rem;display:flex;flex-direction:column;position:relative;min-height:560px;transition:box-shadow .3s ease}
+.app-block:hover{box-shadow:inset 0 0 0 1px rgba(40,200,115,.18)}
+.app-badge{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;
+  margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px dashed var(--border);flex-wrap:wrap}
+.app-badge .num{font-family:var(--serif);font-size:1.4rem;color:var(--teal);font-style:italic;line-height:1;margin-right:6px}
+.app-badge .live{margin-left:auto;padding:3px 9px;background:rgba(40,200,115,.12);color:var(--teal);border:1px solid var(--border);font-size:.56rem;letter-spacing:.18em}
+.app-title{font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,1.85rem);font-weight:400;line-height:1.18;color:var(--text);margin-bottom:1rem;letter-spacing:-.01em}
+.app-desc{font-size:.94rem;line-height:1.72;color:var(--muted);font-weight:300;margin-bottom:1.6rem}
+.app-list{display:flex;flex-direction:column;gap:0;margin-bottom:1.6rem;border-top:1px solid var(--rule);list-style:none}
+.app-list li{position:relative;padding:.85rem 0 .85rem 28px;border-bottom:1px solid var(--rule);
+  font-size:.9rem;line-height:1.55;color:var(--text);font-weight:400}
+.app-list li::before{content:'';position:absolute;left:0;top:1.42rem;width:14px;height:1px;background:var(--teal)}
+.app-list li span.k{color:var(--muted);font-weight:300}
+.app-stat{margin-top:auto;padding:1.4rem 1.5rem;background:var(--panel);border:1px solid var(--rule-strong);
+  display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:center}
+.app-stat-num{font-family:var(--serif);font-size:clamp(2.6rem,4.6vw,3.4rem);color:var(--teal);line-height:.95;letter-spacing:-.02em;font-weight:400;display:flex;align-items:baseline}
+.app-stat-num .suf{font-size:.4em;color:var(--teal);margin-left:3px;font-style:italic}
+.app-stat-text{font-family:var(--mono);font-size:.72rem;line-height:1.6;color:var(--muted);letter-spacing:.04em}
+.app-stat-text strong{color:var(--text);font-weight:600;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.16em;font-size:.64rem}
+@media(max-width:1000px){
+  .app-grid{grid-template-columns:1fr}
+  .app-grid > .app-block + .app-block{border-left:none;border-top:1px solid var(--rule-strong)}
+  .app-block{padding:2rem 1.6rem;min-height:auto}
+}
+
+/* ================== REVISIONS ================== */
+.rev-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:0;
+  border:1px solid var(--rule-strong);background:var(--surface)}
+.rev-text{padding:2.6rem 2.4rem;display:flex;flex-direction:column;border-right:1px solid var(--rule-strong)}
+.rev-text h3{font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:400;line-height:1.18;color:var(--text);margin-bottom:1rem;letter-spacing:-.01em}
+.rev-text h3 em{font-style:italic;color:var(--teal)}
+.rev-text p{font-size:.95rem;line-height:1.72;color:var(--muted);font-weight:300;margin-bottom:1.4rem}
+.rev-list{display:flex;flex-direction:column;gap:0;margin-top:auto;border-top:1px solid var(--rule)}
+.rev-list-item{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--rule)}
+.rev-list-item:last-child{border-bottom:none}
+.rev-list-item .rli-tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);font-weight:600;padding-top:2px;width:80px}
+.rev-list-item .rli-body{font-size:.92rem;line-height:1.6;color:var(--text)}
+.rev-list-item .rli-body strong{color:var(--text);font-weight:500}
+.rev-list-item .rli-body span{color:var(--muted);font-weight:300}
+
+.rev-vis{padding:1.6rem 1.6rem;background:var(--bg);position:relative;display:flex;flex-direction:column}
+.rev-vis-bar{display:flex;align-items:center;justify-content:space-between;padding:.6rem .8rem;background:var(--panel);border:1px solid var(--rule-strong);
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:1rem}
+.rev-vis-bar .l{display:flex;align-items:center;gap:8px}
+.rev-vis-bar .l .dot{width:7px;height:7px;background:var(--teal);border-radius:50%;box-shadow:0 0 6px var(--teal)}
+.rev-vis-bar .r{color:var(--teal);font-weight:600}
+.rev-log{flex:1;border:1px solid var(--rule-strong);background:var(--surface);padding:1rem 1.1rem;
+  font-family:var(--mono);font-size:.72rem;line-height:1.6;letter-spacing:.02em;
+  display:flex;flex-direction:column;gap:.1rem;overflow:hidden;position:relative}
+.rev-log-row{display:grid;grid-template-columns:18px minmax(94px,auto) minmax(0,1fr) 36px;gap:10px;align-items:center;padding:.45rem 0;opacity:0;transform:translateX(-6px);transition:opacity .4s ease,transform .4s ease}
+.rev-log.active .rev-log-row{opacity:1;transform:none}
+.rev-log.active .rev-log-row:nth-child(1){transition-delay:.1s}
+.rev-log.active .rev-log-row:nth-child(2){transition-delay:.25s}
+.rev-log.active .rev-log-row:nth-child(3){transition-delay:.4s}
+.rev-log.active .rev-log-row:nth-child(4){transition-delay:.55s}
+.rev-log.active .rev-log-row:nth-child(5){transition-delay:.7s}
+.rev-log.active .rev-log-row:nth-child(6){transition-delay:.85s}
+.rev-log-row.head{font-size:.58rem;letter-spacing:.18em;color:var(--faint);padding:0 0 .55rem;border-bottom:1px dashed var(--rule);margin-bottom:.35rem;text-transform:uppercase;opacity:1!important;transform:none!important}
+.rev-log-row.head .desc{color:var(--faint)}
+.rev-log-row.head .qty{color:var(--faint);text-align:right}
+.rev-log-row .sym{font-weight:700;text-align:center;font-size:.92rem;line-height:1}
+.rev-log-row .qty{text-align:right}
+.rev-log-row.add .sym{color:var(--teal)}
+.rev-log-row.add .id{color:var(--teal)}
+.rev-log-row.del .sym{color:var(--red)}
+.rev-log-row.del .id{color:var(--red);text-decoration:line-through;text-decoration-color:rgba(226,92,92,.4)}
+.rev-log-row.mod .sym{color:var(--warn)}
+.rev-log-row.mod .id{color:var(--warn)}
+.rev-log-row .id{font-weight:600}
+.rev-log-row .desc{color:var(--muted);font-weight:400}
+.rev-log-row .qty{color:var(--dim);font-size:.68rem;letter-spacing:.06em}
+.rev-log-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:1rem;border:1px solid var(--rule-strong);background:var(--panel)}
+.rlf{padding:.8rem 1rem;border-right:1px solid var(--rule);text-align:center;
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-weight:600}
+.rlf:last-child{border-right:none}
+.rlf strong{display:block;font-family:var(--serif);font-size:1.4rem;font-weight:400;margin-bottom:2px;letter-spacing:-.02em;text-transform:none;line-height:1}
+.rlf.add strong{color:var(--teal)}
+.rlf.mod strong{color:var(--warn)}
+.rlf.del strong{color:var(--red)}
+@media(max-width:1000px){
+  .rev-grid{grid-template-columns:1fr}
+  .rev-text{border-right:none;border-bottom:1px solid var(--rule-strong);padding:2rem 1.6rem}
+  .rev-vis{padding:1.4rem}
+}
+
+/* ================== WORKFLOW ================== */
+.steps{position:relative;display:grid;grid-template-columns:1fr;gap:0;
+  border:1px solid var(--rule-strong);background:var(--surface)}
+.step{display:grid;grid-template-columns:80px 220px minmax(0,1fr) 70px;gap:0;align-items:stretch;
+  border-bottom:1px solid var(--rule);transition:background .35s ease}
+.step:last-child{border-bottom:none}
+.step.active{background:linear-gradient(90deg,rgba(40,200,115,.06) 0%,transparent 60%)}
+.step-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--faint);font-weight:600;
+  display:flex;align-items:center;justify-content:center;
+  border-right:1px solid var(--rule);transition:color .35s ease,background .35s ease}
+.step.active .step-num{color:var(--teal);background:rgba(40,200,115,.04)}
+.step-name{font-family:var(--mono);font-size:.84rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text);font-weight:600;
+  display:flex;align-items:center;padding:1.5rem 1.4rem;border-right:1px solid var(--rule);line-height:1.3}
+.step-desc{font-size:.95rem;line-height:1.7;color:var(--muted);font-weight:300;
+  padding:1.5rem 1.6rem;display:block;align-self:center}
+.step-desc strong{color:var(--text);font-weight:500}
+.step-icon{display:flex;align-items:center;justify-content:center;border-left:1px solid var(--rule);background:var(--panel);position:relative}
+.step-icon svg{width:26px;height:26px;stroke:var(--faint);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s ease,filter .4s ease}
+.step.active .step-icon svg{stroke:var(--teal);filter:drop-shadow(0 0 8px var(--glow))}
+.step-icon::after{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--teal);transform:scaleY(0);transform-origin:top;transition:transform .5s ease}
+.step.active .step-icon::after{transform:scaleY(1)}
+@media(max-width:1100px){.step{grid-template-columns:64px 180px minmax(0,1fr) 60px}}
+@media(max-width:780px){
+  .step{grid-template-columns:54px minmax(0,1fr) 54px;grid-template-rows:auto auto}
+  .step-num{grid-column:1 / 2;grid-row:1 / 2;font-size:.64rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .step-name{grid-column:2 / 3;grid-row:1 / 2;padding:1rem 1.1rem;font-size:.72rem;border-right:none;border-bottom:1px solid var(--rule);align-items:center;line-height:1.3}
+  .step-icon{grid-column:3 / 4;grid-row:1 / 2;border-left:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .step-icon::after{display:none}
+  .step-desc{grid-column:1 / -1;grid-row:2 / 3;padding:1rem 1.2rem;font-size:.88rem;line-height:1.6}
+  .step.active .step-icon::after{display:none}
+  .step.active .step-num{background:rgba(40,200,115,.06)}
+}
+
+/* ================== PROOF ================== */
+.proof-meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-top:1rem;padding-top:.8rem;border-top:1px dashed var(--rule);font-weight:600}
+.proof::before{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(var(--border-s) 1px,transparent 1px),linear-gradient(90deg,var(--border-s) 1px,transparent 1px);
+  background-size:120px 120px;pointer-events:none;opacity:.5;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 80%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 80%)}
+.proof .container{position:relative;z-index:1}
+
+/* Stat list */
+.stat-list{border:1px solid var(--rule-strong);background:var(--bg)}
+.stat-entry{display:grid;grid-template-columns:160px minmax(0,1fr);gap:0;align-items:stretch;border-bottom:1px solid var(--rule);transition:background .25s}
+.stat-entry:last-child{border-bottom:none}
+.stat-entry:hover{background:var(--panel)}
+.stat-entry-num{font-family:var(--mono);font-size:clamp(2rem,3.2vw,3rem);color:var(--teal);font-weight:700;letter-spacing:-.025em;font-variant-numeric:tabular-nums;padding:2.2rem 1.8rem;border-right:1px solid var(--rule);display:flex;align-items:center;justify-content:center;gap:1px;line-height:1}
+.stat-suf{font-size:.52em;align-self:flex-start;margin-top:.18em;font-style:italic;color:var(--teal)}
+.stat-pre{font-size:.8em;color:var(--teal);margin-right:1px}
+.stat-entry-body{padding:2.2rem 2.6rem;display:flex;flex-direction:column;justify-content:center}
+.stat-entry-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text);font-weight:600;margin-bottom:.6rem}
+.stat-entry-text{font-size:.93rem;line-height:1.65;color:var(--muted);font-weight:300}
+.stat-entry-text strong{color:var(--text);font-weight:500}
+@media(max-width:900px){
+  .stat-entry{grid-template-columns:110px 1fr}
+  .stat-entry-num{font-size:clamp(1.6rem,5vw,2.2rem);padding:1.8rem 1.2rem}
+  .stat-entry-body{padding:1.8rem 1.6rem}
+}
+@media(max-width:540px){
+  .stat-entry{grid-template-columns:90px 1fr}
+  .stat-entry-num{font-size:1.6rem;padding:1.4rem 1rem}
+  .stat-entry-body{padding:1.4rem 1.2rem}
+}
+
+.pull-quote{margin-top:3rem;padding:2.6rem 2.8rem;border:1px solid var(--rule-strong);background:var(--surface);
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:1.4rem;align-items:start}
+.pull-mark{font-family:var(--serif);font-size:4.4rem;color:var(--teal);line-height:.85;font-style:italic;display:block;height:3rem;overflow:visible}
+.pull-body{padding-top:.4rem}
+.pull-body blockquote{font-family:var(--serif);font-size:clamp(1.15rem,2vw,1.55rem);line-height:1.4;color:var(--text);font-weight:400;margin-bottom:1.2rem;font-style:italic;letter-spacing:-.005em}
+.pull-attr{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);
+  display:flex;align-items:center;gap:.8rem}
+.pull-attr::before{content:'';width:24px;height:1px;background:var(--teal)}
+@media(max-width:900px){
+  .stat-grid{grid-template-columns:1fr}
+  .stat-card + .stat-card{border-left:none;border-top:1px solid var(--rule-strong)}
+  .stat-card{min-height:auto;padding:2rem 1.6rem}
+  .pull-quote{grid-template-columns:1fr;gap:.6rem;padding:1.8rem 1.6rem}
+  .pull-mark{font-size:3.2rem;height:2.2rem}
+  .pull-body{padding-top:0}
+}
+
+/* ================== INTEGRATIONS ================== */
+.int-table{border:1px solid var(--rule-strong);background:var(--surface)}
+.int-row{display:grid;grid-template-columns:80px minmax(0,1.4fr) minmax(0,2.2fr) 150px;gap:0;align-items:stretch;
+  border-bottom:1px solid var(--rule);transition:background .25s ease,box-shadow .25s ease}
+.int-row:last-child{border-bottom:none}
+.int-row:hover{background:var(--panel);box-shadow:inset 0 0 0 1px rgba(40,200,115,.16)}
+.int-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--faint);font-weight:600;
+  padding:1.4rem 0;border-right:1px solid var(--rule);display:flex;align-items:center;justify-content:center}
+.int-name{font-family:var(--display);font-size:1.05rem;font-weight:600;color:var(--text);padding:1.4rem 1.4rem;border-right:1px solid var(--rule);letter-spacing:-.005em;display:flex;align-items:center}
+.int-desc{font-size:.92rem;color:var(--muted);font-weight:300;padding:1.4rem 1.4rem;border-right:1px solid var(--rule);display:flex;align-items:center;line-height:1.5}
+.int-status{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:1.4rem 1.4rem;text-align:right;display:flex;align-items:center;justify-content:flex-end}
+.int-status.live{color:var(--teal)}
+.int-status.dev{color:var(--warn)}
+.int-status.ok{color:var(--text)}
+.int-foot{margin-top:2rem;padding:1.8rem 2rem;border:1px solid var(--border);background:rgba(40,200,115,.05);
+  display:flex;align-items:center;gap:1.8rem}
+.int-foot-tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);font-weight:600;flex-shrink:0;border-right:1px solid var(--rule-strong);padding-right:1.8rem}
+.int-foot-text{font-family:var(--display);font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:700;font-style:italic;color:var(--text);line-height:1.1;letter-spacing:-.01em}
+@media(max-width:900px){
+  .int-row{grid-template-columns:50px 1fr;grid-template-rows:auto auto auto}
+  .int-num{padding:.9rem 0 .3rem;border-right:none;border-bottom:none;align-self:start;justify-content:flex-start;padding-left:1.2rem}
+  .int-name{padding:.9rem 1.2rem .3rem;border-right:none}
+  .int-desc{grid-column:1 / -1;padding:.3rem 1.2rem .9rem;border-right:none;border-top:1px dashed var(--rule);margin-top:.4rem;padding-top:.9rem}
+  .int-status{grid-column:1 / -1;padding:0 1.2rem 1rem;justify-content:flex-start;text-align:left}
+  .int-foot{flex-direction:column;align-items:flex-start;gap:.8rem;padding:1.2rem 1.2rem}
+  .int-foot-tag{border-right:none;padding-right:0;padding-bottom:.6rem;border-bottom:1px solid var(--rule-strong);width:100%}
+}
+
+/* ================== ICP / BUILT FOR ================== */
+.icp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule-strong);background:var(--bg)}
+.icp-col{padding:2.4rem 2rem;position:relative;display:flex;flex-direction:column;transition:background .25s,box-shadow .25s}
+.icp-col + .icp-col{border-left:1px solid var(--rule-strong)}
+.icp-col:hover{background:var(--panel);box-shadow:inset 0 0 0 1px rgba(40,200,115,.2)}
+.icp-col-head{display:flex;align-items:center;gap:.9rem;margin-bottom:1.4rem;padding-bottom:1.2rem;border-bottom:1px dashed var(--rule)}
+.icp-col-num{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--faint);font-weight:600}
+.icp-col-name{font-family:var(--display);font-size:1.05rem;font-weight:600;color:var(--text);letter-spacing:-.005em}
+.icp-col-tag{margin-left:auto;font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);padding:3px 9px;border:1px solid var(--border);background:rgba(40,200,115,.06);font-weight:600}
+.icp-body{font-size:.95rem;line-height:1.78;color:var(--muted);font-weight:300}
+.icp-body strong{color:var(--text);font-weight:500}
+@media(max-width:900px){
+  .icp-grid{grid-template-columns:1fr}
+  .icp-col{padding:1.8rem 1.4rem}
+  .icp-col + .icp-col{border-left:none;border-top:1px solid var(--rule-strong)}
+}
+
+/* ================== PILOT ================== */
+.pilot{padding:var(--section-y) 0;position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(40,200,115,.05) 0%,transparent 70%)}
+.pilot::before{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 0%,transparent 90%);
+  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 0%,transparent 90%);
+  pointer-events:none;opacity:.7}
+.pilot-inner{position:relative;text-align:center;max-width:980px;margin:0 auto}
+.pilot-corner{position:absolute;width:32px;height:32px;border:1px solid var(--teal);opacity:.55}
+.pilot-corner.tl{top:-12px;left:-12px;border-right:none;border-bottom:none}
+.pilot-corner.tr{top:-12px;right:-12px;border-left:none;border-bottom:none}
+.pilot-corner.bl{bottom:-12px;left:-12px;border-right:none;border-top:none}
+.pilot-corner.br{bottom:-12px;right:-12px;border-left:none;border-top:none}
+.pilot h2{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1.02;letter-spacing:-.022em;color:var(--text);margin:1.4rem auto 1.4rem;max-width:18ch}
+.pilot h2 em{font-style:italic;color:var(--teal)}
+.pilot-copy{font-size:1.05rem;line-height:1.78;color:var(--muted);font-weight:300;max-width:60ch;margin:0 auto 2rem}
+.pilot-terms{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:2rem auto 2.4rem;
+  border:1px solid var(--rule-strong);background:var(--surface);max-width:680px}
+.pilot-term{padding:1.4rem 1rem;text-align:center;border-right:1px solid var(--rule);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem}
+.pilot-term:last-child{border-right:none}
+.pilot-term-num{font-family:var(--serif);font-size:1.7rem;color:var(--teal);line-height:1;font-weight:400;letter-spacing:-.02em;display:inline-flex;align-items:baseline;gap:1px}
+.pilot-term-num .u{font-size:.5em;color:var(--muted);font-style:italic;font-weight:400}
+.pilot-term-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-weight:600;line-height:1}
+.pilot-actions{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:2rem}
+.pilot-contact{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.pilot-contact a{color:var(--teal);border-bottom:1px solid rgba(40,200,115,.4);padding-bottom:1px;text-transform:lowercase;letter-spacing:.04em;transition:border-color .2s}
+.pilot-contact a:hover{border-bottom-color:var(--teal)}
+@media(max-width:600px){
+  .pilot-terms{grid-template-columns:1fr}
+  .pilot-term{border-right:none;border-bottom:1px solid var(--rule)}
+  .pilot-term:last-child{border-bottom:none}
+}
+
+/* ================== DEMO MODAL ================== */
+.modal-backdrop{position:fixed;inset:0;z-index:1000;background:var(--modal-backdrop-color);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center;padding:1.4rem;opacity:0;transition:opacity .25s ease}
+.modal-backdrop.open{display:flex;opacity:1}
+.modal{position:relative;width:100%;max-width:560px;max-height:calc(100vh - 2.8rem);overflow:auto;background:var(--surface);
+  border:1px solid var(--rule-strong);box-shadow:0 24px 80px rgba(0,0,0,.6),0 0 60px rgba(40,200,115,.05);
+  overscroll-behavior:contain;
+  transform:translateY(12px) scale(.98);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+html[data-theme="light"] .modal{background:var(--bg);box-shadow:0 24px 80px rgba(0,0,0,.12),0 4px 20px rgba(0,0,0,.06)}
+.modal-backdrop.open .modal{transform:none}
+.modal-corner{position:absolute;width:18px;height:18px;border:1px solid var(--teal);opacity:.55;pointer-events:none}
+.modal-corner.tl{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.modal-corner.tr{top:-1px;right:-1px;border-left:none;border-bottom:none}
+.modal-corner.bl{bottom:-1px;left:-1px;border-right:none;border-top:none}
+.modal-corner.br{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.modal-bar{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.2rem;
+  border-bottom:1px solid var(--rule);background:var(--bg);
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+html[data-theme="light"] .modal-bar{background:var(--surface)}
+.modal-bar .mb-l{display:flex;align-items:center;gap:10px;color:var(--teal);font-weight:600}
+.modal-bar .mb-l .dot{width:6px;height:6px;background:var(--teal);border-radius:50%;box-shadow:0 0 8px var(--teal);animation:pulse 2s infinite}
+.modal-close{width:30px;height:30px;background:none;border:1px solid var(--rule-strong);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s,border-color .2s,background .2s}
+.modal-close:hover{color:var(--teal);border-color:var(--teal);background:var(--glowx)}
+.modal-close svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.6}
+.modal-body{padding:1.8rem 1.8rem 2rem}
+.modal-eyebrow{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:.7rem}
+.modal-title{font-family:var(--serif);font-size:1.7rem;line-height:1.1;color:var(--text);font-weight:400;letter-spacing:-.018em;margin-bottom:.7rem}
+.modal-title em{font-style:italic;color:var(--teal)}
+.modal-sub{font-size:.94rem;line-height:1.6;color:var(--muted);font-weight:300;margin-bottom:1.6rem}
+.modal-form{display:flex;flex-direction:column;gap:1rem}
+.mf-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.mf-field{display:flex;flex-direction:column;gap:.4rem;min-width:0}
+.mf-field label{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.mf-field label .req{color:var(--teal);margin-left:3px}
+.mf-field input,.mf-field select{
+  font-family:var(--body);font-size:.95rem;color:var(--text);background:var(--bg);
+  border:1px solid var(--rule-strong);padding:.7rem .85rem;outline:none;width:100%;
+  transition:border-color .2s,box-shadow .2s;line-height:1.4;min-height:44px}
+.mf-field textarea{
+  font-family:var(--body);font-size:.95rem;color:var(--text);background:var(--bg);
+  border:1px solid var(--rule-strong);padding:.7rem .85rem;outline:none;width:100%;
+  transition:border-color .2s,box-shadow .2s;line-height:1.4}
+.mf-field input:focus,.mf-field select:focus,.mf-field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(40,200,115,.12)}
+.mf-field input::placeholder,.mf-field textarea::placeholder{color:var(--dim);font-weight:300}
+.mf-field textarea{resize:vertical;min-height:90px;font-family:var(--body)}
+.mf-field select{appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='none' stroke='%2328C873' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' d='M1 1l4 4 4-4'/></svg>");background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.2rem;cursor:pointer}
+html[data-theme="light"] .mf-field select{
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='none' stroke='%230C7A5C' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' d='M1 1l4 4 4-4'/></svg>")}
+.mf-honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.mf-actions{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:.4rem;padding-top:1rem;border-top:1px solid var(--rule)}
+.mf-submit{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--action-text);background:var(--action-bg);
+  border:none;cursor:pointer;padding:14px 26px;display:inline-flex;align-items:center;gap:12px;line-height:1;
+  transition:background .2s,box-shadow .2s,opacity .2s}
+.mf-submit::after{content:'→';font-family:var(--body);font-size:.95rem;line-height:1;transition:transform .2s}
+.mf-submit:hover:not(:disabled){background:var(--teal-bright);box-shadow:0 6px 24px var(--glow)}
+html[data-theme="light"] .mf-submit:hover:not(:disabled){background:var(--teal-vivid-bright);box-shadow:0 6px 24px rgba(29,200,106,.32)}
+.mf-submit:hover:not(:disabled)::after{transform:translateX(2px)}
+.mf-submit:disabled{opacity:.6;cursor:wait}
+.mf-note{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;font-weight:500}
+.mf-success,.mf-error{display:none;padding:1rem 1.1rem;border:1px solid var(--border);background:rgba(40,200,115,.06);
+  font-size:.92rem;line-height:1.55;color:var(--text);font-weight:400;margin-top:.4rem}
+.mf-success.show,.mf-error.show{display:block}
+.mf-error{border-color:rgba(226,92,92,.28);background:rgba(226,92,92,.06);color:var(--text)}
+.mf-success strong{color:var(--teal);font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:.4rem;font-weight:600}
+.mf-error strong{color:var(--red);font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:.4rem;font-weight:600}
+@media(max-width:560px){
+  .mf-row{grid-template-columns:1fr}
+  .modal-body{padding:1.4rem 1.4rem 1.6rem}
+  .modal-title{font-size:1.4rem}
+}
+
+/* ================== FOOTER ================== */
+footer{background:var(--bg);border-top:1px solid var(--rule-strong);padding:3.4rem var(--gutter) 2rem}
+.foot-inner{max-width:var(--container);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:start;margin-bottom:2.4rem}
+.foot-brand{display:flex;flex-direction:column;gap:.9rem}
+.foot-logo{display:flex;align-items:center;gap:11px}
+.foot-logo img{height:28px;width:auto}
+.foot-logo span{font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--text)}
+.foot-logo span em{font-style:normal;color:var(--teal)}
+.foot-tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--muted);line-height:1.6;max-width:38ch}
+.foot-col h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:1rem}
+.foot-col ul li{margin-bottom:.6rem}
+.foot-col a,.foot-col button{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--muted);transition:color .2s;background:none;border:none;cursor:pointer;padding:0;text-align:left;display:block}
+.foot-col a:hover,.foot-col button:hover{color:var(--teal)}
+.foot-bottom{max-width:var(--container);margin:0 auto;padding-top:1.6rem;border-top:1px solid var(--rule);
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.foot-bottom a{color:var(--muted);transition:color .2s}
+.foot-bottom a:hover{color:var(--teal)}
+@media(max-width:780px){
+  .foot-inner{grid-template-columns:1fr;gap:2rem}
+}
+
+/* ================== PROOF NOTE ================== */
+.proof-note{margin-top:1.8rem;padding:1rem 1.6rem;background:var(--panel);
+  border:1px solid var(--rule-strong);display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.proof-note-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--teal);font-weight:700;flex-shrink:0}
+.proof-note-text{font-family:var(--mono);font-size:.66rem;letter-spacing:.04em;line-height:1.65;color:var(--dim)}
+
+/* ================== FAQ ================== */
+.faq{list-style:none;border:1px solid var(--rule-strong);background:var(--surface)}
+.faq-item{border-bottom:1px solid var(--rule)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;
+  padding:1.35rem 2rem;cursor:pointer;
+  font-size:.97rem;font-weight:500;color:var(--text);line-height:1.5;
+  background:none;border:none;width:100%;text-align:left;
+  transition:background .2s,color .2s;font-family:var(--body)}
+.faq-q:hover{background:var(--hover);color:var(--teal)}
+.faq-q[aria-expanded="true"]{color:var(--teal);background:rgba(40,200,115,.03)}
+.faq-icon{flex-shrink:0;width:22px;height:22px;border:1px solid var(--rule-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:1rem;color:var(--dim);line-height:1;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .2s,color .2s}
+.faq-q[aria-expanded="true"] .faq-icon{transform:rotate(45deg);border-color:var(--border);color:var(--teal)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.2,.8,.2,1)}
+.faq-a-inner{padding:.5rem 2rem 1.6rem 2rem;margin:0 0 0 2rem;
+  font-size:.95rem;line-height:1.78;color:var(--muted);font-weight:300}
+.faq-a-inner strong{color:var(--text);font-weight:500}
+@media(prefers-reduced-motion:reduce){.faq-a{transition:none}}
+@media(max-width:600px){
+  .faq-q{padding:1.2rem 1.4rem;font-size:.93rem}
+  .faq-a-inner{padding:.5rem 1.4rem 1.4rem;margin-left:1.4rem}
+}
+
+/* ================== STICKY MOBILE CTA ================== */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;
+  display:none;align-items:center;justify-content:center;
+  padding:.9rem var(--gutter) calc(.9rem + env(safe-area-inset-bottom,0px));
+  background:var(--sticky-cta-bg);border-top:1px solid var(--border);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transform:translateY(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.sticky-cta.visible{transform:translateY(0)}
+.sticky-cta .btn-primary{width:100%;max-width:480px;justify-content:center}
+@media(max-width:980px){.sticky-cta{display:flex}}
+@media(prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
+
+/* ================== FOOT BOTTOM LINKS ================== */
+.foot-bottom-links{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+.foot-bottom-links a{color:var(--muted);transition:color .2s}
+.foot-bottom-links a:hover{color:var(--teal)}
+@media(max-width:560px){.foot-bottom{flex-direction:column;align-items:flex-start;gap:.8rem}}
+
+/* ================== MOBILE SCRIM ================== */
+.menu-scrim{position:fixed;inset:0;z-index:97;background:var(--scrim-color);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .28s,visibility .28s}
+.menu-scrim.open{opacity:1;visibility:visible;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){.menu-scrim{transition:none}}
+
+/* ================== BACK TO TOP ================== */
+.back-top{position:fixed;bottom:5.5rem;right:1.8rem;z-index:190;
+  width:38px;height:38px;background:var(--panel);border:1px solid var(--rule-strong);
+  cursor:pointer;color:var(--teal);font-size:1.1rem;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .25s,transform .25s,visibility .25s,background .2s,border-color .2s}
+.back-top.visible{opacity:1;visibility:visible;transform:none}
+.back-top:hover{background:var(--hover);border-color:var(--border)}
+@media(min-width:981px){.back-top{bottom:2rem}}
+@media(prefers-reduced-motion:reduce){.back-top{transition:none}}
+
+/* ================== ROI CALCULATOR ================== */
+.roi-wrap{background:var(--surface);border:1px solid var(--rule-strong)}
+.roi-head{padding:2.4rem 2.4rem 2rem;border-bottom:1px dashed var(--rule)}
+.roi-eyebrow{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:700;display:block;margin-bottom:.7rem}
+.roi-title{font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:400;color:var(--text);line-height:1.2;margin-bottom:.5rem;letter-spacing:-.01em;text-wrap:balance}
+.roi-sub{font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.6}
+.roi-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:0;align-items:stretch}
+.roi-inputs{padding:2.2rem 2.4rem;display:flex;flex-direction:column;gap:1.8rem;border-right:1px solid var(--rule-strong)}
+.roi-field label{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:.7rem}
+.roi-slider-wrap{display:flex;align-items:center;gap:1rem}
+.roi-slider{-webkit-appearance:none;appearance:none;flex:1;height:2px;background:var(--rule-strong);outline:none;cursor:pointer}
+.roi-slider::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--teal);cursor:pointer;border:2px solid var(--bg);box-shadow:0 0 6px var(--glow)}
+.roi-slider::-moz-range-thumb{width:14px;height:14px;background:var(--teal);cursor:pointer;border:2px solid var(--bg);border-radius:0;box-shadow:0 0 6px var(--glow)}
+.roi-slider-val{font-family:var(--mono);font-size:.76rem;color:var(--text);font-weight:600;min-width:62px;text-align:right;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.roi-output{padding:2.2rem 2.2rem;background:var(--bg);display:flex;flex-direction:column;gap:1.2rem}
+.roi-output-head{font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);font-weight:600;padding-bottom:.7rem;border-bottom:1px dashed var(--rule)}
+.roi-metrics{display:flex;flex-direction:column;border:1px solid var(--rule-strong)}
+.roi-metric{padding:.9rem 1.1rem;border-bottom:1px solid var(--rule);display:flex;align-items:baseline;gap:1rem;justify-content:space-between}
+.roi-metric:last-child{border-bottom:none}
+.roi-metric.roi-hi{background:rgba(40,200,115,.06)}
+.roi-metric-label{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:600;line-height:1.3}
+.roi-metric-num{font-family:var(--display);font-size:1.55rem;color:var(--teal);line-height:1;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums;transition:color .2s}
+.roi-hi .roi-metric-num{text-shadow:0 0 28px rgba(40,200,115,.35)}
+.roi-payback{font-size:.88rem;color:var(--muted);line-height:1.7;font-weight:300;padding:.75rem 1rem;border:1px solid var(--border);background:rgba(40,200,115,.04)}
+.roi-payback strong{color:var(--teal);font-weight:600}
+.roi-cta-wrap{margin-top:.2rem}
+.roi-cta-wrap .btn-primary{width:100%;justify-content:center}
+@media(max-width:900px){
+  .roi-body{grid-template-columns:1fr}
+  .roi-inputs{border-right:none;border-bottom:1px solid var(--rule-strong);padding:1.8rem 1.6rem}
+  .roi-output{padding:1.8rem 1.6rem}
+  .roi-head{padding:1.8rem 1.6rem 1.6rem}
+}
+
+/* ================== BONE PROBLEM SECTION ================== */
+.problem-bone{background:var(--bone);color:var(--bone-text);padding:var(--section-y) 0 0;position:relative}
+.problem-bone .container{max-width:var(--container);margin:0 auto;padding-inline:var(--gutter)}
+.bone-landmark{font-family:var(--display);font-size:clamp(3.5rem,9vw,7.5rem);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;color:var(--bone-text);line-height:.88;margin-bottom:clamp(2.4rem,5vw,4rem)}
+.bone-landmark em{font-style:italic;color:var(--bone-dim);font-weight:700}
+.bone-row{display:grid;grid-template-columns:clamp(3rem,7vw,5.5rem) minmax(0,1fr);gap:0;border-top:1px solid var(--bone-rule);padding:clamp(1.4rem,3vw,2.2rem) 0}
+.bone-row:last-of-type{border-bottom:1px solid var(--bone-rule)}
+.bone-num{font-family:var(--display);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;color:var(--bone-dim);letter-spacing:-.02em;line-height:1;padding-top:.15rem;opacity:.5}
+.bone-body{padding-left:clamp(1.2rem,2.5vw,2.4rem);border-left:1px solid var(--bone-rule)}
+.bone-label{font-family:var(--display);font-size:clamp(1rem,2vw,1.45rem);font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--bone-text);margin-bottom:.55rem;line-height:1.1}
+.bone-text{font-family:var(--body);font-size:.95rem;line-height:1.78;color:var(--bone-muted);font-weight:300}
+.bone-text strong{color:var(--bone-text);font-weight:500}
+.bone-edge{height:6rem;background:linear-gradient(to bottom,var(--bone) 0%,var(--bg) 100%)}
+@media(max-width:680px){
+  .bone-row{grid-template-columns:2.4rem 1fr}
+  .bone-num{font-size:1.8rem}
+  .bone-body{padding-left:.8rem}
+}
+
+/* ================== TEAL PILOT DRENCH ================== */
+.pilot-drench{padding:var(--section-y) 0;background:var(--teal);color:var(--bg);position:relative;overflow:hidden}
+.pilot-drench::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(7,10,8,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(7,10,8,.1) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.pilot-drench .pilot-inner{text-align:center;max-width:960px;margin:0 auto;position:relative;z-index:1;padding:0 var(--gutter)}
+.pilot-drench .eyebrow-pill{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(7,10,8,.6);font-weight:600;margin-bottom:1.8rem;display:flex;align-items:center;justify-content:center;gap:.8rem}
+.pilot-drench .eyebrow-pill::before,.pilot-drench .eyebrow-pill::after{content:'';width:20px;height:1px;background:rgba(7,10,8,.35)}
+.pilot-drench h2{font-family:var(--display);font-size:clamp(2.8rem,7vw,6rem);font-weight:800;text-transform:uppercase;letter-spacing:-.025em;line-height:.9;color:var(--bg);margin-bottom:1.4rem}
+.pilot-drench h2 em{font-style:italic;font-weight:700}
+.pilot-drench .pilot-copy{font-family:var(--body);font-size:clamp(.95rem,1.2vw,1.05rem);line-height:1.72;color:rgba(7,10,8,.65);font-weight:300;max-width:52ch;margin:0 auto 2.4rem}
+.pilot-drench .pilot-terms{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(7,10,8,.3);background:rgba(7,10,8,.75);max-width:600px;margin:0 auto 2.4rem}
+.pilot-drench .pilot-term{padding:1.6rem 1rem;text-align:center;border-right:1px solid rgba(7,10,8,.2);display:flex;flex-direction:column;align-items:center;gap:.45rem}
+.pilot-drench .pilot-term:last-child{border-right:none}
+.pilot-drench .pilot-term-num{font-family:var(--display);font-size:1.9rem;color:var(--teal);line-height:1;font-weight:700;letter-spacing:-.02em;display:inline-flex;align-items:baseline;gap:2px}
+.pilot-drench .pilot-term-num .u{font-size:.48em;color:var(--muted);opacity:.85;font-weight:500}
+.pilot-drench .pilot-term-label{font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-weight:600}
+.pilot-drench .pilot-actions{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.8rem}
+/* Reversed button: dark bg on teal surface */
+.btn-drench{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--teal);background:var(--bg);padding:16px 32px;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:12px;line-height:1}
+.btn-drench::after{content:'→';font-family:var(--body);font-size:.95rem;line-height:1;transition:transform .2s}
+.btn-drench:hover{background:rgba(7,10,8,.85);box-shadow:0 8px 32px rgba(7,10,8,.4);transform:translateY(-2px)}
+.btn-drench:hover::after{transform:translateX(3px)}
+.pilot-drench .pilot-contact{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(7,10,8,.45)}
+.pilot-drench .pilot-contact a{color:rgba(7,10,8,.7);text-transform:lowercase;letter-spacing:.04em;border-bottom:1px solid rgba(7,10,8,.3);padding-bottom:1px;transition:border-color .2s}
+.pilot-drench .pilot-contact a:hover{border-bottom-color:rgba(7,10,8,.65)}
+/* Light mode: pilot drench uses teal-vivid */
+html[data-theme="light"] .pilot-drench{background:var(--teal-vivid);color:var(--text)}
+html[data-theme="light"] .pilot-drench::before{background-image:linear-gradient(rgba(14,28,18,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(14,28,18,.08) 1px,transparent 1px)}
+html[data-theme="light"] .pilot-drench .eyebrow-pill{color:rgba(14,28,18,.60)}
+html[data-theme="light"] .pilot-drench .eyebrow-pill::before,
+html[data-theme="light"] .pilot-drench .eyebrow-pill::after{background:rgba(14,28,18,.28)}
+html[data-theme="light"] .pilot-drench h2{color:var(--text)}
+html[data-theme="light"] .pilot-drench .pilot-copy{color:rgba(14,28,18,.72)}
+html[data-theme="light"] .pilot-drench .pilot-terms{border:1px solid rgba(14,28,18,.22);background:rgba(14,28,18,.12)}
+html[data-theme="light"] .pilot-drench .pilot-term{border-right:1px solid rgba(14,28,18,.16)}
+html[data-theme="light"] .pilot-drench .pilot-term-num{color:var(--text)}
+html[data-theme="light"] .pilot-drench .pilot-term-num .u{color:rgba(14,28,18,.58)}
+html[data-theme="light"] .pilot-drench .pilot-term-label{color:rgba(14,28,18,.58)}
+html[data-theme="light"] .btn-drench{color:var(--teal-vivid);background:var(--text)}
+html[data-theme="light"] .btn-drench:hover{background:#1A2E1E;box-shadow:0 8px 40px rgba(14,28,18,.30)}
+html[data-theme="light"] .pilot-drench .pilot-contact{color:rgba(14,28,18,.50)}
+html[data-theme="light"] .pilot-drench .pilot-contact a{color:rgba(14,28,18,.82);border-bottom:1px solid rgba(14,28,18,.28)}
+html[data-theme="light"] .pilot-drench .pilot-contact a:hover{border-bottom-color:rgba(14,28,18,.60)}
+@media(max-width:600px){
+  .pilot-drench .pilot-terms{grid-template-columns:1fr}
+  .pilot-drench .pilot-term{border-right:none;border-bottom:1px solid rgba(7,10,8,.15)}
+  .pilot-drench .pilot-term:last-child{border-bottom:none}
+  html[data-theme="light"] .pilot-drench .pilot-term{border-bottom:1px solid rgba(14,28,18,.12)}
+}
+
+/* ================== SECTION MARKER ================== */
+.sec-mark{padding:0;background:var(--bg)}
+.sec-mark .container{display:flex;align-items:center;height:48px;border-top:1px solid var(--rule);gap:1.2rem}
+.sm-num{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:var(--teal);font-weight:700;flex-shrink:0}
+.sm-rule{flex:1;height:1px;background:var(--rule)}
+.sm-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text);font-weight:600;flex-shrink:0}
+
+/* ================== NAV SECTION INDICATOR ================== */
+.nav-section-pill{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding:4px 12px;border:1px solid var(--rule);transition:color .3s,border-color .3s;display:none}
+@media(min-width:960px){.nav-section-pill{display:block}}
+nav.site-nav.scrolled .nav-section-pill{color:var(--muted);border-color:var(--rule-strong)}
+
+/* ================== DISPLAY FONT OVERRIDES ================== */
+.manifesto-l h3{font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:700;line-height:1.08;letter-spacing:-.015em;text-transform:uppercase}
+.manifesto-l h3 em{font-style:italic;text-transform:none}
+.app-title{font-family:var(--display);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:700;letter-spacing:-.01em;text-transform:uppercase}
+.app-title em{font-style:italic;text-transform:none}
+.rev-text h3{font-family:var(--display);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:700;letter-spacing:-.01em;text-transform:uppercase}
+.rev-text h3 em{font-style:italic;text-transform:none}
+.pilot h2{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:-.02em}
+.pilot h2 em{font-style:italic;text-transform:none}
+.stat-entry-num{font-family:var(--display) !important;font-style:italic}
+.pull-body blockquote{font-family:var(--display);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:600;line-height:1.2;font-style:italic;letter-spacing:-.008em}
+.pull-mark{font-family:var(--display);font-size:3.8rem;line-height:.85;font-style:italic;color:var(--teal);display:block;height:2.6rem;overflow:visible}
+.roi-title{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:-.01em}
+.modal-title{font-family:var(--display);font-size:1.85rem;font-weight:700;letter-spacing:-.01em;text-transform:uppercase}
+.modal-title em{font-style:italic;text-transform:none}
+.faq-q{font-family:var(--display);font-size:1rem;font-weight:600;letter-spacing:-.005em;text-transform:uppercase}
+.icp-col-name{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.int-name{font-family:var(--display);font-weight:700;letter-spacing:-.005em}
+.pain-label{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.step-name{font-family:var(--display);font-weight:700;text-transform:uppercase}
+.foot-logo span{font-family:var(--display);font-weight:700;letter-spacing:.01em}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ANNOUNCE BAR -->
+<div class="announce-bar">
+  <div class="announce-item"><span class="announce-badge">Pilot Open</span>90-day pilot · $500/month — <button type="button" data-open-demo>apply →</button></div>
+</div>
+
+<header>
+<!-- NAV -->
+<nav class="site-nav" id="mainNav">
+  <a href="#" class="nav-logo" aria-label="MillworkSuite">
+    <img src="assets/favicon.png" alt="" class="nav-icon" width="32" height="32">
+    <span class="nav-wordmark" translate="no">Millwork<span>Suite</span></span>
+  </a>
+  <span class="nav-section-pill" id="navSection" aria-hidden="true">§ 00 · Overview</span>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button type="button" class="nav-demo" data-open-demo aria-haspopup="dialog">Request Pilot →</button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" aria-label="Main navigation" aria-hidden="true">
+  <a href="#problem">Problem</a>
+  <a href="#manifesto">Our Approach</a>
+  <a href="#platform">Platform</a>
+  <a href="#revisions">Revisions</a>
+  <a href="#how">How It Works</a>
+  <a href="#proof">Results</a>
+  <a href="#integrations">Integrations</a>
+  <a href="#icp">Built For</a>
+  <a href="#faq">FAQ</a>
+  <a href="#pilot">Pricing</a>
+  <button type="button" class="mob-theme-toggle" id="mobThemeToggle">☀ / ☾ Switch Theme</button>
+  <button type="button" class="mob-demo" data-open-demo>Request Demo</button>
+</div>
+<div class="menu-scrim" id="menuScrim"></div>
+</header>
+
+<main>
+<!-- ================== HERO ================== -->
+<section class="hero" id="main-content">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-corner tl"></div>
+  <div class="hero-corner tr"></div>
+  <div class="hero-corner bl"></div>
+  <div class="hero-corner br"></div>
+
+  <div class="hero-content">
+    <div class="hero-l">
+      <div class="hero-eyebrow reveal">Production Excellence Suite · Commercial Millwork</div>
+      <h1 class="reveal rd1">
+        Stop estimating
+        <span class="em-line">Manually.</span>
+      </h1>
+      <p class="hero-sub reveal rd2">
+        MillworkSuite reads any architectural PDF, discovers every casework item automatically, prices the scope against your catalog, and exports directly to Microvellum or Cabinet Vision. From drawing to production — without re-entry.
+      </p>
+      <div class="hero-actions reveal rd3">
+        <button type="button" class="btn-primary btn-magnetic" data-open-demo aria-haspopup="dialog">Request a Demo</button>
+        <a href="#how" class="btn-link">See how it works</a>
+      </div>
+      <div class="hero-suite reveal rd4">
+        <span class="hero-suite-tag">In the suite</span>
+        <span class="hsp">Estimate</span>
+        <span class="hsp">Draft</span>
+        <span class="hsp">Revisions</span>
+        <span class="hsa">→</span>
+        <span class="hsl">One Suite</span>
+      </div>
+    </div>
+
+    <div class="hero-r reveal rd2">
+      <div class="hero-scan-wrap">
+        <div class="hero-scan-glow" aria-hidden="true"></div>
+        <div class="hero-scan">
+          <div class="scan-bar">
+            <div class="scan-bar-l"><span class="scan-bar-dot"></span><span class="scan-bar-status">Scope discovery — active</span></div>
+            <div class="scan-counter"><span class="scan-count" id="scanCount">0</span><span style="color:var(--dim)">&nbsp;detected</span></div>
+          </div>
+          <div style="padding:1rem 1rem .6rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:.8rem;border-bottom:1px solid var(--rule)">
+            <div style="border:1px solid var(--rule);background:var(--bg);position:relative;min-height:210px;display:flex;flex-direction:column;overflow:hidden">
+              <div style="font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding:.5rem .7rem .3rem;border-bottom:1px solid var(--rule);position:absolute;top:0;left:0;right:0;z-index:2;background:var(--bg)">PDF · A2-04 · ELEV</div>
+              <svg id="heroScanSvg" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;flex:1;padding-top:1.6rem" aria-label="Scope detection in progress">
+                <rect x="5" y="5" width="190" height="140" stroke="var(--svg-line-a)" stroke-width=".5" fill="none"/>
+                <line x1="5" y1="72" x2="195" y2="72" stroke="var(--svg-line-b)" stroke-width=".4" stroke-dasharray="3 2"/>
+                <line x1="100" y1="5" x2="100" y2="145" stroke="var(--svg-line-b)" stroke-width=".4" stroke-dasharray="3 2"/>
+                <g class="scan-item"><rect class="scan-box" x="12" y="12" width="22" height="13"/><text class="scan-lbl" x="12.5" y="11">B-01</text></g>
+                <g class="scan-item"><rect class="scan-box" x="40" y="12" width="22" height="13"/><text class="scan-lbl" x="40.5" y="11">B-02</text></g>
+                <g class="scan-item"><rect class="scan-box" x="68" y="12" width="22" height="13"/><text class="scan-lbl" x="68.5" y="11">B-03</text></g>
+                <g class="scan-item"><rect class="scan-box" x="12" y="78" width="28" height="20"/><text class="scan-lbl" x="12.5" y="77">T-08</text></g>
+                <g class="scan-item"><rect class="scan-box" x="46" y="78" width="22" height="20"/><text class="scan-lbl" x="46.5" y="77">T-09</text></g>
+                <g class="scan-item"><rect class="scan-box" x="74" y="78" width="18" height="20"/><text class="scan-lbl" x="74.5" y="77">B-10</text></g>
+                <g class="scan-item"><rect class="scan-box" x="12" y="112" width="26" height="16"/><text class="scan-lbl" x="12.5" y="111">U-11</text></g>
+                <g class="scan-item"><rect class="scan-box" x="44" y="112" width="22" height="16"/><text class="scan-lbl" x="44.5" y="111">U-12</text></g>
+                <g class="scan-item"><rect class="scan-box" x="108" y="12" width="38" height="18"/><text class="scan-lbl" x="108.5" y="11">U-04</text></g>
+                <g class="scan-item"><rect class="scan-box" x="152" y="12" width="28" height="18"/><text class="scan-lbl" x="152.5" y="11">U-05</text></g>
+                <g class="scan-item"><rect class="scan-box" x="108" y="78" width="22" height="30"/><text class="scan-lbl" x="108.5" y="77">B-12</text></g>
+                <g class="scan-item"><rect class="scan-box" x="136" y="78" width="22" height="30"/><text class="scan-lbl" x="136.5" y="77">B-13</text></g>
+                <g class="scan-item"><rect class="scan-box" x="164" y="78" width="22" height="30"/><text class="scan-lbl" x="164.5" y="77">B-14</text></g>
+                <g class="scan-item"><rect class="scan-box" x="108" y="118" width="52" height="18"/><text class="scan-lbl" x="108.5" y="117">C-20</text></g>
+              </svg>
+            </div>
+            <div class="hml-wrap">
+              <div class="hml-head"><span>Detected · L01</span><span id="hmlCount">0</span></div>
+              <div class="hml-row hml-r1" style="opacity:0;transition:opacity .3s"><span class="ty">B</span><span class="nm">Base Cabinet · 36"</span><span class="ct">×3</span></div>
+              <div class="hml-row hml-r2" style="opacity:0;transition:opacity .3s .15s"><span class="ty">U</span><span class="nm">Wall Hung · 30"</span><span class="ct">×2</span></div>
+              <div class="hml-row hml-r3" style="opacity:0;transition:opacity .3s .3s"><span class="ty">T</span><span class="nm">Tall Storage · 84"</span><span class="ct">×2</span></div>
+              <div class="hml-row hml-r4" style="opacity:0;transition:opacity .3s .45s"><span class="ty">B</span><span class="nm">Drawer Stack · 24"</span><span class="ct">×3</span></div>
+            </div>
+          </div>
+          <div class="scan-foot">
+            <div class="scan-foot-cell">Scope<strong><span class="u" id="scanTotal">0</span></strong></div>
+            <div class="scan-foot-cell">Pricing<strong>Applied</strong></div>
+            <div class="scan-foot-cell">Export<strong>MV / CV</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-pipeline reveal rd4">
+    <div class="pipeline-label">The end-to-end workflow</div>
+    <div class="pipeline" id="heroPipeline">
+      <div class="pipe-step"><span class="pipe-num">01</span><span class="pipe-text">Drawings</span><span class="pipe-arrow">→</span></div>
+      <div class="pipe-step"><span class="pipe-num">02</span><span class="pipe-text">Scope Discovery</span><span class="pipe-arrow">→</span></div>
+      <div class="pipe-step"><span class="pipe-num">03</span><span class="pipe-text">Pricing Engine</span><span class="pipe-arrow">→</span></div>
+      <div class="pipe-step"><span class="pipe-num">04</span><span class="pipe-text">Proposal</span><span class="pipe-arrow">→</span></div>
+      <div class="pipe-step"><span class="pipe-num">05</span><span class="pipe-text">CAD Export</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- §01 PROBLEM -->
+
+<section class="problem-bone" id="problem" data-section-num="01" data-section-name="The Problem">
+  <div class="container">
+    <p class="bone-landmark reveal">Before.<em>&nbsp;&nbsp;The familiar story.</em></p>
+    <div class="bone-row reveal rd1">
+      <div class="bone-num">01</div>
+      <div class="bone-body">
+        <div class="bone-label">Drawings</div>
+        <p class="bone-text">Architectural PDFs arrive. <strong>An estimator manually marks up every cabinet,</strong> elevation by elevation, room by room. Major commercial bids consume entire teams for weeks just to land on a count.</p>
+      </div>
+    </div>
+    <div class="bone-row reveal rd2">
+      <div class="bone-num">02</div>
+      <div class="bone-body">
+        <div class="bone-label">Pricing</div>
+        <p class="bone-text">That count gets copied into a spreadsheet. Pricing tables applied manually. <strong>One formula error, one missed cabinet</strong> — and the bid is wrong before it leaves the door.</p>
+      </div>
+    </div>
+    <div class="bone-row reveal rd3">
+      <div class="bone-num">03</div>
+      <div class="bone-body">
+        <div class="bone-label">Handoff</div>
+        <p class="bone-text">The estimator sends the scope to the draftsman. The draftsman <strong>re-enters everything from scratch</strong> — cabinet codes, dimensions, configurations — into Microvellum or Cabinet Vision. The same job, entered twice.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bone-edge"></div>
+</section>
+
+<!-- §02 MANIFESTO -->
+<div class="sec-mark" id="manifesto"><div class="container"><span class="sm-num">§02</span><span class="sm-rule"></span><span class="sm-label">Our Approach</span></div></div>
+
+<section class="section" data-section-num="02" data-section-name="Our Approach">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <span class="eyebrow reveal">Manifesto</span>
+        <h2 class="h2 reveal rd1">The goal is <em>not</em> to replace estimators or draftsmen. It's to let them work at their best.</h2>
+      </div>
+      <div class="sec-head-r">
+        <p class="lead reveal rd2">
+          Skilled people are scarce in this trade. The bottleneck isn't talent — it's the volume of repetitive work piled in front of it. MillworkSuite is built around a single principle: amplify expertise, eliminate repetition.
+        </p>
+      </div>
+    </div>
+
+    <div class="manifesto-grid">
+      <div class="manifesto-l reveal rd1">
+        <span class="ml-tag">A Time Problem, Not a Skill Problem</span>
+        <h3>Estimators don't bid slowly because they aren't good at it. They bid slowly because <em>the work is tedious and time consuming.</em></h3>
+        <p>Marking up cabinets in a PDF isn't expertise. Copying counts into a spreadsheet isn't expertise. Re-keying the same project into Microvellum isn't expertise. <strong>It's transcription dressed up as estimation or drafting.</strong></p>
+        <p>The actual hard work — reading the room, anticipating field conditions, sequencing the install, optimizing the cost approach, catching what the architect didn't draw — is what your team is paid for. That's where their judgment shows up. That's where margin is won or lost.</p>
+        <p>MillworkSuite handles the volume so the people in your shop can spend their time on the work that requires their attention.</p>
+      </div>
+
+      <div class="manifesto-r reveal rd2">
+        <div class="contrast-bar">
+          <span class="cb-w">Without · Today</span>
+          <span class="cb-x">→</span>
+          <span class="cb-a">With MillworkSuite</span>
+        </div>
+        <div class="contrast-row">
+          <div class="c-w"><span>Repetitive takeoffs</span></div>
+          <div class="c-x"><svg viewBox="0 0 24 10"><path d="M2 5h20M17 1l4 4-4 4"/></svg></div>
+          <div class="c-a">AI handles the count</div>
+        </div>
+        <div class="contrast-row">
+          <div class="c-w"><span>Manual re-entry into CAD</span></div>
+          <div class="c-x"><svg viewBox="0 0 24 10"><path d="M2 5h20M17 1l4 4-4 4"/></svg></div>
+          <div class="c-a">One scope version, end to end</div>
+        </div>
+        <div class="contrast-row">
+          <div class="c-w"><span>Full re-estimate on revisions</span></div>
+          <div class="c-x"><svg viewBox="0 0 24 10"><path d="M2 5h20M17 1l4 4-4 4"/></svg></div>
+          <div class="c-a">Diff review &amp; delta repricing</div>
+        </div>
+        <div class="contrast-row">
+          <div class="c-w"><span>Separate versions across teams</span></div>
+          <div class="c-x"><svg viewBox="0 0 24 10"><path d="M2 5h20M17 1l4 4-4 4"/></svg></div>
+          <div class="c-a">A single, shared job file</div>
+        </div>
+
+        <div class="manifesto-tagline">
+          <strong>// Principle</strong>
+          Not automation for automation's sake. Amplification of expertise that already exists.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §03 PLATFORM -->
+<div class="sec-mark" id="platform"><div class="container"><span class="sm-num">§03</span><span class="sm-rule"></span><span class="sm-label">The Platform</span></div></div>
+
+<section class="section section-light platform" data-section-num="03" data-section-name="Platform">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <h2 class="h2 reveal">One platform. <em>Estimating and drafting,</em> connected.</h2>
+      </div>
+      <div class="sec-head-r">
+        <p class="lead reveal rd2">
+          MillworkSuite is not just a takeoff tool. It is one product with two connected capabilities — reading drawings, pricing the job, generating the proposal, and handing off to your CAD software using your casework libraries that you already have in use.
+        </p>
+      </div>
+    </div>
+
+    <div class="platform-note reveal">
+      <span class="pn-tag">Note</span>
+      <span>Two capabilities — <strong style="color:var(--text);font-weight:600">Estimate</strong> &amp; <strong style="color:var(--text);font-weight:600">Draft</strong> — same product, same database, same scope version.</span>
+    </div>
+
+    <div class="app-grid">
+      <!-- ESTIMATE -->
+      <div class="app-block reveal rd1">
+        <div class="app-badge">
+          <span class="num">01</span>
+          <span>Estimate</span>
+          <span class="live">Available Now</span>
+        </div>
+        <h3 class="app-title">AI Scope Discovery + Pricing Engine</h3>
+        <p class="app-desc">
+          Upload any architectural PDF. MillworkSuite auto-detects Page Names / Page Numbers, and by Page Type — detects every casework item in every elevation, links floor plan context, and generates a complete scope of work with your pricing applied.
+        </p>
+        <ul class="app-list">
+          <li>Automatic page organization — <span class="k">rooms &amp; elevations</span></li>
+          <li>AI elevation detection — <span class="k">90%+ scope accuracy</span></li>
+          <li>Floor plan + elevation cross-reference</li>
+          <li>Calibrated measurement — <span class="k">scale-accurate, no manual conversion</span></li>
+          <li>User-defined pricing catalog</li>
+          <li>Proposal export to Excel</li>
+          <li>Supports any architect's drawing style</li>
+        </ul>
+        <div class="app-stat">
+          <div class="app-stat-num"><span class="stat-anim" data-target="60" data-suffix="">0</span><span class="suf">%</span></div>
+          <div class="app-stat-text">
+            <strong>Effort reduction in estimation</strong>
+            A complete priced scope of work — generated end-to-end.
+          </div>
+        </div>
+      </div>
+
+      <!-- DRAFT -->
+      <div class="app-block reveal rd2">
+        <div class="app-badge">
+          <span class="num">02</span>
+          <span>Draft</span>
+          <span class="live">CAD Export</span>
+        </div>
+        <h3 class="app-title">Direct-to-CAD Handoff</h3>
+        <p class="app-desc">
+          When the estimate is approved, MillworkSuite exports directly to Microvellum and Cabinet Vision — using the cabinet libraries you currently have in use within your CAD system of choice. The draftsman opens the job already built. No re-entry.
+        </p>
+        <ul class="app-list">
+          <li>Export to Microvellum</li>
+          <li>Export to Cabinet Vision</li>
+          <li>Company catalog mapping — <span class="k">your codes, not generic defaults</span></li>
+          <li>Per-project CAD path selection — <span class="k">Microvellum or Cabinet Vision</span></li>
+          <li>Drafting time reduction of 50% or more on large projects</li>
+          <li>Same scope version from estimate to shop drawings</li>
+        </ul>
+        <div class="app-stat">
+          <div class="app-stat-num">40<span class="suf">%</span><span style="font-size:.45em;margin:0 .2em;opacity:.6;font-style:normal">–</span>60<span class="suf">%</span></div>
+          <div class="app-stat-text">
+            <strong>Drafting time reduction</strong>
+            On large commercial jobs — pre-matched libraries, no manual re-entry from estimate to shop drawings.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §04 REVISIONS -->
+<div class="sec-mark" id="revisions"><div class="container"><span class="sm-num">§04</span><span class="sm-rule"></span><span class="sm-label">Revisions</span></div></div>
+
+<section class="section" data-section-num="04" data-section-name="Revisions">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <span class="eyebrow reveal">Revision-aware</span>
+        <h2 class="h2 reveal rd1">Architects revise. <em>Your scope shouldn't restart.</em></h2>
+      </div>
+      <div class="sec-head-r">
+        <p class="lead reveal rd2">
+          Drawings don't arrive once. Architects deliver a base set, then an addendum, then post-award revisions, change directives, etc. MillworkSuite handles every version — without rebuilding the job from scratch.
+        </p>
+      </div>
+    </div>
+
+    <div class="rev-grid">
+      <div class="rev-text reveal rd1">
+        <h3>Diff revisions. Update only what changed. <em>Push deltas to CAD.</em></h3>
+        <p>Upload a new drawing set. MillworkSuite compares it page-by-page, elevation-by-elevation against the prior version. Added cabinets, removed cabinets, dimension changes, finish swaps — every difference is flagged and ready for review.</p>
+        <ul class="rev-list">
+          <li class="rev-list-item">
+            <span class="rli-tag">+ Detect</span>
+            <span class="rli-body"><strong>Page-level diffing.</strong> <span>Match revised pages to the original set</span></span>
+          </li>
+          <li class="rev-list-item">
+            <span class="rli-tag">~ Reprice</span>
+            <span class="rli-body"><strong>Re-price only what changed.</strong> <span>The unchanged scope remains. Update your bid within minutes — not days.</span></span>
+          </li>
+          <li class="rev-list-item">
+            <span class="rli-tag">→ Push</span>
+            <span class="rli-body"><strong>Export the revised job.</strong> <span>Microvellum and Cabinet Vision get the updated project — reimport only what changed.</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rev-vis reveal rd2">
+        <div class="rev-vis-bar">
+          <div class="l"><span class="dot"></span> revision_log · v3 vs v2</div>
+          <div class="r">8 changes</div>
+        </div>
+        <div class="rev-log" id="revLog">
+          <div class="rev-log-row head"><span></span><span>Pg / Elev</span><span>Item</span><span>Δ</span></div>
+          <div class="rev-log-row add"><span class="sym">+</span><span class="id">A2-04 / E-A</span><span class="desc">Tall Storage 84" · Lab 3</span><span class="qty">+1</span></div>
+          <div class="rev-log-row mod"><span class="sym">~</span><span class="id">A2-04 / E-B</span><span class="desc">Cab-205 width 36" → 30"</span><span class="qty">δ</span></div>
+          <div class="rev-log-row del"><span class="sym">−</span><span class="id">A2-05 / E-A</span><span class="desc">Wall Hung U-12</span><span class="qty">−1</span></div>
+          <div class="rev-log-row mod"><span class="sym">~</span><span class="id">A2-06 / E-C</span><span class="desc">Finish Lam-A → Lam-C</span><span class="qty">δ</span></div>
+          <div class="rev-log-row add"><span class="sym">+</span><span class="id">A2-07 / E-B</span><span class="desc">Base Drawer Stack 24"</span><span class="qty">+2</span></div>
+        </div>
+        <div class="rev-log-foot">
+          <div class="rlf add"><strong>+3</strong>Added</div>
+          <div class="rlf mod"><strong>3</strong>Modified</div>
+          <div class="rlf del"><strong>−1</strong>Removed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §05 HOW IT WORKS -->
+<div class="sec-mark" id="how"><div class="container"><span class="sm-num">§05</span><span class="sm-rule"></span><span class="sm-label">How It Works</span></div></div>
+
+<section class="section section-light" data-section-num="05" data-section-name="How It Works">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <h2 class="h2 reveal">Five steps. <em>End to end.</em></h2>
+      </div>
+      <div class="sec-head-r">
+        <p class="lead reveal rd2">
+          One product, multiple drawing versions, one source of truth. From the architect's PDF to the draftsman's open project — without re-entry, without spreadsheets, without losing days of estimating effort.
+        </p>
+      </div>
+    </div>
+
+    <div class="steps" id="steps">
+      <div class="step" data-step="1">
+        <div class="step-num">01</div>
+        <div class="step-name">Drawing Intake</div>
+        <div class="step-desc">Upload architectural PDFs. MillworkSuite <strong>auto-classifies every page</strong> by room and elevation type.</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8M8 9h2"/></svg></div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-num">02</div>
+        <div class="step-name">AI Scope Discovery</div>
+        <div class="step-desc">The AI engine detects every casework item — base cabinets, uppers, countertops, soffits, etc. — across every elevation. <strong>Verified at 90%+ accuracy</strong> on unseen architect styles.</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step-num">03</div>
+        <div class="step-name">Pricing Engine</div>
+        <div class="step-desc">Apply your company's pricing catalog. The engine maps detected items to your SKUs, applies unit pricing, and calculates a complete priced scope — with a <strong>user-review step</strong> before the proposal is locked.</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="18" cy="18" r="3"/></svg></div>
+      </div>
+      <div class="step" data-step="4">
+        <div class="step-num">04</div>
+        <div class="step-name">Proposal Output</div>
+        <div class="step-desc">Export a complete, formatted scope of work and quote to Excel. <strong>Client-ready</strong> using your company branding.</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 9h6v6H9zM3 9h6M3 15h6M15 3v6M15 15v6"/></svg></div>
+      </div>
+      <div class="step" data-step="5">
+        <div class="step-num">05</div>
+        <div class="step-name">CAD Export</div>
+        <div class="step-desc">Push the approved scope directly to Microvellum or Cabinet Vision using your existing CAD Libraries. Drafting starts with live CAD files of cabinets — not a blank screen.</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M3 12h13M11 6l5 6-5 6M16 3h5v18h-5"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §06 PROOF -->
+<div class="sec-mark" id="proof"><div class="container"><span class="sm-num">§06</span><span class="sm-rule"></span><span class="sm-label">Proof</span></div></div>
+
+<section class="section proof" data-section-num="06" data-section-name="Proof">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <h2 class="h2 reveal">Less time on volume. <em>More time on value.</em></h2>
+      </div>
+      <div class="sec-head-r">
+        <p class="lead reveal rd2">Three numbers we'll defend in a live demo. Pulled from real commercial millwork bids run end-to-end through MillworkSuite — scope discovery, pricing, proposal, and CAD export.</p>
+      </div>
+    </div>
+
+    <div class="stat-list">
+      <div class="stat-entry reveal rd1">
+        <div class="stat-entry-num"><span class="stat-anim" data-target="90" data-suffix="">0</span><span class="stat-suf">%+</span></div>
+        <div class="stat-entry-body">
+          <div class="stat-entry-label">Scope Accuracy</div>
+          <p class="stat-entry-text">On commercial jobs — including <strong>first-time architect styles never seen before.</strong> Full review step before anything locks.</p>
+        </div>
+      </div>
+      <div class="stat-entry reveal rd2">
+        <div class="stat-entry-num">40<span class="stat-suf">%</span><span style="font-size:.45em;margin:0 .2em;opacity:.6;font-style:normal">–</span>60<span class="stat-suf">%</span></div>
+        <div class="stat-entry-body">
+          <div class="stat-entry-label">Effort Reduction · Estimation</div>
+          <p class="stat-entry-text">Less estimator effort on commercial bids — <strong>scope discovery, pricing, and proposal generated end-to-end.</strong></p>
+        </div>
+      </div>
+      <div class="stat-entry reveal rd3">
+        <div class="stat-entry-num">40<span class="stat-suf">%</span><span style="font-size:.45em;margin:0 .2em;opacity:.6;font-style:normal">–</span>60<span class="stat-suf">%</span></div>
+        <div class="stat-entry-body">
+          <div class="stat-entry-label">Time Reduction · Drafting</div>
+          <p class="stat-entry-text">Reduction in drafting time. Same job, <strong>pre-loaded into CAD</strong> with libraries already matched.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote reveal">
+      <div class="pull-mark">"</div>
+      <div class="pull-body">
+        <blockquote>We uploaded a set we'd never seen before — a completely new architect, a style our team hadn't worked with. It picked up 88+ boxes at high accuracy. We didn't have to train it.</blockquote>
+        <div class="pull-attr">Commercial millwork estimator · Active pilot participant</div>
+      </div>
+    </div>
+
+    <div class="proof-note reveal">
+      <span class="proof-note-label">Methodology</span>
+      <span class="proof-note-text">Based on commercial jobs processed end-to-end through MillworkSuite during active pilot — hospital casework, hotel interiors, and office build-outs. Effort reduction measured against prior estimator time on equivalent jobs at the same shop.</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- §07 INTEGRATIONS -->
+<div class="sec-mark" id="integrations"><div class="container"><span class="sm-num">§07</span><span class="sm-rule"></span><span class="sm-label">Integrations</span></div></div>
+
+<section class="section" data-section-num="07" data-section-name="Integrations">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <h2 class="h2 reveal">Works with the tools <em>you already use.</em></h2>
+      </div>
+      <div class="sec-head-r">
+        <p class="lead reveal rd2">
+          MillworkSuite slots into your existing stack. No proprietary formats. No replacing the tools your shop has built workflows around.
+        </p>
+      </div>
+    </div>
+
+    <div class="int-table">
+      <div class="int-row reveal rd1">
+        <div class="int-num">01</div>
+        <div class="int-name">Microvellum</div>
+        <div class="int-desc">Native export — drafting starts from a live, pre-built project file.</div>
+        <div class="int-status live">✓ Live</div>
+      </div>
+      <div class="int-row reveal rd2">
+        <div class="int-num">02</div>
+        <div class="int-name">Cabinet Vision</div>
+        <div class="int-desc">Native export with company catalog mapping. Expected Q3 2026.</div>
+        <div class="int-status dev">◑ In Development</div>
+      </div>
+      <div class="int-row reveal rd3">
+        <div class="int-num">03</div>
+        <div class="int-name">Excel / CSV</div>
+        <div class="int-desc">Proposal and bill of materials output — formatted, client-ready.</div>
+        <div class="int-status ok">— Standard</div>
+      </div>
+      <div class="int-row reveal rd4">
+        <div class="int-num">04</div>
+        <div class="int-name">Architectural PDF</div>
+        <div class="int-desc">Any drawing set, any architect — no proprietary format required.</div>
+        <div class="int-status ok">— Universal</div>
+      </div>
+    </div>
+
+    <div class="int-foot reveal">
+      <div class="int-foot-tag">Note</div>
+      <div class="int-foot-text">MillworkSuite does not replace your CAD software. It feeds it.</div>
+    </div>
+  </div>
+</section>
+
+<!-- §08 BUILT FOR -->
+<div class="sec-mark" id="icp"><div class="container"><span class="sm-num">§08</span><span class="sm-rule"></span><span class="sm-label">Built For</span></div></div>
+
+<section class="section section-light" data-section-num="08" data-section-name="Built For">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <h2 class="h2 reveal">Built for <em>commercial millwork contractors.</em></h2>
+      </div>
+      <div class="sec-head-r">
+        <p class="lead reveal rd2">
+          We built MillworkSuite for the people who actually do the work — the estimator, the owner, the draftsman. Three roles. Three problems. One product that solves all three.
+        </p>
+      </div>
+    </div>
+
+    <div class="icp-grid">
+      <div class="icp-col reveal rd1">
+        <div class="icp-col-head">
+          <span class="icp-col-num">01</span>
+          <span class="icp-col-name">The Estimator</span>
+          <span class="icp-col-tag">Speed</span>
+        </div>
+        <p class="icp-body">
+          You're spending weeks per major job, counting items and pricing a project you may never get awarded. You want to bid more work without hiring another estimator. MillworkSuite cuts the estimation effort by 40%–60%.
+        </p>
+      </div>
+      <div class="icp-col reveal rd2">
+        <div class="icp-col-head">
+          <span class="icp-col-num">02</span>
+          <span class="icp-col-name">The Owner / President</span>
+          <span class="icp-col-tag">Margin</span>
+        </div>
+        <p class="icp-body">
+          You're leaving bids on the table because your team can't keep up. Bid more with the same resources — more opportunity to win more. At the same time, you may be winning the bids but having to pass on additional work when drafting can't get it drawn fast enough. MillworkSuite solves both problems.
+        </p>
+      </div>
+      <div class="icp-col reveal rd3">
+        <div class="icp-col-head">
+          <span class="icp-col-num">03</span>
+          <span class="icp-col-name">The Draftsman</span>
+          <span class="icp-col-tag">Handoff</span>
+        </div>
+        <p class="icp-body">
+          You're <strong>starting from scratch on every project.</strong> Every project means drawing begins from a blank page in Microvellum or Cabinet Vision. MillworkSuite gives you a pre-drawn job to jump-start your drafting process.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- §09 FAQ -->
+<div class="sec-mark" id="faq"><div class="container"><span class="sm-num">§09</span><span class="sm-rule"></span><span class="sm-label">Common Questions</span></div></div>
+
+<section class="section section-light" data-section-num="09" data-section-name="FAQ">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <h2 class="h2 reveal">Questions we hear <em>before every demo.</em></h2>
+      </div>
+      <div class="sec-head-r">
+        <p class="lead reveal rd2">Straight answers to the objections that matter most. Don't see yours? Email us — we respond to every message.</p>
+      </div>
+    </div>
+
+    <ul class="faq reveal">
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-1">
+          How accurate is the AI scope detection?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-1" role="region" aria-label="How accurate is the AI scope detection?">
+          <div class="faq-a-inner">
+            <strong>90%+ on commercial jobs, including first-time architect styles.</strong> We've tested against drawing sets the model had never seen — new architects, unusual elevation layouts, non-standard page formats. Accuracy holds. There's also a full review step before anything is locked: your estimator approves the scope before pricing is applied. The AI covers the volume; your team closes the last 10%.
+          </div>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-2">
+          What happens to my drawing files after upload?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-2" role="region" aria-label="What happens to my drawing files after upload?">
+          <div class="faq-a-inner">
+            Your files are <strong>encrypted in transit and at rest</strong>. Project data is isolated per organization — no sharing between accounts. Files are retained for the duration of your subscription and deleted on account closure. We do not use your drawing data to train our models. A full security overview is available on request.
+          </div>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-3">
+          What if the AI misses something? Can I correct it?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-3" role="region" aria-label="What if the AI misses something? Can I correct it?">
+          <div class="faq-a-inner">
+            Yes — there is a <strong>full review step</strong> between scope detection and proposal generation. Your estimator sees every detected item, can add, remove, or correct anything. The AI handles the volume; your estimator handles the judgment calls.
+          </div>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-4">
+          How long does onboarding take?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-4" role="region" aria-label="How long does onboarding take?">
+          <div class="faq-a-inner">
+            <strong>Less than 1 day for most shops.</strong> Most of the time is spent uploading and confirming your pricing catalog, mapping your cabinet codes, and configuring your CAD export path (Microvellum or Cabinet Vision). We walk through this in the onboarding call. Most pilot customers run their first real job the same day.
+          </div>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-5">
+          Is Export to Cabinet Vision available now?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-5" role="region" aria-label="Is Export to Cabinet Vision available now?">
+          <div class="faq-a-inner">
+            <strong>Microvellum export is live.</strong> Export to Cabinet Vision is in development — expected Q3 2026. Cabinet Vision shops on pilot today get full access to scope discovery, pricing, and proposal output now, with CAD export to Cabinet Vision added to their account using a pre-release version.
+          </div>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-6">
+          What does the $500/month 90-day pilot include?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-6" role="region" aria-label="What does the $500/month 90-day pilot include?">
+          <div class="faq-a-inner">
+            <strong>Full platform access for 90 days</strong> — one organization, unlimited PDF uploads, AI scope discovery, your pricing catalog, proposal export to Excel, and CAD export to Microvellum or Cabinet Vision. Includes direct onboarding support and access to our team throughout the pilot. No setup fee.
+          </div>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-7">
+          Does this work for residential millwork, or only commercial?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-7" role="region" aria-label="Does this work for residential millwork, or only commercial?">
+          <div class="faq-a-inner">
+            MillworkSuite is <strong>built and optimized for commercial millwork</strong> — hospital casework, hotel interiors, office build-outs, K–12 school casework, corporate interiors. These are the jobs where the volume and complexity deliver the clearest ROI. Residential shops with high-volume production runs will see similar benefits. Small projects with only a few rooms of cabinets would not take full advantage of the added estimating volume capacity. However, the drafting export will still save a good amount of time regardless of project size.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ROI CALCULATOR -->
+<section class="section section-light" aria-labelledby="roi-heading">
+  <div class="container">
+    <div class="roi-wrap reveal">
+      <div class="roi-head">
+        <span class="roi-eyebrow">ROI Calculator</span>
+        <h2 class="roi-title" id="roi-heading">See how fast it pays for itself</h2>
+        <p class="roi-sub">Based on the 50% drafting time reduction measured in active pilots. Adjust for your shop.</p>
+      </div>
+      <div class="roi-body">
+        <div class="roi-inputs">
+          <div class="roi-field">
+            <label for="roi-estimators">Draftsmen on your team</label>
+            <div class="roi-slider-wrap">
+              <input type="range" id="roi-estimators" class="roi-slider" min="1" max="5" value="1" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+              <span class="roi-slider-val" id="roi-estimators-val" aria-live="polite">1</span>
+            </div>
+          </div>
+          <div class="roi-field">
+            <label for="roi-hours">Drafting hours per project (current)</label>
+            <div class="roi-slider-wrap">
+              <input type="range" id="roi-hours" class="roi-slider" min="40" max="640" step="40" value="160" aria-valuemin="40" aria-valuemax="640" aria-valuenow="160">
+              <span class="roi-slider-val" id="roi-hours-val" aria-live="polite">160 hrs</span>
+            </div>
+          </div>
+          <div class="roi-field">
+            <label for="roi-rate">Drafter rate ($/hr)</label>
+            <div class="roi-slider-wrap">
+              <input type="range" id="roi-rate" class="roi-slider" min="15" max="85" step="5" value="45" aria-valuemin="15" aria-valuemax="85" aria-valuenow="45">
+              <span class="roi-slider-val" id="roi-rate-val" aria-live="polite">$45/hr</span>
+            </div>
+          </div>
+          <div class="roi-field">
+            <label for="roi-bids">Major projects per month</label>
+            <div class="roi-slider-wrap">
+              <input type="range" id="roi-bids" class="roi-slider" min="1" max="8" value="2" aria-valuemin="1" aria-valuemax="8" aria-valuenow="2">
+              <span class="roi-slider-val" id="roi-bids-val" aria-live="polite">2</span>
+            </div>
+          </div>
+        </div>
+        <div class="roi-output">
+          <div class="roi-output-head">Monthly impact at 50% drafting time reduction</div>
+          <div class="roi-metrics">
+            <div class="roi-metric">
+              <span class="roi-metric-label">Drafting hours freed/month</span>
+              <span class="roi-metric-num" id="roi-hours-saved" aria-live="polite">160 hrs</span>
+            </div>
+            <div class="roi-metric roi-hi">
+              <span class="roi-metric-label">Estimated savings</span>
+              <span class="roi-metric-num" id="roi-savings" aria-live="polite">$3,120</span>
+            </div>
+            <div class="roi-metric">
+              <span class="roi-metric-label">Net of $500 pilot cost</span>
+              <span class="roi-metric-num" id="roi-net" aria-live="polite">$2,620</span>
+            </div>
+          </div>
+          <div class="roi-payback" id="roi-payback-text" aria-live="polite">
+            Pilot pays for itself after the <strong>1st bid</strong> of the month.
+          </div>
+          <div class="roi-cta-wrap">
+            <button type="button" class="btn-primary" data-open-demo aria-haspopup="dialog">Run it on your next real bid</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- §10 PILOT — TEAL DRENCH -->
+<div class="sec-mark" id="pilot"><div class="container"><span class="sm-num">§10</span><span class="sm-rule"></span><span class="sm-label">Get Started</span></div></div>
+
+<section class="pilot-drench" data-section-num="10" data-section-name="Get Started">
+  <div class="pilot-inner">
+    <div class="eyebrow-pill reveal">Pilot Program · Open Now</div>
+    <h2 class="reveal rd1">Your next bid<br><em>is the demo.</em></h2>
+    <p class="pilot-copy reveal rd2">
+      Upload a real job — a current bid, a recent project — and run the full platform end to end: scope discovery, pricing, proposal, and CAD export.
+    </p>
+    <div class="pilot-terms reveal rd3">
+      <div class="pilot-term">
+        <div class="pilot-term-num">$500<span class="u">/mo</span></div>
+        <div class="pilot-term-label">Pilot Pricing</div>
+      </div>
+      <div class="pilot-term">
+        <div class="pilot-term-num">90<span class="u">&nbsp;days</span></div>
+        <div class="pilot-term-label">Pilot Period</div>
+      </div>
+      <div class="pilot-term">
+        <div class="pilot-term-num">$0</div>
+        <div class="pilot-term-label">Setup Fees</div>
+      </div>
+    </div>
+    <div class="pilot-actions reveal rd4">
+      <button type="button" class="btn-drench btn-magnetic" data-open-demo aria-haspopup="dialog">Request Pilot Access</button>
+    </div>
+    <div class="pilot-contact reveal rd5">
+      Questions? <a href="mailto:info@millworksuite.com">info@millworksuite.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="foot-logo">
+        <img src="assets/favicon.png" alt="" width="28" height="28" loading="lazy">
+        <span translate="no">Millwork<em>Suite</em></span>
+      </div>
+      <p class="foot-tag">The Production Excellence Suite<br>for Commercial Millwork</p>
+    </div>
+    <div class="foot-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#revisions">Revisions</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#integrations">Integrations</a></li>
+        <li><a href="#proof">Proof</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Get Started</h4>
+      <ul>
+        <li><a href="#pilot">Pricing</a></li>
+        <li><button type="button" data-open-demo aria-haspopup="dialog">Request Demo</button></li>
+        <li><a href="mailto:info@millworksuite.com">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div>© 2026 MillworkSuite — All rights reserved</div>
+    <div class="foot-bottom-links">
+      <a href="https://linkedin.com/company/millworksuite" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:info@millworksuite.com">info@millworksuite.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" aria-label="Back to top" aria-hidden="true">↑</button>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <button type="button" class="btn-primary" data-open-demo aria-haspopup="dialog">Request Pilot Access</button>
+</div>
+
+<!-- ================== DEMO MODAL ================== -->
+<div class="modal-backdrop" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" aria-hidden="true">
+  <div class="modal" role="document">
+    <span class="modal-corner tl"></span>
+    <span class="modal-corner tr"></span>
+    <span class="modal-corner bl"></span>
+    <span class="modal-corner br"></span>
+    <div class="modal-bar">
+      <div class="mb-l"><span class="dot"></span> Request a demo</div>
+      <button class="modal-close" id="demoModalClose" aria-label="Close">
+        <svg viewBox="0 0 12 12"><path d="M2 2l8 8M10 2L2 10"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-eyebrow">Pilot Access · Demo Request</div>
+      <h3 class="modal-title" id="demoModalTitle">Tell us about your <em>shop.</em></h3>
+      <p class="modal-sub">Quick form. No sales call until you ask for one. We'll get back to you within one business day with next steps for the 90-day pilot.</p>
+
+      <form class="modal-form" id="demoForm" action="https://formspree.io/f/mgopqbrg" method="POST" novalidate>
+        <div class="mf-row">
+          <div class="mf-field">
+            <label for="mf-name">Name <span class="req">*</span></label>
+            <input id="mf-name" name="name" type="text" placeholder="Jane Smith…" required autocomplete="name">
+          </div>
+          <div class="mf-field">
+            <label for="mf-company">Company <span class="req">*</span></label>
+            <input id="mf-company" name="company" type="text" placeholder="Acme Millwork…" required autocomplete="organization">
+          </div>
+        </div>
+        <div class="mf-row">
+          <div class="mf-field">
+            <label for="mf-email">Work Email <span class="req">*</span></label>
+            <input id="mf-email" name="email" type="email" placeholder="jane@acme.com…" required autocomplete="email" spellcheck="false">
+          </div>
+          <div class="mf-field">
+            <label for="mf-phone">Phone</label>
+            <input id="mf-phone" name="phone" type="tel" placeholder="(555) 555-0100…" autocomplete="tel">
+          </div>
+        </div>
+        <div class="mf-row">
+          <div class="mf-field">
+            <label for="mf-role">Your Role <span class="req">*</span></label>
+            <select id="mf-role" name="role" required>
+              <option value="" disabled selected>Select role</option>
+              <option>Estimator</option>
+              <option>Draftsman</option>
+              <option>Owner / President</option>
+              <option>Operations / PM</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="mf-field">
+            <label for="mf-cad">Primary CAD</label>
+            <select id="mf-cad" name="cad">
+              <option value="" disabled selected>Select CAD</option>
+              <option>Microvellum</option>
+              <option>Cabinet Vision</option>
+              <option>Both</option>
+              <option>Other</option>
+              <option>None yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="mf-field">
+          <label for="mf-message">What you're trying to solve</label>
+          <textarea id="mf-message" name="message" placeholder="e.g. scope challenges, team size, current estimating workflow…"></textarea>
+        </div>
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" class="mf-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="mf-actions">
+          <button class="mf-submit" type="submit" id="mfSubmit">Send Request</button>
+          <span class="mf-note">We'll respond within 1 business day</span>
+        </div>
+
+        <div class="mf-success" id="mfSuccess" role="status">
+          <strong>Request received</strong>
+          Thanks — we'll be in touch within one business day with next steps for the pilot. Want to move faster? <a href="mailto:info@millworksuite.com?subject=Schedule%20demo%20call" style="color:var(--teal);border-bottom:1px solid rgba(40,200,115,.4);padding-bottom:1px">Email us to schedule a call directly →</a>
+        </div>
+        <div class="mf-error" id="mfError" role="alert">
+          <strong>Something went wrong</strong>
+          We couldn't send the form. Please email <a href="mailto:info@millworksuite.com" style="color:var(--teal);border-bottom:1px solid rgba(40,200,115,.4)">info@millworksuite.com</a> directly.
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ============ NAV ============
+  const nav = document.getElementById('mainNav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ============ HAMBURGER + SCRIM ============
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const scrim = document.getElementById('menuScrim');
+  hb?.addEventListener('click', () => {
+    const isOpen = hb.classList.toggle('open');
+    mm.classList.toggle('open');
+    scrim?.classList.toggle('open', isOpen);
+    hb.setAttribute('aria-expanded', String(isOpen));
+    mm.setAttribute('aria-hidden', String(!isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  const closeMobileMenu = () => {
+    hb.classList.remove('open');
+    mm.classList.remove('open');
+    scrim?.classList.remove('open');
+    hb.setAttribute('aria-expanded', 'false');
+    mm.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+  mm?.querySelectorAll('a, button').forEach(el => el.addEventListener('click', closeMobileMenu));
+  scrim?.addEventListener('click', closeMobileMenu);
+
+  // ============ REVEAL ============
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+  reveals.forEach(el => revealObs.observe(el));
+
+  // ============ HERO PIPELINE ============
+  const pipeline = document.getElementById('heroPipeline');
+  if (pipeline) {
+    const pObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          if (prefersReduced) {
+            pipeline.querySelectorAll('.pipe-step').forEach(s => {
+              s.style.opacity = '1'; s.style.transform = 'none';
+            });
+          } else {
+            pipeline.classList.add('active');
+          }
+          pObs.unobserve(pipeline);
+        }
+      });
+    }, {threshold:0.3});
+    pObs.observe(pipeline);
+  }
+
+  // ============ SECTION INDICATOR ============
+  const navSec = document.getElementById('navSection');
+  if (navSec) {
+    const secEls = document.querySelectorAll('[data-section-num]');
+    secEls.forEach(s => {
+      new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) navSec.textContent = '§ ' + e.target.dataset.sectionNum + ' · ' + e.target.dataset.sectionName;
+        });
+      }, {threshold: 0.25, rootMargin: '-15% 0px -55% 0px'}).observe(s);
+    });
+  }
+
+  // ============ HERO SCAN ANIMATION ============
+  const heroSvg = document.getElementById('heroScanSvg');
+  if (heroSvg && !prefersReduced) {
+    const items = heroSvg.querySelectorAll('.scan-item');
+    const countEl = document.getElementById('scanCount');
+    const totalEl = document.getElementById('scanTotal');
+    const hmlCount = document.getElementById('hmlCount');
+    const hmlRows = document.querySelectorAll('.hml-r1,.hml-r2,.hml-r3,.hml-r4');
+    let running = false;
+
+    const runScan = () => {
+      items.forEach(it => it.classList.remove('on'));
+      if (countEl) countEl.textContent = '0';
+      if (totalEl) totalEl.textContent = '0';
+      if (hmlCount) hmlCount.textContent = '0';
+      hmlRows.forEach(r => { r.style.opacity = '0'; });
+      let i = 0;
+      const next = () => {
+        if (i >= items.length) {
+          setTimeout(() => { if (running) runScan(); }, 2200);
+          return;
+        }
+        items[i].classList.add('on');
+        const n = i + 1;
+        if (countEl) countEl.textContent = n;
+        if (totalEl) totalEl.textContent = n;
+        if (hmlCount) hmlCount.textContent = Math.min(n, 4);
+        // Show list rows progressively
+        if (n >= 3 && hmlRows[0]) hmlRows[0].style.opacity = '1';
+        if (n >= 6 && hmlRows[1]) hmlRows[1].style.opacity = '1';
+        if (n >= 9 && hmlRows[2]) hmlRows[2].style.opacity = '1';
+        if (n >= 12 && hmlRows[3]) hmlRows[3].style.opacity = '1';
+        i++;
+        setTimeout(next, 120 + Math.random() * 150);
+      };
+      next();
+    };
+
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !running) { running = true; runScan(); }
+        else if (!e.isIntersecting) running = false;
+      });
+    }, {threshold: 0.1}).observe(heroSvg);
+  }
+
+  // ============ MAGNETIC BUTTONS ============
+  document.querySelectorAll('.btn-magnetic').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      const x = (e.clientX - r.left - r.width / 2) * 0.28;
+      const y = (e.clientY - r.top - r.height / 2) * 0.28;
+      btn.style.transform = `translate(${x}px,${y}px) translateY(-2px)`;
+      btn.style.transition = 'transform 0.08s ease';
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+      btn.style.transition = 'transform 0.5s cubic-bezier(.34,1.56,.64,1), background .2s, box-shadow .2s';
+    });
+  });
+
+  // ============ INTERACTIVE BEFORE/AFTER CONTRAST ============
+  const maniR = document.querySelector('.manifesto-r');
+  if (maniR && !prefersReduced) {
+    maniR.addEventListener('mousemove', e => {
+      const r = maniR.getBoundingClientRect();
+      const x = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+      maniR.querySelectorAll('.c-w').forEach(el => {
+        el.style.filter = `blur(${x * 1.2}px)`;
+        el.style.opacity = String(1 - x * 0.28);
+      });
+      maniR.querySelectorAll('.c-a').forEach(el => {
+        el.style.opacity = String(0.72 + x * 0.28);
+        el.style.color = x > 0.6 ? 'var(--text)' : '';
+      });
+    });
+    maniR.addEventListener('mouseleave', () => {
+      maniR.querySelectorAll('.c-w,.c-a').forEach(el => {
+        el.style.filter = ''; el.style.opacity = ''; el.style.color = '';
+      });
+    });
+  }
+
+  // ============ COUNT-UP STATS ============
+  const easeOut = t => 1 - Math.pow(1 - t, 3);
+  const animateCount = (el) => {
+    const target = parseFloat(el.dataset.target);
+    if (prefersReduced) {
+      el.textContent = target % 1 === 0 ? target : target.toFixed(1);
+      return;
+    }
+    const dur = 1400;
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const v = easeOut(p) * target;
+      el.textContent = (target % 1 === 0) ? Math.round(v) : v.toFixed(1);
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target % 1 === 0 ? target : target.toFixed(1);
+    };
+    requestAnimationFrame(tick);
+  };
+  const counters = document.querySelectorAll('.stat-anim');
+  const cObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCount(e.target);
+        cObs.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.5});
+  counters.forEach(c => cObs.observe(c));
+
+  // ============ WORKFLOW STEPS ============
+  const steps = document.querySelectorAll('.step');
+  const stepsContainer = document.getElementById('steps');
+  if (stepsContainer) {
+    let activated = false;
+    const sObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !activated) {
+          activated = true;
+          steps.forEach((s, i) => {
+            if (prefersReduced) {
+              s.classList.add('active');
+            } else {
+              setTimeout(() => s.classList.add('active'), i * 220);
+            }
+          });
+          sObs.unobserve(stepsContainer);
+        }
+      });
+    }, {threshold:0.18});
+    sObs.observe(stepsContainer);
+  }
+
+  // ============ REVISION LOG ============
+  const revLog = document.getElementById('revLog');
+  if (revLog) {
+    if (prefersReduced) {
+      revLog.querySelectorAll('.rev-log-row').forEach(r => {
+        r.style.opacity = '1'; r.style.transform = 'none';
+      });
+    }
+    const rObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          revLog.classList.add('active');
+          rObs.unobserve(revLog);
+        }
+      });
+    }, {threshold:0.3});
+    rObs.observe(revLog);
+  }
+
+  // ============ BACK TO TOP ============
+  const backTop = document.getElementById('backTop');
+  if (backTop) {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      const btObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          backTop.classList.toggle('visible', !e.isIntersecting);
+          backTop.setAttribute('aria-hidden', String(e.isIntersecting));
+        });
+      }, {threshold:0.2});
+      btObs.observe(hero);
+    }
+    backTop.addEventListener('click', () => window.scrollTo({top:0,behavior:prefersReduced?'auto':'smooth'}));
+  }
+
+  // ============ ROI CALCULATOR ============
+  const roiCalc = () => {
+    const get = (id, def) => parseInt(document.getElementById(id)?.value || def);
+    const estimators = get('roi-estimators', 1);
+    const hours = get('roi-hours', 160);
+    const rate = get('roi-rate', 45);
+    const bids = get('roi-bids', 2);
+
+    const hoursSaved = Math.round(estimators * hours * bids * 0.5);
+    const savings = hoursSaved * rate;
+    const net = savings - 500;
+    const fmt = n => new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+    const fmtN = n => n.toLocaleString();
+
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    set('roi-hours-saved', fmtN(hoursSaved) + ' hrs');
+    set('roi-savings', fmt(savings));
+    set('roi-net', net >= 0 ? fmt(net) : '−' + fmt(Math.abs(net)));
+    set('roi-estimators-val', estimators);
+    set('roi-hours-val', hours + ' hrs');
+    set('roi-rate-val', '$' + rate + '/hr');
+    set('roi-bids-val', bids);
+
+    const paybackEl = document.getElementById('roi-payback-text');
+    if (paybackEl) {
+      if (savings <= 0) {
+        paybackEl.innerHTML = 'Increase volume or rate to see impact.';
+      } else if (net >= savings * 0.9) {
+        paybackEl.innerHTML = `Pilot pays for itself after the <strong>1st project</strong> of the month. Net positive: <strong>${fmt(net)}/mo</strong>.`;
+      } else if (net >= 0) {
+        const paybackBids = Math.ceil(500 / (savings / bids));
+        paybackEl.innerHTML = `Breaks even after <strong>${paybackBids} project${paybackBids > 1 ? 's' : ''}</strong>. Net positive: <strong>${fmt(net)}/mo</strong>.`;
+      } else {
+        paybackEl.innerHTML = `At this volume, <strong>increase projects/month</strong> to see positive ROI — or request a demo to model your specific jobs.`;
+      }
+    }
+
+    // Sync ARIA values
+    ['roi-estimators','roi-hours','roi-rate','roi-bids'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute('aria-valuenow', el.value);
+    });
+  };
+  document.querySelectorAll('.roi-slider').forEach(s => s.addEventListener('input', roiCalc));
+  roiCalc();
+
+  // ============ EMAIL BRIEF FORM ============
+  const briefForm = document.getElementById('briefForm');
+  const briefSuccess = document.getElementById('briefSuccess');
+  briefForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailInput = briefForm.querySelector('input[type="email"]');
+    if (!emailInput?.value || !briefForm.checkValidity()) return;
+    briefForm.style.display = 'none';
+    if (briefSuccess) briefSuccess.classList.add('show');
+  });
+
+  // ============ FAQ ACCORDION ============
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      const answerId = btn.getAttribute('aria-controls');
+      const answer = document.getElementById(answerId);
+      // Close all others
+      document.querySelectorAll('.faq-q').forEach(other => {
+        if (other !== btn) {
+          other.setAttribute('aria-expanded', 'false');
+          const otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+          if (otherAnswer) otherAnswer.style.maxHeight = '0';
+        }
+      });
+      // Toggle current
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      if (answer) answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+    });
+  });
+
+  // ============ STICKY MOBILE CTA ============
+  const stickyCta = document.getElementById('stickyCta');
+  if (stickyCta) {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      const ctaObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          const show = !e.isIntersecting;
+          stickyCta.classList.toggle('visible', show);
+          stickyCta.setAttribute('aria-hidden', String(!show));
+        });
+      }, {threshold:0.1});
+      ctaObs.observe(hero);
+    }
+  }
+
+  // ============ DEMO MODAL ============
+  const modal = document.getElementById('demoModal');
+  const modalClose = document.getElementById('demoModalClose');
+  const triggers = document.querySelectorAll('[data-open-demo]');
+  let lastFocused = null;
+
+  const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+
+  const openModal = (e) => {
+    if (e) e.preventDefault();
+    lastFocused = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      const firstInput = modal.querySelector('input,select,textarea');
+      if (firstInput) firstInput.focus();
+    }, 80);
+  };
+  const closeModal = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  };
+
+  triggers.forEach(t => t.addEventListener('click', openModal));
+  modalClose?.addEventListener('click', closeModal);
+  modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeModal(); return; }
+    if (e.key === 'Tab') {
+      const focusable = Array.from(modal.querySelectorAll(FOCUSABLE));
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+  });
+
+  // ============ DEMO FORM SUBMIT ============
+  const form = document.getElementById('demoForm');
+  const submit = document.getElementById('mfSubmit');
+  const success = document.getElementById('mfSuccess');
+  const error = document.getElementById('mfError');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    success.classList.remove('show');
+    error.classList.remove('show');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    submit.disabled = true;
+    const orig = submit.textContent;
+    submit.textContent = 'Sending…';
+    let ok;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {'Accept':'application/json'}
+      });
+      ok = res.ok;
+    } catch (_) {
+      ok = false;
+    }
+    if (ok) {
+      success.classList.add('show');
+      form.reset();
+      submit.textContent = 'Sent ✓';
+      setTimeout(() => { submit.textContent = orig; submit.disabled = false; }, 2400);
+    } else {
+      error.classList.add('show');
+      submit.textContent = orig;
+      submit.disabled = false;
+    }
+  });
+
+  // ============ ANALYTICS ============
+  const track = (event, props = {}) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event, ...props, _ts: Date.now() });
+    if (typeof window.plausible === 'function') window.plausible(event, { props });
+    if (typeof window.posthog === 'object' && window.posthog.capture) window.posthog.capture(event, props);
+  };
+
+  // CTA source resolver
+  const ctaSrc = el => {
+    if (el.closest('.announce-bar')) return 'announce_bar';
+    if (el.closest('.sticky-cta'))   return 'sticky_cta';
+    if (el.closest('.site-nav'))     return 'nav';
+    if (el.closest('.hero'))         return 'hero';
+    if (el.closest('.pilot'))        return 'pilot_cta';
+    if (el.closest('.roi-wrap'))     return 'roi_calculator';
+    if (el.closest('footer'))        return 'footer';
+    return 'page';
+  };
+
+  // CTA clicks (modal triggers)
+  document.querySelectorAll('[data-open-demo]').forEach(btn => {
+    btn.addEventListener('click', () => track('cta_clicked', { source: ctaSrc(btn) }));
+  });
+
+  // Scroll depth — 25 / 50 / 75 / 90
+  const depthsSeen = new Set();
+  window.addEventListener('scroll', () => {
+    const pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+    [25, 50, 75, 90].forEach(d => {
+      if (pct >= d && !depthsSeen.has(d)) {
+        depthsSeen.add(d);
+        track('scroll_depth', { percent: d });
+      }
+    });
+  }, { passive: true });
+
+  // Section views (once per section per load)
+  const sViewObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      track('section_viewed', { section: e.target.id || e.target.className.split(' ')[0] });
+      sViewObs.unobserve(e.target);
+    });
+  }, { threshold: 0.3 });
+  ['problem','manifesto','platform','revisions','how','proof','integrations','icp','faq','pilot'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) sViewObs.observe(el);
+  });
+
+  // Mobile menu open (MutationObserver — order-independent)
+  const mobileMenuElA = document.getElementById('mobileMenu');
+  if (mobileMenuElA) {
+    new MutationObserver(muts => {
+      muts.forEach(m => {
+        if (m.target.getAttribute('aria-hidden') === 'false') track('mobile_menu_opened');
+      });
+    }).observe(mobileMenuElA, { attributes: true, attributeFilter: ['aria-hidden'] });
+  }
+
+  // Demo form: start + success/error via MutationObserver
+  let demoStarted = false;
+  document.getElementById('demoForm')?.addEventListener('focusin', () => {
+    if (!demoStarted) { demoStarted = true; track('demo_form_started'); }
+  });
+  const obsClass = (id, eventName) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    new MutationObserver(muts => {
+      muts.forEach(m => {
+        if (m.target.classList.contains('show')) track(eventName);
+      });
+    }).observe(el, { attributes: true, attributeFilter: ['class'] });
+  };
+  obsClass('mfSuccess', 'demo_form_success');
+  obsClass('mfError', 'demo_form_error');
+
+  // ROI calculator first interaction
+  let roiUsed = false;
+  document.querySelectorAll('.roi-slider').forEach(s => {
+    s.addEventListener('input', () => {
+      if (!roiUsed) { roiUsed = true; track('roi_calculator_used'); }
+    });
+  });
+
+  // FAQ: which questions opened
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.getAttribute('aria-expanded') === 'true') {
+        track('faq_opened', { question: btn.textContent.trim().replace(/\+$/, '').trim().slice(0, 80) });
+      }
+    });
+  });
+
+  // Email brief capture
+  document.getElementById('briefForm')?.addEventListener('submit', () => track('brief_form_submitted'));
+
+  // Back to top
+  document.getElementById('backTop')?.addEventListener('click', () => track('back_to_top_clicked'));
+
+})();
+</script>
+
+<script>
+(function(){
+  var DARK = 'dark', LIGHT = 'light';
+  var html = document.documentElement;
+  var btn = document.getElementById('themeToggle');
+  var mobBtn = document.getElementById('mobThemeToggle');
+  var meta = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(t){
+    var isLight = t === LIGHT;
+    if(isLight){
+      html.setAttribute('data-theme','light');
+    } else {
+      html.removeAttribute('data-theme');
+    }
+    if(meta) meta.setAttribute('content', isLight ? '#F3FAF6' : '#060D08');
+    if(btn) btn.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    try{ localStorage.setItem('mws-theme', t); }catch(e){}
+  }
+
+  function toggle(){
+    var current = html.getAttribute('data-theme') === 'light' ? LIGHT : DARK;
+    applyTheme(current === LIGHT ? DARK : LIGHT);
+  }
+
+  // Load saved preference
+  var saved;
+  try{ saved = localStorage.getItem('mws-theme'); }catch(e){}
+  if(!saved && window.matchMedia){ saved = window.matchMedia('(prefers-color-scheme: light)').matches ? LIGHT : DARK; }
+  applyTheme(saved || DARK);
+
+  if(btn) btn.addEventListener('click', toggle);
+  if(mobBtn) mobBtn.addEventListener('click', toggle);
+})();
+</script>
+</body>
+</html>
