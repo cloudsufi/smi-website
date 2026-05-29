@@ -220,9 +220,11 @@ nav.site-nav{position:fixed;top:32px;left:0;right:0;z-index:100;height:64px;
 nav.site-nav.scrolled{border-bottom-color:var(--rule-strong);background:var(--nav-bg-scrolled);box-shadow:0 8px 40px rgba(0,0,0,.4)}
 html[data-theme="light"] nav.site-nav.scrolled{box-shadow:0 6px 28px rgba(0,0,0,.07)}
 .nav-logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
-.nav-icon{height:32px;width:auto;display:block}
-.nav-wordmark{font-family:var(--display);font-size:1.02rem;font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1}
-.nav-wordmark span{color:var(--teal)}
+.nav-icon{height:28px;width:auto;display:block;max-width:200px}
+.logo-dark{display:block}
+.logo-light{display:none}
+html[data-theme="light"] .logo-dark{display:none}
+html[data-theme="light"] .logo-light{display:block}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
   font-weight:500;color:var(--muted);position:relative;transition:color .2s;padding:6px 0}
@@ -1061,8 +1063,8 @@ nav.site-nav.scrolled .nav-section-pill{color:var(--muted);border-color:var(--ru
 <!-- NAV -->
 <nav class="site-nav" id="mainNav">
   <a href="#" class="nav-logo" aria-label="MillworkSuite">
-    <img src="assets/favicon.png" alt="" class="nav-icon" width="32" height="32">
-    <span class="nav-wordmark" translate="no">Millwork<span>Suite</span></span>
+    <img src="assets/millworksuite-logo-dark-background.svg" alt="MillworkSuite" class="nav-icon logo-dark" style="height:28px;width:auto">
+    <img src="assets/millworksuite-logo-light-background.svg" alt="MillworkSuite" class="nav-icon logo-light" style="height:28px;width:auto">
   </a>
   <span class="nav-section-pill" id="navSection" aria-hidden="true">§ 00 · Overview</span>
   <div class="nav-right">
@@ -1833,8 +1835,8 @@ nav.site-nav.scrolled .nav-section-pill{color:var(--muted);border-color:var(--ru
   <div class="foot-inner">
     <div class="foot-brand">
       <div class="foot-logo">
-        <img src="assets/favicon.png" alt="" width="28" height="28" loading="lazy">
-        <span translate="no">Millwork<em>Suite</em></span>
+        <img src="assets/millworksuite-logo-dark-background.svg" alt="MillworkSuite" class="logo-dark" style="height:24px;width:auto" loading="lazy">
+        <img src="assets/millworksuite-logo-light-background.svg" alt="MillworkSuite" class="logo-light" style="height:24px;width:auto" loading="lazy">
       </div>
       <p class="foot-tag">The Production Excellence Suite<br>for Commercial Millwork</p>
     </div>
