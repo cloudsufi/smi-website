@@ -1,0 +1,44 @@
+MILLWORKSUITE ONBOARDING — ROLES & PERMISSIONS
+Purpose: Part 1 lists all roles that will exist in your workspace. Part 2 shows the full permission matrix. System roles are pre-filled and cannot be changed. Add your own custom roles in the rows marked USER-DEFINED.
+,,,,,,,,
+PART 1 — ROLE DEFINITIONS
+,,,,,,,,
+Role Name,Type,Description,Assign to which users?,Notes
+WHAT TO ENTER → ,"The name of the role exactly as it should appear in MillworkSuite. For system roles this is fixed. For user-defined roles choose a clear name (e.g. 'Senior Estimator' / 'Project Manager' / 'Outside Consultant')","System roles: leave as-is. User-defined roles: write a plain-English description of what this role is allowed to do. This will appear in the MillworkSuite roles list.","List the email addresses of all users (from 01_Users.csv) who should be assigned this role. Separate multiple emails with a comma.","Any additional context for the MillworkSuite setup team"
+Administrator,System — do not edit,Full system access. All possible permissions.,rob@yourcompany.com,
+Estimator,System — do not edit,Full access to projects drawings rooms elevations pricing and AI. No drafting access.,jmartinez@yourcompany.com,
+Drafter,System — do not edit,Project access (without delete). Drawings/Rooms/Elevations (without delete). Full drafting and AI access. No pricing.,skowalski@yourcompany.com,
+Viewer,System — do not edit,Read-only access to project estimates. Cannot create edit or export.,ehughes@yourcompany.com,
+Senior Estimator,User-defined — edit this,Like Estimator with added access to manage pricing and product mappings.,dtorres@yourcompany.com,Example custom role
+Outside Consultant,User-defined — edit this,Limited access for external contractors — view projects and export to CAD only.,bflores@outsidecompany.com,Example custom role
+<Add custom role name here>,User-defined,<Describe what this role can do>,<email1@company.com>,
+<Add custom role name here>,User-defined,<Describe what this role can do>,<email1@company.com>,
+,,,,,,,,
+,,,,,,,,
+PART 2 — PERMISSION MATRIX
+Instructions: The system role columns are pre-filled for reference. For each USER-DEFINED role you added above fill in Yes or No for every permission row. Add a new column for each custom role you defined.
+,,,,,,,,
+Permission Subject,Permission Name,What this permission allows,Administrator,Estimator,Drafter,Viewer,<Your Custom Role — copy column for each>
+WHAT TO ENTER → ,Fixed — do not change,Fixed — do not change,Fixed — do not change,Fixed — do not change,Fixed — do not change,Fixed — do not change,"For each custom role enter Yes or No in this column. Add a new column to the right for each additional custom role, using the exact Role Name from Part 1."
+Projects,Add,Create a new project in the workspace,Yes,Yes,Yes,No,
+Projects,Update,Edit an existing project's details,Yes,Yes,Yes,No,
+Projects,Delete,Permanently delete a project,Yes,Yes,No,No,
+Projects,Import,Import a project definition file,Yes,Yes,No,No,
+Projects,Export,Export project data,Yes,Yes,Yes,No,
+Drawings,Add,Upload new drawing sheets to a project,Yes,Yes,Yes,No,
+Drawings,Update,Replace or edit existing drawing sheets,Yes,Yes,Yes,No,
+Drawings,Delete,Remove drawing sheets from a project,Yes,Yes,No,No,
+Rooms,Add,Create rooms on a drawing sheet,Yes,Yes,Yes,No,
+Rooms,Update,Edit room definitions,Yes,Yes,Yes,No,
+Rooms,Delete,Remove rooms from a drawing sheet,Yes,Yes,No,No,
+Elevations,Add,Create elevations within a room,Yes,Yes,Yes,No,
+Elevations,Update,Edit elevation definitions,Yes,Yes,Yes,No,
+Elevations,Delete,Remove elevations,Yes,Yes,No,No,
+Pricing,View,See pricing data and bid totals,Yes,Yes,No,No,
+Pricing,Edit,Change pricing on line items,Yes,Yes,No,No,
+Pricing,Manage Catalogue,Add / edit products in the Pricing Catalogue,Yes,No,No,No,
+AI,Run Detection,Trigger AI scan on a drawing set,Yes,Yes,Yes,No,
+AI,Override Detection,Manually correct or override an AI detection result,Yes,Yes,No,No,
+Drafting,View Drawings,View CAD drawings in the Drafting Catalogue,Yes,No,Yes,No,
+Drafting,Export to CAD,Export a drawing to CAD software,Yes,No,Yes,No,
+Drafting,Manage Catalogue,Add / edit drawings in the Drafting Catalogue,Yes,No,Yes,No,

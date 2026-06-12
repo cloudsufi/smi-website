@@ -1,0 +1,146 @@
+<div style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1rem;">
+
+  <!-- App chrome -->
+  <div style="background: var(--color-background-primary); border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); overflow: hidden;">
+
+    <!-- Top bar -->
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 0.5px solid var(--color-border-tertiary);">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="width: 22px; height: 22px; border-radius: 5px; background: #0C1810; display: flex; align-items: center; justify-content: center;">
+          <i class="ti ti-square-rotated" style="font-size: 13px; color: #28C873;" aria-hidden="true"></i>
+        </div>
+        <span style="font-size: 13px; font-weight: 500;">Mercy Hospital — Level 3 Casework</span>
+        <span style="font-size: 11px; color: var(--color-text-tertiary);">A-401.pdf · 24 sheets</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button style="font-size: 12px; padding: 4px 10px;"><i class="ti ti-help-circle" style="font-size:13px; vertical-align:-2px; margin-right:4px" aria-hidden="true"></i>Help</button>
+        <button style="font-size: 12px; padding: 4px 10px;"><i class="ti ti-file-export" style="font-size:13px; vertical-align:-2px; margin-right:4px" aria-hidden="true"></i>Export</button>
+      </div>
+    </div>
+
+    <!-- Body: drawing | scope list | help panel -->
+    <div style="display: grid; grid-template-columns: 200px 1fr 220px; min-height: 360px;">
+
+      <!-- Drawing thumbnail column -->
+      <div style="border-right: 0.5px solid var(--color-border-tertiary); padding: 12px; background: var(--color-background-tertiary);">
+        <div style="font-size: 11px; color: var(--color-text-secondary); margin-bottom: 8px; text-transform: none;">Drawing region</div>
+        <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); aspect-ratio: 1; position: relative; overflow: hidden;">
+          <!-- Simulated drawing -->
+          <svg viewBox="0 0 100 100" style="width:100%; height:100%;" aria-hidden="true">
+            <rect x="5" y="5" width="90" height="90" fill="none" stroke="#888780" stroke-width="0.4"/>
+            <rect x="12" y="14" width="30" height="8" fill="none" stroke="#888780" stroke-width="0.3"/>
+            <rect x="12" y="26" width="30" height="8" fill="none" stroke="#888780" stroke-width="0.3"/>
+            <rect x="50" y="14" width="38" height="20" fill="none" stroke="#888780" stroke-width="0.3"/>
+            <rect x="12" y="55" width="76" height="6" fill="none" stroke="#888780" stroke-width="0.3"/>
+            <rect x="12" y="65" width="20" height="20" fill="none" stroke="#888780" stroke-width="0.3"/>
+            <rect x="40" y="65" width="20" height="20" fill="none" stroke="#888780" stroke-width="0.3"/>
+            <rect x="68" y="65" width="20" height="20" fill="none" stroke="#888780" stroke-width="0.3"/>
+            <!-- AI detection box highlighted -->
+            <rect x="12" y="55" width="76" height="30" fill="#28C873" fill-opacity="0.12" stroke="#28C873" stroke-width="0.6" stroke-dasharray="1.5,1"/>
+          </svg>
+        </div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 8px; line-height: 1.5;">Sheet A-401 · highlighted region maps to selected scope item</div>
+      </div>
+
+      <!-- Scope detection list (main) -->
+      <div style="padding: 14px 16px; min-width: 0;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <div>
+            <div style="font-size: 14px; font-weight: 500;">Detected scope</div>
+            <div style="font-size: 11px; color: var(--color-text-secondary);">47 items · 3 flagged for review</div>
+          </div>
+          <span style="font-size: 11px; color: var(--color-text-tertiary); display: inline-flex; align-items: center; gap: 4px;">
+            <i class="ti ti-info-circle" style="font-size:12px;" aria-hidden="true"></i>
+            Hover any item for AI reasoning
+          </span>
+        </div>
+
+        <!-- Scope row 1 -->
+        <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <div style="min-width: 0;">
+              <div style="font-size: 13px; font-weight: 500;">Nurse station casework — plastic laminate</div>
+              <div style="font-size: 11px; color: var(--color-text-secondary);">AWI Premium · 24 LF · Sheet A-401</div>
+            </div>
+            <span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--color-background-success); color: var(--color-text-success); white-space: nowrap;">High confidence</span>
+          </div>
+        </div>
+
+        <!-- Scope row 2 — selected, with inline help -->
+        <div style="border: 2px solid var(--color-border-info); border-radius: var(--border-radius-md); padding: 10px 12px; margin-bottom: 8px; background: var(--color-background-primary);">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <div style="min-width: 0;">
+              <div style="font-size: 13px; font-weight: 500;">Reception transaction top — solid surface</div>
+              <div style="font-size: 11px; color: var(--color-text-secondary);">AWI Custom · 12 LF · Sheet A-401</div>
+            </div>
+            <span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--color-background-warning); color: var(--color-text-warning); white-space: nowrap;">Review</span>
+          </div>
+          <!-- Inline "Why?" affordance -->
+          <div style="margin-top: 10px; padding-top: 10px; border-top: 0.5px dashed var(--color-border-tertiary); display: flex; gap: 6px; flex-wrap: wrap;">
+            <button style="font-size: 11px; padding: 3px 9px;"><i class="ti ti-sparkles" style="font-size:12px; vertical-align:-2px; margin-right:3px" aria-hidden="true"></i>Why this scope?</button>
+            <button style="font-size: 11px; padding: 3px 9px;"><i class="ti ti-zoom-in" style="font-size:12px; vertical-align:-2px; margin-right:3px" aria-hidden="true"></i>Show on drawing</button>
+            <button style="font-size: 11px; padding: 3px 9px;"><i class="ti ti-thumb-up" style="font-size:12px; vertical-align:-2px; margin-right:3px" aria-hidden="true"></i>Accept</button>
+            <button style="font-size: 11px; padding: 3px 9px;"><i class="ti ti-edit" style="font-size:12px; vertical-align:-2px; margin-right:3px" aria-hidden="true"></i>Edit</button>
+          </div>
+        </div>
+
+        <!-- Scope row 3 -->
+        <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <div style="min-width: 0;">
+              <div style="font-size: 13px; font-weight: 500;">Patient room wardrobes (qty 18)</div>
+              <div style="font-size: 11px; color: var(--color-text-secondary);">AWI Custom · Sheet A-403</div>
+            </div>
+            <span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--color-background-success); color: var(--color-text-success); white-space: nowrap;">High confidence</span>
+          </div>
+        </div>
+
+        <!-- Scope row 4 -->
+        <div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <div style="min-width: 0;">
+              <div style="font-size: 13px; font-weight: 500;">Wall-mounted upper cabinets — corridor</div>
+              <div style="font-size: 11px; color: var(--color-text-secondary);">AWI Custom · 38 LF · Sheet A-402</div>
+            </div>
+            <span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--color-background-success); color: var(--color-text-success); white-space: nowrap;">High confidence</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right rail: AI assist panel -->
+      <div style="border-left: 0.5px solid var(--color-border-tertiary); padding: 12px; background: var(--color-background-tertiary);">
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 10px;">
+          <i class="ti ti-message-circle-bolt" style="font-size: 14px; color: #28C873;" aria-hidden="true"></i>
+          <span style="font-size: 12px; font-weight: 500;">Estimator assist</span>
+        </div>
+
+        <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px; margin-bottom: 10px;">
+          <div style="font-size: 11px; color: var(--color-text-secondary); margin-bottom: 6px;">Why flagged for review</div>
+          <div style="font-size: 12px; line-height: 1.5;">Drawing detail D-4 calls out solid surface, but spec section 12 3000 lists Corian and quartz as alternates. Pick the material before pricing.</div>
+        </div>
+
+        <div style="font-size: 11px; color: var(--color-text-secondary); margin-bottom: 6px;">Try asking</div>
+        <button style="font-size: 11px; padding: 6px 9px; width: 100%; text-align: left; margin-bottom: 6px; display: block;">What's the LF count on this run?</button>
+        <button style="font-size: 11px; padding: 6px 9px; width: 100%; text-align: left; margin-bottom: 6px; display: block;">Show me similar past projects</button>
+        <button style="font-size: 11px; padding: 6px 9px; width: 100%; text-align: left; margin-bottom: 10px; display: block;">Explain AWI Custom vs Premium</button>
+
+        <div style="border-top: 0.5px solid var(--color-border-tertiary); padding-top: 10px;">
+          <div style="position: relative;">
+            <input type="text" placeholder="Ask about this drawing…" style="font-size: 12px; height: 32px; width: 100%; padding-right: 28px; box-sizing: border-box;" />
+            <i class="ti ti-arrow-up" style="font-size: 14px; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: var(--color-text-tertiary);" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer: help layer toggle row -->
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 14px; border-top: 0.5px solid var(--color-border-tertiary); background: var(--color-background-tertiary);">
+      <div style="display: flex; align-items: center; gap: 14px; font-size: 11px; color: var(--color-text-secondary);">
+        <span style="display: inline-flex; align-items: center; gap: 4px;"><i class="ti ti-circle-filled" style="font-size: 8px; color: #28C873;" aria-hidden="true"></i>Tour: Run your first estimate (3 of 7)</span>
+        <span style="display: inline-flex; align-items: center; gap: 4px;"><i class="ti ti-book" style="font-size: 12px;" aria-hidden="true"></i>QCP standard 1.5</span>
+      </div>
+      <span style="font-size: 11px; color: var(--color-text-tertiary);">⌘K to search help</span>
+    </div>
+  </div>
+</div>

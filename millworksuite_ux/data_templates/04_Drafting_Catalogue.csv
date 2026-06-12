@@ -1,0 +1,22 @@
+MILLWORKSUITE ONBOARDING — DRAFTING CATALOGUE
+Purpose: List every CAD drawing template your team uses when producing millwork drawings. Each row is one drawing file. If you have the same cabinet type in two different CAD tools (e.g. Microvellum AND Cabinet Vision) add a separate row for each. The MwS AI Code links each drawing to the AI detection type it covers.
+Valid CAD Tools: Microvellum | Cabinet Vision | Pytha | IMOS AX | Other (specify in Notes)
+Valid MwS AI Codes — see 03_AI_Catalogue.csv: B1D | B2D | BSB | BDB | W1D | W2D | TH | VB | CT-L | CT-C | RD | NS | WP | CT-K | HW-P | HW-H | HW-DB | WP-FRP | TR-CM | TR-BM | SHS
+,,,,,
+Drawing Name,File Reference ID,MwS AI Code,CAD Tool,Description / Notes,Ready to Upload? (Yes / No / Needs Review)
+WHAT TO ENTER → ,"The display name for this drawing as it will appear in MillworkSuite. Be descriptive — include the type and size if relevant. Example: 'Base Cabinet 2-Door 36in' or 'Sink Base 30in Thermofoil (MV)'.","Your internal file reference or drawing number for this file. This is how your team identifies the file on disk or in your file system. Example: MV-BC2D-36-001 or CV-SINK-30. If you do not have a reference number the Drawing Name will be used automatically.","The CAD software this drawing file belongs to. Must be one of: Microvellum | Cabinet Vision | Pytha | IMOS AX | Other. If Other please describe in the Notes column.","The MwS AI Code this drawing corresponds to. Copy the code exactly from the MwS AI Code column in 03_AI_Catalogue.csv. Example: B2D for a 2-door base cabinet drawing. One drawing maps to one AI type.","Any extra context: finish / material / size variant / special notes. Also use this column if CAD Tool is 'Other' to specify the software name.","Confirm whether this drawing file is ready to be uploaded to MillworkSuite. Yes = file is finalised. No = not ready yet. Needs Review = unsure."
+EXAMPLE → ,BC 2-Door 36in (Microvellum),MV-BC2D-36-001,B2D,Microvellum,Standard 2-door base 36 inch white shaker,Yes
+EXAMPLE → ,BC 2-Door 36in (Cabinet Vision),CV-BC2D-36-001,B2D,Cabinet Vision,Same type as above — Cabinet Vision version,Yes
+EXAMPLE → ,Sink Base 30in,MV-BSB-30-001,BSB,Microvellum,Thermofoil finish sink base 30 inch,Yes
+EXAMPLE → ,Solid Surface Countertop Run,PYTHA-CT-L-001,CT-L,Pytha,Linear countertop run standard profile,Yes
+EXAMPLE → ,Reception Desk 2-Tier,IMOS-RD-2T-001,RD,IMOS AX,2-tier reception desk standard layout,Yes
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,
+<drawing name>,<file reference or leave blank>,<MwS AI Code>,<CAD Tool>,<notes>,

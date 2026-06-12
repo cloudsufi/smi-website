@@ -1,0 +1,26 @@
+MILLWORKSUITE ONBOARDING — AI CATALOGUE (MASTER DATA)
+Purpose: This is the MillworkSuite reference list of all detectable and manual-entry millwork types. It is pre-filled by MillworkSuite and is READ-ONLY — do not change any codes or type names. Use the 'Your Notes' column only to flag questions or items that don't apply to your company.
+,,,,,
+MwS AI Code,Type Name,Product Group,Detection Method,Description,Your Notes
+WHAT TO ENTER → ,"Fixed — this is the unique MillworkSuite code for this type. Referenced in files 04_Drafting_Catalogue.csv and 05_Pricing_Catalogue.csv. Do not change.","Fixed — the category this type belongs to (Casework / Countertops / Custom Millwork / Hardware / Panels / Trim). Do not change.","Fixed — Detectable means the AI can automatically identify this type from a PDF drawing. Manual Entry means your estimator must enter it by hand. Do not change.","Fixed — explains how the AI detects or how the estimator enters this type. Do not change.","Your use only — add any notes here. Examples: 'We never use this type', 'We call this a vanity cabinet not vanity base', 'Confirm this maps to our sink base SKU'. Leave blank if no notes."
+B1D,Base Cabinet — 1 Door,Casework,Detectable,Detected from floor plan elevation lines and single-door symbol,
+B2D,Base Cabinet — 2 Door,Casework,Detectable,Detected from standard 2-door base cabinet symbol,
+BSB,Base Cabinet — Sink Base,Casework,Detectable,Detected via sink cutout and no-drawer indicator,
+BDB,Base Cabinet — Drawer Bank,Casework,Detectable,Detected from multi-drawer stack pattern,
+W1D,Wall Cabinet — 1 Door,Casework,Detectable,Detected from wall-mount elevation symbol,
+W2D,Wall Cabinet — 2 Door,Casework,Detectable,Detected from standard 2-door wall symbol,
+TH,Tall Cabinet — Full Height,Casework,Detectable,Detected from full-height cabinet outline,
+VB,Vanity Base,Casework,Detectable,Detected from bathroom layout and vanity symbol,
+CT-L,Countertop — Linear,Countertops,Detectable,Detected as continuous horizontal run,
+CT-C,Countertop — Corner/Miter,Countertops,Detectable,Detected from L-corner junction pattern,
+RD,Reception Desk,Custom Millwork,Detectable,Detected from reception desk shape and height markers,
+NS,Nurse Station,Custom Millwork,Detectable,Detected from nurse station layout pattern,
+WP,Wood Wainscot / Paneling,Custom Millwork,Detectable,Detected from full-wall panel elevation,
+CT-K,Countertop — Curved / ADA Knee,Countertops,Manual Entry,Non-standard curves require manual entry,
+HW-P,Hardware — Pulls,Hardware,Manual Entry,Individual hardware items entered manually,
+HW-H,Hardware — Hinges,Hardware,Manual Entry,Hinge counts entered per cabinet manually,
+HW-DB,Hardware — Drawer Boxes,Hardware,Manual Entry,Drawer box count manually verified,
+WP-FRP,Wall Panel — FRP,Panels,Manual Entry,Fire-rated panel manually dimensioned,
+TR-CM,Trim — Crown Moulding,Trim,Manual Entry,Moulding run entered as linear footage,
+TR-BM,Trim — Base Moulding,Trim,Manual Entry,Base moulding LF entered manually,
+SHS,Shelf Storage Unit,Casework,Manual Entry,Open shelving requires manual count,

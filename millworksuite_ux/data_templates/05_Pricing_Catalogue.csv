@@ -1,0 +1,24 @@
+MILLWORKSUITE ONBOARDING — PRICING CATALOGUE
+Purpose: List every product your company prices for millwork estimates. Each row is one product. You can have multiple products mapping to the same AI type (e.g. a standard and a premium version of the same cabinet). The default product used when the AI detects a type is set separately in MillworkSuite after upload.
+Valid Pricing Methods: Per Unit | Per Sq Ft | Per LF
+Valid MwS AI Codes — see 03_AI_Catalogue.csv: B1D | B2D | BSB | BDB | W1D | W2D | TH | VB | CT-L | CT-C | RD | NS | WP | CT-K | HW-P | HW-H | HW-DB | WP-FRP | TR-CM | TR-BM | SHS
+,,,,,,
+Product Name,MwS AI Code,Pricing Method,Unit Price ($),Description / Spec Notes,Ready to Upload? (Yes / No / Needs Review)
+WHAT TO ENTER → ,"The display name for this product as it will appear in estimates. Be specific enough that an estimator can identify it at a glance. Include size / finish / material where relevant. Example: 'Base Cabinet 2-Door 36in White Shaker' or 'Solid Surface Countertop — Corian'.","The MwS AI Code this product corresponds to. Copy the code exactly from 03_AI_Catalogue.csv. Example: B2D for a 2-door base cabinet. Multiple products can share the same code — the AI will pick the default one you designate later.","How this product is priced. Choose exactly one of: Per Unit (charged as a flat price per detected item) | Per Sq Ft (charged by square footage — you will enter square footage per item in the estimate) | Per LF (charged by linear footage — used for countertops trim and panels).","The price in US dollars for one unit / one square foot / one linear foot depending on your Pricing Method. Enter numbers only — no $ sign or commas. Example: 845.00 or 28.60.","Include material spec finish size range or any conditions that apply to this price. Example: 'White shaker Blum hardware standard depth' or 'Corian or equivalent solid surface'. Also note if this is a base price before add-ons.","Confirm whether this product and price are finalised. Yes = ready. No = price TBD. Needs Review = check with manager."
+EXAMPLE → ,Base Cabinet 2-Door 36in Standard,B2D,Per Unit,845.00,Standard white shaker box 36x34.5x24 Blum hardware,Yes
+EXAMPLE → ,Base Cabinet 2-Door 36in Premium,B2D,Per Unit,1120.00,Full-overlay painted premium finish — same carcass,Yes
+EXAMPLE → ,Sink Base 30in Thermofoil,BSB,Per Unit,1210.00,Thermofoil wrap 30x34.5x21 no drawer bank,Yes
+EXAMPLE → ,Tall Cabinet 24in Painted,TH,Per Unit,1985.00,Full height 84in painted utility cabinet,Yes
+EXAMPLE → ,Solid Surface Countertop,CT-L,Per LF,28.60,Corian or equivalent solid surface per linear foot installed,Yes
+EXAMPLE → ,Corner Countertop Miter,CT-C,Per Unit,385.00,L-corner miter joint fabrication flat fee,Yes
+EXAMPLE → ,Reception Desk 2-Tier Standard,RD,Per Unit,4200.00,Standard 2-tier reception desk carcass only no finish,Yes
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,
+<product name>,<MwS AI Code>,<Per Unit / Per Sq Ft / Per LF>,<price>,<notes>,

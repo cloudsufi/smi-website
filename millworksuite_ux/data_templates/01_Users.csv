@@ -1,0 +1,22 @@
+MILLWORKSUITE ONBOARDING — USER LIST
+Purpose: Provide this list to your MillworkSuite administrator. Every person listed will receive an email invitation to join your workspace.
+,,,,,
+First Name,Last Name,Email Address,Role,Department,Notes
+WHAT TO ENTER → ,The person's legal first name,The person's legal last name,The work email address they will use to sign in — must be unique per person,"The role that controls what this person can see and do in MillworkSuite. Must match exactly one of the Role Names in file 02_Roles.csv. Default system roles: Administrator | Estimator | Drafter | Viewer","Optional: the team or department this person belongs to (e.g. Estimating / Drafting / Management / External)",Optional: any special instructions for this user (e.g. 'start inactive' or 'external contractor')
+EXAMPLE → ,Rob,Pryor,rob@yourcompany.com,Administrator,Management,Primary admin — set up first
+EXAMPLE → ,Jamie,Martinez,jmartinez@yourcompany.com,Estimator,Estimating,
+EXAMPLE → ,Sam,Kowalski,skowalski@yourcompany.com,Drafter,Drafting,
+EXAMPLE → ,Dana,Torres,dtorres@yourcompany.com,Senior Estimator,Estimating,Custom role — must exist in 02_Roles.csv first
+EXAMPLE → ,Ellen,Hughes,ehughes@yourcompany.com,Viewer,Management,Read-only access only
+EXAMPLE → ,Ben,Flores,bflores@outsidecompany.com,Outside Consultant,External,External contractor — limited access
+,,,,, <- DELETE example rows above and add your users below
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,

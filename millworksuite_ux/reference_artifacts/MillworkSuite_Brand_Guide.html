@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MillworkSuite — Brand Identity Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FFFFFF;
+  --bg-page:#F7F6F3;
+  --text:#37352F;
+  --text-s:#787774;
+  --text-d:#ACABA8;
+  --border:#E9E9E7;
+  --hover:#F1F0EE;
+  --teal:#28C873;
+  --teal-bg:#EDF8F2;
+  --teal-border:#A8E6C5;
+  --red-bg:#FDEDED;
+  --red-border:#F5C2C2;
+  --yellow-bg:#FFF8E1;
+  --blue-bg:#EEF4FF;
+  --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+body{font-family:var(--font);background:var(--bg-page);color:var(--text);font-size:16px;line-height:1.65;min-height:100vh}
+.layout{display:flex;min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{width:240px;background:#F7F6F3;border-right:1px solid var(--border);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;padding:12px 0;z-index:10;flex-shrink:0}
+.sidebar-header{padding:8px 14px 16px;border-bottom:1px solid var(--border);margin-bottom:8px}
+.sidebar-brand{display:flex;align-items:center;gap:8px;padding:4px 0}
+.sidebar-icon{width:22px;height:22px;background:var(--teal);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sidebar-icon svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round}
+.sidebar-title{font-size:14px;font-weight:600;color:var(--text)}
+.sidebar-nav{padding:0 8px}
+.nav-section{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-d);padding:12px 8px 4px}
+.nav-item{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;font-size:14px;color:var(--text-s);text-decoration:none;transition:background .15s,color .15s}
+.nav-item:hover,.nav-item.active{background:var(--hover);color:var(--text)}
+.nav-item .nav-num{font-size:11px;font-weight:600;background:var(--teal);color:#fff;padding:1px 5px;border-radius:3px;min-width:18px;text-align:center}
+.nav-item .nav-emoji{font-size:14px;line-height:1;width:18px;text-align:center}
+
+/* MAIN */
+.main{margin-left:240px;min-height:100vh;background:var(--bg);width:calc(100% - 240px)}
+.page-wrapper{max-width:900px;margin:0 auto;padding:60px 96px 120px}
+
+/* COVER */
+.cover{width:100%;height:180px;background:linear-gradient(135deg,#060D08 0%,#0C1810 40%,#111F14 100%);position:relative;overflow:hidden;margin-left:-240px;width:calc(100% + 240px);max-width:none}
+.cover-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(40,200,115,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(40,200,115,.08) 1px,transparent 1px);background-size:40px 40px}
+.cover-glow{position:absolute;top:-40px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse at center,rgba(40,200,115,.18) 0%,transparent 70%)}
+
+/* PAGE HEADER */
+.page-header{margin-bottom:32px;padding-top:20px}
+.page-icon{font-size:64px;line-height:1;margin-bottom:16px;display:block}
+.page-title{font-size:40px;font-weight:700;letter-spacing:-.02em;color:var(--text);line-height:1.1;margin-bottom:8px}
+.page-desc{font-size:16px;color:var(--text-s);font-weight:400;max-width:600px;line-height:1.55}
+
+/* PROPERTIES TABLE */
+.properties{border:1px solid var(--border);border-radius:6px;margin-bottom:32px;overflow:hidden}
+.prop-row{display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--border)}
+.prop-row:last-child{border-bottom:none}
+.prop-key{padding:8px 14px;font-size:14px;color:var(--text-s);background:#FAFAF9;display:flex;align-items:center;gap:7px;font-weight:500;border-right:1px solid var(--border)}
+.prop-key svg{width:14px;height:14px;opacity:.5;flex-shrink:0}
+.prop-val{padding:8px 14px;font-size:14px;color:var(--text);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.tag{display:inline-flex;align-items:center;padding:2px 8px;border-radius:3px;font-size:13px;font-weight:500}
+.tag-green{background:var(--teal-bg);color:#1B7A4A}
+.tag-gray{background:var(--hover);color:var(--text-s)}
+.tag-blue{background:var(--blue-bg);color:#2B5CC5}
+
+/* DIVIDER */
+.divider{border:none;border-top:1px solid var(--border);margin:24px 0}
+.divider-thick{border:none;border-top:2px solid var(--border);margin:40px 0}
+
+/* SECTION HEADING */
+.h1{font-size:28px;font-weight:700;color:var(--text);margin:40px 0 8px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.h2{font-size:20px;font-weight:600;color:var(--text);margin:28px 0 8px;display:flex;align-items:center;gap:8px}
+.h3{font-size:16px;font-weight:600;color:var(--text);margin:18px 0 6px}
+.h-anchor{color:var(--teal);font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;opacity:.7}
+
+/* TEXT */
+p{font-size:16px;color:var(--text);margin-bottom:12px;line-height:1.65}
+.muted{color:var(--text-s)}
+code{font-family:'Courier New',monospace;font-size:14px;background:#F1F0EE;color:#E03E3E;padding:2px 6px;border-radius:3px}
+.teal{color:var(--teal);font-weight:600}
+
+/* CALLOUT */
+.callout{display:flex;gap:12px;background:#FAFAF9;border:1px solid var(--border);border-radius:6px;padding:14px 16px;margin:16px 0}
+.callout.green{background:var(--teal-bg);border-color:var(--teal-border)}
+.callout.yellow{background:var(--yellow-bg);border-color:#FFE082}
+.callout.red{background:var(--red-bg);border-color:var(--red-border)}
+.callout.blue{background:var(--blue-bg);border-color:#BDD0FA}
+.callout-icon{font-size:20px;line-height:1;flex-shrink:0;margin-top:1px}
+.callout-text{font-size:15px;color:var(--text);line-height:1.6}
+
+/* QUOTE */
+.quote{border-left:3px solid var(--teal);padding:10px 16px;margin:16px 0;color:var(--text-s);font-style:italic;font-size:16px}
+
+/* TOGGLE */
+.toggle{margin:4px 0}
+.toggle-head{display:flex;align-items:flex-start;gap:8px;cursor:pointer;padding:3px 0;border-radius:3px;user-select:none}
+.toggle-head:hover{background:var(--hover);margin:0 -8px;padding:3px 8px}
+.toggle-arrow{flex-shrink:0;width:18px;height:18px;display:flex;align-items:center;justify-content:center;margin-top:2px;transition:transform .15s}
+.toggle-arrow svg{width:12px;height:12px;fill:var(--text-d)}
+.toggle[open] .toggle-arrow{transform:rotate(90deg)}
+.toggle-title{font-size:16px;font-weight:500;color:var(--text)}
+.toggle-body{padding:4px 0 4px 26px;display:none}
+.toggle[open] .toggle-body{display:block}
+
+/* COLOR SWATCHES */
+.color-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:16px 0}
+.color-card{border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.color-swatch{height:72px;width:100%}
+.color-info{padding:10px 12px}
+.color-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
+.color-codes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px}
+.color-code{font-family:'Courier New',monospace;font-size:11px;background:var(--hover);color:var(--text-s);padding:2px 5px;border-radius:2px}
+.color-use{font-size:12px;color:var(--text-s);line-height:1.4}
+
+/* FONT SPECIMENS */
+.font-spec{border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:12px}
+.font-header{background:#FAFAF9;border-bottom:1px solid var(--border);padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
+.font-meta{font-size:12px;color:var(--text-s)}
+.font-tag{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);background:var(--teal-bg);padding:2px 7px;border-radius:3px}
+.font-body{padding:14px}
+.font-sample{margin-bottom:10px;border-bottom:1px solid var(--border);padding-bottom:10px}
+.font-sample:last-child{margin-bottom:0;border-bottom:none;padding-bottom:0}
+.font-sample-label{font-size:11px;color:var(--text-d);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+
+/* SPEC TABLE */
+.spec-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+.spec-table th{background:#FAFAF9;padding:8px 12px;text-align:left;font-weight:600;font-size:12px;color:var(--text-s);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border);border-top:1px solid var(--border)}
+.spec-table th:first-child{border-left:1px solid var(--border);border-radius:0}
+.spec-table th:last-child{border-right:1px solid var(--border)}
+.spec-table td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;line-height:1.5}
+.spec-table tr:last-child td{border-bottom:none}
+.spec-table tr td:first-child{border-left:1px solid var(--border);font-weight:500;color:var(--text-s);white-space:nowrap}
+.spec-table tr td:last-child{border-right:1px solid var(--border)}
+.spec-table tbody tr:hover{background:var(--hover)}
+.spec-table tfoot td{background:#FAFAF9;font-weight:600;border-top:1px solid var(--border)}
+
+/* STEP FLOW */
+.steps{margin:16px 0}
+.step{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.step:last-child{border-bottom:none}
+.step-num{width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-old .step-num{background:#F5C2C2;color:#922020}
+.step-content .step-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:2px}
+.step-content .step-desc{font-size:14px;color:var(--text-s);line-height:1.5}
+
+/* COMPARISON */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.compare-card{border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.compare-head{padding:10px 14px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.compare-head.old{background:var(--red-bg);color:#922020;border-bottom:1px solid var(--red-border)}
+.compare-head.new{background:var(--teal-bg);color:#1B7A4A;border-bottom:1px solid var(--teal-border)}
+.compare-body{padding:12px 14px}
+.compare-row{display:flex;align-items:center;gap:9px;padding:5px 0;font-size:14px}
+.compare-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.compare-dot.red{background:#E24B4A}
+.compare-dot.green{background:var(--teal)}
+.compare-summary{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:13px;font-weight:700}
+.compare-summary.old{color:#922020}
+.compare-summary.new{color:var(--teal)}
+
+/* BREADCRUMB */
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-d);margin-bottom:24px}
+.breadcrumb span{color:var(--text-s)}
+
+/* TOC */
+.toc{background:#FAFAF9;border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:36px}
+.toc-title{font-size:14px;font-weight:600;color:var(--text-s);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.toc-item{display:flex;align-items:center;gap:7px;padding:4px 6px;border-radius:4px;text-decoration:none;color:var(--text-s);font-size:14px;transition:background .1s,color .1s}
+.toc-item:hover{background:var(--hover);color:var(--text)}
+.toc-item .toc-num{font-size:11px;font-weight:700;color:var(--teal);min-width:16px}
+
+/* BADGE GROUP */
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:4px;font-size:13px;font-weight:500}
+.badge-outline{border:1.5px solid var(--teal);color:var(--teal);background:var(--teal-bg)}
+.badge-solid{background:var(--teal);color:#fff}
+.badge-ghost{background:var(--hover);color:var(--text-s)}
+
+/* DO/DONT */
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.do-card{border:1px solid #A8E6C5;border-radius:8px;background:var(--teal-bg);padding:14px 16px}
+.dont-card{border:1px solid var(--red-border);border-radius:8px;background:var(--red-bg);padding:14px 16px}
+.do-label{font-size:12px;font-weight:700;color:#1B7A4A;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.dont-label{font-size:12px;font-weight:700;color:#922020;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.dodont li{font-size:14px;color:var(--text);margin-bottom:5px;line-height:1.45;margin-left:14px}
+
+/* INLINE TAG */
+.il{display:inline-flex;align-items:center;gap:4px;background:var(--hover);color:var(--text-s);padding:1px 7px;border-radius:3px;font-size:13px;font-weight:500;vertical-align:middle}
+
+/* ANIMATION/MOTION TABLE */
+.anim-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+.anim-table th{padding:7px 10px;text-align:left;font-size:11px;font-weight:600;color:var(--text-d);text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--border)}
+.anim-table td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
+.anim-table td:first-child{font-weight:500;color:var(--text);white-space:nowrap}
+.anim-table td:last-child{font-family:'Courier New',monospace;color:#E03E3E;font-size:12px}
+
+/* SCROLL BEHAVIOR */
+html{scroll-behavior:smooth}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* SECTION ANCHOR */
+.anchor-target{scroll-margin-top:60px}
+
+/* COPY NOTICE */
+.copy-notice{background:var(--yellow-bg);border:1px solid #FFE082;border-radius:6px;padding:12px 16px;margin-bottom:28px;font-size:14px;display:flex;align-items:flex-start;gap:10px}
+.copy-notice-icon{font-size:18px;line-height:1;margin-top:1px}
+
+@media(max-width:860px){
+  .sidebar{display:none}
+  .main{margin-left:0;width:100%}
+  .page-wrapper{padding:40px 24px 80px}
+  .cover{margin-left:0;width:100%}
+  .compare-grid,.dodont,.toc-grid{grid-template-columns:1fr}
+  .color-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-brand">
+      <div class="sidebar-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7L2 9h7z"/></svg>
+      </div>
+      <span class="sidebar-title">MillworkSuite</span>
+    </div>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Brand Guide</div>
+    <a href="#overview" class="nav-item active"><span class="nav-emoji">📄</span> Overview</a>
+    <a href="#s1" class="nav-item"><span class="nav-num">1</span> Brand Essence</a>
+    <a href="#s2" class="nav-item"><span class="nav-num">2</span> Logo & Identity</a>
+    <a href="#s3" class="nav-item"><span class="nav-num">3</span> Color Palette</a>
+    <a href="#s4" class="nav-item"><span class="nav-num">4</span> Typography</a>
+    <a href="#s5" class="nav-item"><span class="nav-num">5</span> Imagery & Icons</a>
+    <a href="#s6" class="nav-item"><span class="nav-num">6</span> Layout & Grid</a>
+    <a href="#s7" class="nav-item"><span class="nav-num">7</span> Components</a>
+    <a href="#s8" class="nav-item"><span class="nav-num">8</span> Applications</a>
+    <a href="#s9" class="nav-item"><span class="nav-num">9</span> Psychology</a>
+    <div class="nav-section">Reference</div>
+    <a href="#appendix" class="nav-item"><span class="nav-emoji">📎</span> Appendix</a>
+    <a href="https://millworksuite-web-prod.web.app/" class="nav-item"><span class="nav-emoji">🔗</span> Live Site ↗</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-grid"></div>
+  <div class="cover-glow"></div>
+</div>
+
+<div class="page-wrapper">
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <span>MillworkSuite</span>
+  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  <span style="color:var(--text)">Brand Identity Guide</span>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header" id="overview">
+  <span class="page-icon">🏗️</span>
+  <h1 class="page-title">MillworkSuite<br>Brand Identity Guide</h1>
+  <p class="page-desc">A complete brand bible for designers, developers, marketers, and content teams — ensuring perfect consistency across every touchpoint.</p>
+</div>
+
+<!-- PROPERTIES -->
+<div class="properties">
+  <div class="prop-row">
+    <div class="prop-key">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+      Version
+    </div>
+    <div class="prop-val"><span class="tag tag-green">v1.0 — 2026</span></div>
+  </div>
+  <div class="prop-row">
+    <div class="prop-key">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>
+      Location
+    </div>
+    <div class="prop-val">Orlando, Florida</div>
+  </div>
+  <div class="prop-row">
+    <div class="prop-key">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      Industry
+    </div>
+    <div class="prop-val"><span class="tag tag-blue">Millwork & Casework</span> <span class="tag tag-blue">AI/SaaS</span></div>
+  </div>
+  <div class="prop-row">
+    <div class="prop-key">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Audience
+    </div>
+    <div class="prop-val">Designers · Developers · Marketers · Content Teams</div>
+  </div>
+  <div class="prop-row">
+    <div class="prop-key">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7L2 9h7z"/></svg>
+      Status
+    </div>
+    <div class="prop-val"><span class="tag tag-green">Active</span></div>
+  </div>
+</div>
+
+<!-- COPY NOTICE -->
+<div class="copy-notice">
+  <span class="copy-notice-icon">💡</span>
+  <div>
+    <strong>How to use this in Notion:</strong> Copy any section's text directly into a Notion page. Use Notion's <code>/callout</code>, <code>/table</code>, <code>/divider</code>, and <code>/toggle</code> blocks to recreate the structure. Color swatches can be added as Notion color blocks or database entries.
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <div class="toc-title">Contents</div>
+  <div class="toc-grid">
+    <a href="#s1" class="toc-item"><span class="toc-num">01</span> Brand Essence & Voice</a>
+    <a href="#s2" class="toc-item"><span class="toc-num">02</span> Logo & Identity</a>
+    <a href="#s3" class="toc-item"><span class="toc-num">03</span> Color Palette</a>
+    <a href="#s4" class="toc-item"><span class="toc-num">04</span> Typography System</a>
+    <a href="#s5" class="toc-item"><span class="toc-num">05</span> Imagery & Iconography</a>
+    <a href="#s6" class="toc-item"><span class="toc-num">06</span> Layout & Grid</a>
+    <a href="#s7" class="toc-item"><span class="toc-num">07</span> Components & UI</a>
+    <a href="#s8" class="toc-item"><span class="toc-num">08</span> Applications</a>
+    <a href="#s9" class="toc-item"><span class="toc-num">09</span> Psychology & Strategy</a>
+    <a href="#appendix" class="toc-item"><span class="toc-num">→</span> Quick Reference Appendix</a>
+  </div>
+</div>
+
+<hr class="divider-thick">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 1 -->
+<!-- ═══════════════════════════════════════ -->
+<div id="s1" class="anchor-target">
+  <h2 class="h1">🎯 1 — Brand Essence & Voice</h2>
+
+  <h3 class="h2">Mission Statement</h3>
+  <div class="callout green">
+    <span class="callout-icon">✦</span>
+    <div class="callout-text">To eliminate the manual burden of millwork estimating through purpose-built AI — so that firms can bid faster, estimate more accurately, and spend more time doing what they were hired to do: building exceptional millwork.</div>
+  </div>
+
+  <h3 class="h2">The Manifesto</h3>
+  <div class="quote">Every day, skilled millwork estimators sit down and do a job that machines should be doing. They sort three-hundred-page PDFs by hand. They hunt elevation callouts across dozens of sheets. They transcribe measurements. They retype scope items into spreadsheets, copy-paste proposals into Word, re-enter cabinet layouts into CAD. Not because they want to — but because until now, they had to.</div>
+  <div class="callout">
+    <span class="callout-icon">🏆</span>
+    <div class="callout-text"><strong>One platform. One session. Zero re-entry.</strong><br>MillworkSuite is the answer to that waste — a system built from the ground up for this industry, this workflow, and these professionals.</div>
+  </div>
+
+  <h3 class="h2">Core Values</h3>
+  <table class="spec-table">
+    <thead><tr><th>Value</th><th>What It Means in Practice</th></tr></thead>
+    <tbody>
+      <tr><td>Precision over speed</td><td>Fast is only valuable when accurate. Never sacrifice correctness for velocity.</td></tr>
+      <tr><td>Industry specificity</td><td>Every word, every feature, every design choice is calibrated for millwork — not construction in general.</td></tr>
+      <tr><td>Automation as empowerment</td><td>AI frees skilled estimators to exercise expertise rather than perform data entry.</td></tr>
+      <tr><td>Transparency in workflow</td><td>Show value, don't just claim it. The Before/After comparison and workflow steps are central to this.</td></tr>
+      <tr><td>Quiet confidence</td><td>Declarative statements. No hedging. Dark, restrained palette signals a brand secure in its capabilities.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Brand Personality</h3>
+  <div class="badge-row">
+    <span class="badge badge-outline">Expert</span>
+    <span class="badge badge-outline">Direct</span>
+    <span class="badge badge-outline">Technical but Accessible</span>
+    <span class="badge badge-outline">Quietly Confident</span>
+  </div>
+
+  <h3 class="h2">Voice & Tone by Context</h3>
+  <table class="spec-table">
+    <thead><tr><th>Context</th><th>Tone</th></tr></thead>
+    <tbody>
+      <tr><td>Marketing headlines</td><td>Bold, declarative, problem-aware. Max 8–10 words. Imperative-first.</td></tr>
+      <tr><td>Feature descriptions</td><td>Clinical, precise, benefit-focused. Lead with the outcome.</td></tr>
+      <tr><td>CTA copy</td><td>Action-oriented, no-friction. "Schedule a Demo." Never "Learn More."</td></tr>
+      <tr><td>Error / edge cases</td><td>Clear, calm, actionable. Never blame the user.</td></tr>
+      <tr><td>Social / LinkedIn</td><td>Expert, industry-insider. Share workflow insights, not product-first promo.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout yellow">
+    <span class="callout-icon">⚠️</span>
+    <div class="callout-text"><strong>Language to avoid:</strong> "World-class", "best-in-class", "innovative solution", "game-changing". These are placeholders. Use specifics: quantities, time comparisons, named integrations.</div>
+  </div>
+</div>
+
+<hr class="divider-thick">
+
+<!-- SECTION 2 -->
+<div id="s2" class="anchor-target">
+  <h2 class="h1">🔷 2 — Logo & Identity</h2>
+
+  <h3 class="h2">Logotype Construction</h3>
+  <p>The wordmark is set in <span class="teal">Syne</span> — geometric, high-contrast display sans-serif. Styled as a compound noun: <strong>Millwork</strong> in primary text color, <strong style="color:var(--teal)">Suite</strong> in Precision Green (#28C873).</p>
+
+  <div class="callout">
+    <span class="callout-icon">💡</span>
+    <div class="callout-text">The chromatic split segments the two conceptual components: the industry domain <em>(Millwork)</em> and the product category <em>(Suite)</em>. It also creates a distinctive recall trigger — even at peripheral vision the green syllable is immediately identifiable.</div>
+  </div>
+
+  <h3 class="h2">Approved Color Combinations</h3>
+  <table class="spec-table">
+    <thead><tr><th>Background</th><th>Treatment</th></tr></thead>
+    <tbody>
+      <tr><td>Dark (primary)</td><td>Icon & "Millwork" in #E8F0EA · "Suite" in #28C873</td></tr>
+      <tr><td>Light</td><td>Icon & "Millwork" in #060D08 · "Suite" in #28C873</td></tr>
+      <tr><td>Single-color (emboss/foil)</td><td>Entire lockup in #28C873 or #060D08</td></tr>
+      <tr><td>Reversed/white-out</td><td>Full lockup #FFFFFF on dark backgrounds only</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Minimum Sizes</h3>
+  <table class="spec-table">
+    <thead><tr><th>Application</th><th>Digital Min.</th><th>Print Min.</th></tr></thead>
+    <tbody>
+      <tr><td>Full lockup (icon + wordmark)</td><td>140px wide</td><td>38mm</td></tr>
+      <tr><td>Wordmark only</td><td>100px wide</td><td>28mm</td></tr>
+      <tr><td>Icon/logomark only</td><td>28px</td><td>10mm</td></tr>
+      <tr><td>Favicon</td><td>16×16 & 32×32px</td><td>N/A</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Do's & Don'ts</h3>
+  <div class="dodont">
+    <div class="do-card">
+      <div class="do-label">✓ Do</div>
+      <ul>
+        <li>Use provided logo files — never recreate</li>
+        <li>Place on dark backgrounds (primary)</li>
+        <li>Maintain exact proportions always</li>
+        <li>Use logomark only where brand is established</li>
+      </ul>
+    </div>
+    <div class="dont-card">
+      <div class="dont-label">✗ Don't</div>
+      <ul>
+        <li>Rotate, skew, or add drop shadows</li>
+        <li>Recolor beyond approved combos</li>
+        <li>Add 'TM', 'Inc' to the lockup</li>
+        <li>Use below minimum sizes</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="divider-thick">
+
+<!-- SECTION 3 -->
+<div id="s3" class="anchor-target">
+  <h2 class="h1">🎨 3 — Color Palette</h2>
+
+  <div class="callout blue">
+    <span class="callout-icon">ℹ️</span>
+    <div class="callout-text">MillworkSuite is a <strong>dark-mode-first</strong> brand. The palette signals precision instruments, reduces cognitive fatigue, and creates maximum contrast for the single accent color. No light-mode version exists for primary marketing materials.</div>
+  </div>
+
+  <h3 class="h2">Primary — Dark Surfaces</h3>
+  <div class="color-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background:#060D08"></div>
+      <div class="color-info">
+        <div class="color-name">Deep Forest Black</div>
+        <div class="color-codes"><span class="color-code">#060D08</span><span class="color-code">R6 G13 B8</span><span class="color-code">C54 M0 Y38 K95</span></div>
+        <div class="color-use">Primary page background. The deepest layer in the elevation hierarchy.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#0C1810"></div>
+      <div class="color-info">
+        <div class="color-name">Forest Surface</div>
+        <div class="color-codes"><span class="color-code">#0C1810</span><span class="color-code">R12 G24 B16</span><span class="color-code">C50 M0 Y33 K91</span></div>
+        <div class="color-use">Section backgrounds, feature cards, footer surface.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#111F14"></div>
+      <div class="color-info">
+        <div class="color-name">Elevated Panel</div>
+        <div class="color-codes"><span class="color-code">#111F14</span><span class="color-code">R17 G31 B20</span><span class="color-code">C45 M0 Y35 K88</span></div>
+        <div class="color-use">Card panels, integration blocks, hover state surfaces.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#162218"></div>
+      <div class="color-info">
+        <div class="color-name">Raised Layer</div>
+        <div class="color-codes"><span class="color-code">#162218</span><span class="color-code">R22 G34 B24</span><span class="color-code">C35 M0 Y29 K87</span></div>
+        <div class="color-use">Hover state on cards — highest surface layer before accent.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="h2">Accent — Precision Green</h3>
+  <div class="color-grid" style="grid-template-columns:1fr 1fr">
+    <div class="color-card">
+      <div class="color-swatch" style="background:#28C873"></div>
+      <div class="color-info">
+        <div class="color-name">Precision Green ⬤ Primary</div>
+        <div class="color-codes"><span class="color-code">#28C873</span><span class="color-code">R40 G200 B115</span><span class="color-code">C80 M0 Y43 K22</span></div>
+        <div class="color-use">CTAs, active nav, icon strokes, key metrics, wordmark "Suite". The single brightest element — never diluted by a secondary accent.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#34E085"></div>
+      <div class="color-info">
+        <div class="color-name">Active Green — Hover Only</div>
+        <div class="color-codes"><span class="color-code">#34E085</span><span class="color-code">R52 G224 B133</span><span class="color-code">C77 M0 Y41 K12</span></div>
+        <div class="color-use">Button hover state only. Brightening signals interactivity. Never used as a primary accent.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="h2">Text Hierarchy</h3>
+  <div class="color-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background:#E8F0EA"></div>
+      <div class="color-info">
+        <div class="color-name">Frost White</div>
+        <div class="color-codes"><span class="color-code">#E8F0EA</span><span class="color-code">opacity: 100%</span></div>
+        <div class="color-use">Primary body text and headlines.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:rgba(232,240,234,.45);border-bottom:1px solid #eee"></div>
+      <div class="color-info">
+        <div class="color-name">Muted Frost</div>
+        <div class="color-codes"><span class="color-code">#E8F0EA</span><span class="color-code">opacity: 45%</span></div>
+        <div class="color-use">Secondary copy, card descriptions, inactive nav links.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:rgba(232,240,234,.25);border-bottom:1px solid #eee"></div>
+      <div class="color-info">
+        <div class="color-name">Dim Frost</div>
+        <div class="color-codes"><span class="color-code">#E8F0EA</span><span class="color-code">opacity: 25%</span></div>
+        <div class="color-use">Tertiary labels, footer meta, placeholders.</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#C83C3C"></div>
+      <div class="color-info">
+        <div class="color-name">Error Red — Semantic Only</div>
+        <div class="color-codes"><span class="color-code">#C83C3C</span><span class="color-code">R200 G60 B60</span></div>
+        <div class="color-use">Semantic danger indicator. Before/After "Old Way" only. Never decorative.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="h2">Elevation Model</h3>
+  <table class="spec-table">
+    <thead><tr><th>Layer</th><th>Color Token</th><th>Role</th></tr></thead>
+    <tbody>
+      <tr><td>Layer 0 (deepest)</td><td><code>#060D08</code> — Deep Forest Black</td><td>Page substrate — infinite depth background</td></tr>
+      <tr><td>Layer 1</td><td><code>#0C1810</code> — Forest Surface</td><td>Primary content surfaces</td></tr>
+      <tr><td>Layer 2</td><td><code>#111F14</code> — Elevated Panel</td><td>Cards and panels — floating above surface</td></tr>
+      <tr><td>Layer 3</td><td><code>#162218</code> — Raised Layer</td><td>Hover states — interactive feedback</td></tr>
+      <tr><td>Layer 4</td><td><code>rgba(40,200,115,.08)</code> — Glowx</td><td>Icon containers and eyebrow badge fills</td></tr>
+      <tr><td>Layer 5 (highest)</td><td><code>#28C873</code> — Precision Green</td><td>Primary CTAs and active states — the action layer</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="divider-thick">
+
+<!-- SECTION 4 -->
+<div id="s4" class="anchor-target">
+  <h2 class="h1">🔤 4 — Typography System</h2>
+
+  <div class="callout">
+    <span class="callout-icon">📝</span>
+    <div class="callout-text">A three-typeface system — each face selected for a specific psychological and functional role — creating complete separation between display, interface, and body contexts.</div>
+  </div>
+
+  <!-- DM SERIF -->
+  <div class="font-spec">
+    <div class="font-header">
+      <div>
+        <div style="font-size:15px;font-weight:600;color:var(--text)">DM Serif Display</div>
+        <div class="font-meta">Google Fonts · Regular 400 + Italic 400</div>
+      </div>
+      <span class="font-tag">HEADLINES</span>
+    </div>
+    <div class="font-body">
+      <div class="font-sample">
+        <div class="font-sample-label">H1 — Hero</div>
+        <div style="font-family:'Georgia',serif;font-size:36px;font-weight:400;letter-spacing:-.02em;line-height:1.04;color:var(--text)">Stop estimating manually.<br><em style="color:var(--teal)">Start closing faster.</em></div>
+      </div>
+      <div class="font-sample">
+        <div class="font-sample-label">H2 — Section</div>
+        <div style="font-family:'Georgia',serif;font-size:26px;font-weight:400;line-height:1.1;color:var(--text)">Everything automated. <em style="color:var(--teal)">Nothing missed.</em></div>
+      </div>
+      <div class="font-sample">
+        <div class="font-sample-label">Role / Psychology</div>
+        <p class="muted" style="font-size:14px;margin:0">Triggers the <strong>reading mode</strong>. High-contrast transitional serif with thin horizontal strokes creates heritage authority. Juxtaposing classical form with AI technology communicates maturity, not a startup toy. Italic variant = forward momentum.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYNE -->
+  <div class="font-spec">
+    <div class="font-header">
+      <div>
+        <div style="font-size:15px;font-weight:600;color:var(--text)">Syne</div>
+        <div class="font-meta">Google Fonts · 400 / 500 / 600 / 700 / 800</div>
+      </div>
+      <span class="font-tag">UI SYSTEM</span>
+    </div>
+    <div class="font-body">
+      <div class="font-sample">
+        <div class="font-sample-label">Navigation / CTA</div>
+        <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text)">SCHEDULE A DEMO · FEATURES · HOW IT WORKS</div>
+      </div>
+      <div class="font-sample">
+        <div class="font-sample-label">Section Tag / Eyebrow</div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--teal)">CORE FEATURES</div>
+      </div>
+      <div class="font-sample">
+        <div class="font-sample-label">Role / Psychology</div>
+        <p class="muted" style="font-size:14px;margin:0">Triggers the <strong>navigating/acting mode</strong>. Geometric construction at uppercase with expanded tracking signals "this is a control element." Users decode Syne-set elements as interface structure — not content to read, but actions to take.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTRUMENT SANS -->
+  <div class="font-spec">
+    <div class="font-header">
+      <div>
+        <div style="font-size:15px;font-weight:600;color:var(--text)">Instrument Sans</div>
+        <div class="font-meta">Google Fonts · 300 / 400 / 500 / 600</div>
+      </div>
+      <span class="font-tag">BODY COPY</span>
+    </div>
+    <div class="font-body">
+      <div class="font-sample">
+        <div class="font-sample-label">Body — Hero Subtitle</div>
+        <div style="font-size:16px;font-weight:300;line-height:1.78;color:#555">MillworkSuite is the AI-powered platform built exclusively for millwork and casework estimating. Upload any set of PDF architectural drawings and create a complete, priced scope of work — in minutes, not hours.</div>
+      </div>
+      <div class="font-sample">
+        <div class="font-sample-label">Role / Psychology</div>
+        <p class="muted" style="font-size:14px;margin:0">Triggers the <strong>scanning mode</strong>. Humanist skeleton at weight 300 with 1.72–1.82 line-height invites flow reading. Its warmth prevents the dark technical environment from feeling cold or sterile.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="h2">Type Scale</h3>
+  <table class="spec-table">
+    <thead><tr><th>Element</th><th>Face</th><th>Size</th><th>Weight</th><th>Tracking</th></tr></thead>
+    <tbody>
+      <tr><td>Hero H1</td><td>DM Serif Display</td><td>clamp(3.2–6.5rem)</td><td>400</td><td>−0.02em</td></tr>
+      <tr><td>Section H2</td><td>DM Serif Display</td><td>clamp(2.2–3.4rem)</td><td>400</td><td>−0.01em</td></tr>
+      <tr><td>CTA H2</td><td>DM Serif Display</td><td>clamp(2.8–5rem)</td><td>400</td><td>−0.01em</td></tr>
+      <tr><td>Feature card name</td><td>DM Serif Display</td><td>1.2rem</td><td>400</td><td>0</td></tr>
+      <tr><td>Stat number</td><td>DM Serif Display</td><td>1.9–2.4rem</td><td>400</td><td>0</td></tr>
+      <tr><td>Nav / Button</td><td>Syne</td><td>0.72–0.76rem</td><td>600</td><td>0.14em</td></tr>
+      <tr><td>Section tags</td><td>Syne</td><td>0.62–0.68rem</td><td>600</td><td>0.24–0.28em</td></tr>
+      <tr><td>Workflow titles</td><td>Syne</td><td>0.82rem</td><td>600</td><td>0.02em</td></tr>
+      <tr><td>Hero subtitle</td><td>Instrument Sans</td><td>1.1rem</td><td>300</td><td>0</td></tr>
+      <tr><td>Body / descriptions</td><td>Instrument Sans</td><td>0.96–0.98rem</td><td>300</td><td>0</td></tr>
+      <tr><td>Card descriptions</td><td>Instrument Sans</td><td>0.85rem</td><td>300</td><td>0</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="divider-thick">
+
+<!-- SECTION 5 -->
+<div id="s5" class="anchor-target">
+  <h2 class="h1">🖼️ 5 — Imagery & Iconography</h2>
+
+  <h3 class="h2">Icon System Specification</h3>
+  <table class="spec-table">
+    <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Style</td><td>Outlined/stroke — no filled icons in the primary system</td></tr>
+      <tr><td>Stroke weight</td><td>1.5px standard · 1.4px circles · 1.8px emphasis · 2.5px button arrows</td></tr>
+      <tr><td>Linecap / Linejoin</td><td><code>round</code> / <code>round</code></td></tr>
+      <tr><td>Viewbox</td><td>0 0 24 24 (standard icon grid)</td></tr>
+      <tr><td>Feature card size</td><td>22×22px icon in 48×48px container</td></tr>
+      <tr><td>Workflow dot size</td><td>20×20px icon in 58×58px container</td></tr>
+      <tr><td>Button arrows</td><td>14×14px inline</td></tr>
+      <tr><td>Color</td><td>#28C873 (Precision Green) — all interactive and decorative icons</td></tr>
+      <tr><td>Container</td><td>1px teal border · 2px border-radius · rgba(40,200,115,.08) fill</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Three Visual Signature Elements</h3>
+
+  <details class="toggle">
+    <summary class="toggle-head">
+      <span class="toggle-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+      <span class="toggle-title">Hero Grid — 60×60px orthographic pattern</span>
+    </summary>
+    <div class="toggle-body">
+      <p>A precise 60×60px orthographic grid rendered as 1px lines in <code>rgba(40,200,115,0.07)</code>. Masked radially — visible at center, fading to transparent at edges. References architectural drawing paper and engineering notation. Must always use the radial mask — never at full opacity.</p>
+    </div>
+  </details>
+
+  <details class="toggle">
+    <summary class="toggle-head">
+      <span class="toggle-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+      <span class="toggle-title">Radial Glow Gradients — ambient AI energy</span>
+    </summary>
+    <div class="toggle-body">
+      <p>Elliptical radial gradients in Precision Green at 7–18% opacity in hero sections, CTAs, and workflow backgrounds. Creates a bioluminescent ambient light effect. Must be elliptical, centered on/above primary content, never exceeding 18% opacity at core.</p>
+    </div>
+  </details>
+
+  <details class="toggle">
+    <summary class="toggle-head">
+      <span class="toggle-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+      <span class="toggle-title">SVG Film Grain — material presence</span>
+    </summary>
+    <div class="toggle-body">
+      <p>Fixed-position <code>fractalNoise</code> SVG overlay at 3% opacity applied as a body <code>::after</code> pseudo-element. Prevents flat digital surfaces from feeling antiseptic. Must be imperceptible at normal viewing distances — experienced as material quality, not visible as a pattern. <code>pointer-events: none</code>.</p>
+    </div>
+  </details>
+
+  <h3 class="h2">Photography Direction</h3>
+  <div class="dodont">
+    <div class="do-card">
+      <div class="do-label">✓ Use</div>
+      <ul>
+        <li>Workshop interiors and drafting environments</li>
+        <li>Close-up hands with precision tools</li>
+        <li>Architectural drawings / blueprint imagery</li>
+        <li>Manufacturing facility details</li>
+      </ul>
+    </div>
+    <div class="dont-card">
+      <div class="dont-label">✗ Avoid</div>
+      <ul>
+        <li>Generic office stock with laptops</li>
+        <li>Smiling professionals posed for camera</li>
+        <li>Aspirational lifestyle imagery</li>
+        <li>Construction sites without millwork focus</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="divider-thick">
+
+<!-- SECTION 6 -->
+<div id="s6" class="anchor-target">
+  <h2 class="h1">📐 6 — Layout & Grid</h2>
+
+  <h3 class="h2">Grid by Section</h3>
+  <table class="spec-table">
+    <thead><tr><th>Section</th><th>Grid Structure</th></tr></thead>
+    <tbody>
+      <tr><td>Hero</td><td>Single column, centered, max-width: 900px</td></tr>
+      <tr><td>Problem</td><td>2-column (1fr 1fr) · 8vw gap · center-aligned</td></tr>
+      <tr><td>Features</td><td>4-column (repeat(4, 1fr)) · 1px gap</td></tr>
+      <tr><td>Workflow</td><td>6-column (repeat(6, 1fr)) + horizontal connector line</td></tr>
+      <tr><td>Before/After</td><td>2-column (1fr 1fr) · 3rem gap · max-width: 1100px</td></tr>
+      <tr><td>Integrations</td><td>2-column (1fr 1fr) · 8vw gap</td></tr>
+      <tr><td>Integration cards</td><td>3-column (1fr 1fr 1fr) · 1px gap</td></tr>
+      <tr><td>Footer</td><td>3-column (1.4fr 1fr 1fr) · 4rem gap</td></tr>
+      <tr><td>Tablet ≤1000px</td><td>2-col → 1-col · features 4-col → 2×2 · workflow 6-col → 2×3</td></tr>
+      <tr><td>Mobile ≤600px</td><td>All grids → 1-column · hero stats stack vertically</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Spacing System (Base-8 Rhythm)</h3>
+  <table class="spec-table">
+    <thead><tr><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td><code>8px / 0.5rem</code></td><td>Tight gaps — icon-to-label, badge items</td></tr>
+      <tr><td><code>16px / 1rem</code></td><td>Feature card internal element spacing</td></tr>
+      <tr><td><code>32px / 2rem</code></td><td>Nav link gaps, standard component gaps</td></tr>
+      <tr><td><code>64px / 4rem</code></td><td>Footer column gap</td></tr>
+      <tr><td><code>80px / 5rem</code></td><td>Features header margin, workflow header margin</td></tr>
+      <tr><td><code>128px / 8rem</code></td><td>Primary section vertical padding</td></tr>
+      <tr><td><code>160px / 10rem</code></td><td>Demo CTA section padding (maximum emphasis)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="divider-thick">
+
+<!-- SECTION 7 -->
+<div id="s7" class="anchor-target">
+  <h2 class="h1">🧩 7 — Components & UI Patterns</h2>
+
+  <h3 class="h2">Buttons</h3>
+  <table class="spec-table">
+    <thead><tr><th>Property</th><th>Primary</th><th>Secondary</th></tr></thead>
+    <tbody>
+      <tr><td>Background</td><td>#28C873</td><td>transparent</td></tr>
+      <tr><td>Text color</td><td>#060D08</td><td>#E8F0EA</td></tr>
+      <tr><td>Border</td><td>none</td><td>1px solid rgba(40,200,115,.12)</td></tr>
+      <tr><td>Font</td><td colspan="2">Syne · 0.76rem · 600 · +0.14em · uppercase</td></tr>
+      <tr><td>Padding</td><td colspan="2">15px / 38px</td></tr>
+      <tr><td>Border radius</td><td colspan="2">2px (nearly square — architectural)</td></tr>
+      <tr><td>Hover bg</td><td>#34E085</td><td>transparent</td></tr>
+      <tr><td>Hover shadow</td><td>0 4px 32px rgba(40,200,115,.18)</td><td>none</td></tr>
+      <tr><td>Hover transform</td><td>translateY(−2px)</td><td>none</td></tr>
+      <tr><td>Hover border/text</td><td>—</td><td>color: #28C873</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Feature Cards</h3>
+  <table class="spec-table">
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Background</td><td>#0C1810</td></tr>
+      <tr><td>Padding</td><td>2.8rem 2.4rem</td></tr>
+      <tr><td>Border</td><td>1px solid rgba(40,200,115,.07)</td></tr>
+      <tr><td>Hover background</td><td>#111F14</td></tr>
+      <tr><td>Hover top accent</td><td>2px gradient (transparent → #28C873 → transparent), opacity 0→1</td></tr>
+      <tr><td>Icon container</td><td>48×48px · 2px border-radius · rgba(40,200,115,.08) fill</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Form Inputs</h3>
+  <table class="spec-table">
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Background</td><td>#0C1810</td></tr>
+      <tr><td>Border</td><td>1px solid rgba(40,200,115,.12)</td></tr>
+      <tr><td>Padding</td><td>14px 18px</td></tr>
+      <tr><td>Border radius</td><td>2px</td></tr>
+      <tr><td>Focus border</td><td>#28C873</td></tr>
+      <tr><td>Focus shadow</td><td>0 0 0 3px rgba(40,200,115,.08)</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Animation Tokens</h3>
+  <table class="anim-table">
+    <thead><tr><th>Token</th><th>Description</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Scroll reveal easing</td><td>Spring/overshoot effect</td><td>cubic-bezier(.16,1,.3,1)</td></tr>
+      <tr><td>Scroll reveal duration</td><td></td><td>0.8s</td></tr>
+      <tr><td>Scroll reveal transform</td><td></td><td>translateY(20px)→0</td></tr>
+      <tr><td>Stagger delays</td><td>.rd1 through .rd5</td><td>80ms per step</td></tr>
+      <tr><td>Button hover</td><td></td><td>all 0.25s ease</td></tr>
+      <tr><td>Nav underline draw</td><td>Left to right</td><td>right property 0.3s</td></tr>
+      <tr><td>Card hover</td><td></td><td>bg 0.3s · border 0.2s</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Before / After Comparison Pattern</h3>
+  <div class="compare-grid">
+    <div class="compare-card">
+      <div class="compare-head old">The Old Way</div>
+      <div class="compare-body">
+        <div class="compare-row"><span class="compare-dot red"></span>Open PDF</div>
+        <div class="compare-row"><span class="compare-dot red"></span>Sort 300 pages manually</div>
+        <div class="compare-row"><span class="compare-dot red"></span>Open markup tool</div>
+        <div class="compare-row"><span class="compare-dot red"></span>Hyperlink callouts by hand</div>
+        <div class="compare-row"><span class="compare-dot red"></span>Measure manually</div>
+        <div class="compare-row"><span class="compare-dot red"></span>Export to Excel</div>
+        <div class="compare-row"><span class="compare-dot red"></span>Re-enter in pricing tool</div>
+        <div class="compare-row"><span class="compare-dot red"></span>Copy to Word for proposal</div>
+        <div class="compare-row"><span class="compare-dot red"></span>Re-enter in CAD</div>
+        <div class="compare-summary old">5+ tools. Days of work. Errors at every handoff.</div>
+      </div>
+    </div>
+    <div class="compare-card">
+      <div class="compare-head new">With MillworkSuite</div>
+      <div class="compare-body">
+        <div class="compare-row"><span class="compare-dot green"></span>Upload PDF</div>
+        <div class="compare-row"><span class="compare-dot green"></span>AI organizes & detects scope</div>
+        <div class="compare-row"><span class="compare-dot green"></span>Review & verify</div>
+        <div class="compare-row"><span class="compare-dot green"></span>AI inputs your pricing</div>
+        <div class="compare-row"><span class="compare-dot green"></span>Generate proposal</div>
+        <div class="compare-row"><span class="compare-dot green"></span>Export to CAD</div>
+        <br>
+        <div class="compare-summary new">One platform. One session. Zero re-entry.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider-thick">
+
+<!-- SECTION 8 -->
+<div id="s8" class="anchor-target">
+  <h2 class="h1">📱 8 — Applications & Use-Cases</h2>
+
+  <h3 class="h2">Digital Channels</h3>
+  <table class="spec-table">
+    <thead><tr><th>Channel</th><th>Key Rules</th></tr></thead>
+    <tbody>
+      <tr><td>Primary website</td><td>Dark-mode mandatory. Section order is fixed. Film grain + radial glow required.</td></tr>
+      <tr><td>Product UI</td><td>Same CSS token system. DM Serif for large outputs. Syne for all UI labels.</td></tr>
+      <tr><td>Mobile app</td><td>Maintain dark palette. Minimum 16px body text. 44×44px touch targets.</td></tr>
+      <tr><td>LinkedIn</td><td>Profile banner: dark + wordmark centered. Posts: expertise-first, not product-first.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Print & Physical</h3>
+  <table class="spec-table">
+    <thead><tr><th>Format</th><th>Key Specifications</th></tr></thead>
+    <tbody>
+      <tr><td>Pitch decks</td><td>#060D08 slide background. DM Serif 36–48pt titles. Precision Green for charts and key numbers.</td></tr>
+      <tr><td>Proposals (product output)</td><td>Light-mode: white background. Precision Green section headers. MillworkSuite wordmark in footer.</td></tr>
+      <tr><td>Business cards</td><td>3.5×2" · #060D08 background · 1px Precision Green bottom border on front · full green back.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout yellow">
+    <span class="callout-icon">⚠️</span>
+    <div class="callout-text"><strong>Proposal documents</strong> (the output of the product itself) use a <em>light-mode</em> treatment — white background with dark text. The MillworkSuite wordmark must appear in the footer of every page to build brand awareness with general contractors and architects who receive the output.</div>
+  </div>
+</div>
+
+<hr class="divider-thick">
+
+<!-- SECTION 9 -->
+<div id="s9" class="anchor-target">
+  <h2 class="h1">🧠 9 — Psychology & Strategy</h2>
+
+  <h3 class="h2">The 5-Step Conversion Sequence</h3>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      <div class="step-content">
+        <div class="step-title">Credibility</div>
+        <div class="step-desc">Is this legitimate? — Dark environment, serif headlines, film grain, precise icon system answer "yes" in under 500ms.</div>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <div class="step-content">
+        <div class="step-title">Relevance</div>
+        <div class="step-desc">Is this for me? — "Stop estimating manually", "millwork and casework", the specific pain list answer within 8–12 seconds.</div>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <div class="step-content">
+        <div class="step-title">Desire</div>
+        <div class="step-desc">Do I want this? — Before/After comparison + 6-step workflow + integration details build concrete desire.</div>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">4</span>
+      <div class="step-content">
+        <div class="step-title">Trust</div>
+        <div class="step-desc">Can I trust this? — LinkedIn badge, Orlando identity, transparent demo CTA, specific product descriptions.</div>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">5</span>
+      <div class="step-content">
+        <div class="step-title">Action</div>
+        <div class="step-desc">What should I do? — "Schedule a Demo" in the fixed nav + hero ensures the CTA is never more than one scroll away.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="h2">Gestalt Principles Applied</h3>
+  <table class="spec-table">
+    <thead><tr><th>Principle</th><th>Where Applied</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td>Figure/Ground</td><td>#28C873 CTAs on near-black backgrounds (~23:1 contrast)</td><td>CTA is always unambiguously the figure. Next action is always self-evident.</td></tr>
+      <tr><td>Proximity</td><td>Feature grid — 1px inter-card spacing</td><td>"These belong together" — a complete system, not disparate features.</td></tr>
+      <tr><td>Similarity</td><td>Consistent icon stroke weight, color, and container across all sections</td><td>Visual language decoded on first encounter. No "what kind of element is this?" questions.</td></tr>
+      <tr><td>Continuation</td><td>Workflow section connector line</td><td>Eye follows step 1 to step 6 as a smooth, linear, effortless progression.</td></tr>
+      <tr><td>Closure</td><td>Before/After comparison — "Old Way" card is deliberately incomplete</td><td>The eye seeks closure and finds it in the MillworkSuite card's triumphant summary.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Color Psychology Summary</h3>
+  <div class="callout green">
+    <span class="callout-icon">🟢</span>
+    <div class="callout-text"><strong>Why not blue?</strong> Blue is the default B2B SaaS color — Salesforce, Microsoft, Jira. By using green as the sole accent, MillworkSuite creates immediate visual distinction in any competitive set while leveraging associations with "go," "approved," "profit," and financial growth.</div>
+  </div>
+  <div class="callout">
+    <span class="callout-icon">⬛</span>
+    <div class="callout-text"><strong>Why dark mode?</strong> The deep forest blacks (with subtle green cast — <code>#060D08</code> is not neutral black, it's dark green) create infinite depth and resonate subliminally with "millwork" — a craft rooted in natural wood and forest materials. Premium tools, precision instruments, and professional software all default to dark environments.</div>
+  </div>
+
+  <h3 class="h2">Memorability Strategy</h3>
+  <p>The most memorable brands own a single, distinctive visual element. For MillworkSuite, that element is <strong style="color:var(--teal)">#28C873 Precision Green on deep black.</strong></p>
+  <div class="badge-row">
+    <span class="badge badge-outline">Consistent application</span>
+    <span class="badge badge-outline">High-priority contexts only</span>
+    <span class="badge badge-outline">Distinctive hue (not standard web green)</span>
+    <span class="badge badge-ghost">≠ #00FF00 web green</span>
+    <span class="badge badge-ghost">≠ #00C853 material green</span>
+    <span class="badge badge-solid">#28C873 MillworkSuite green</span>
+  </div>
+</div>
+
+<hr class="divider-thick">
+
+<!-- APPENDIX -->
+<div id="appendix" class="anchor-target">
+  <h2 class="h1">📎 Appendix — Quick Reference</h2>
+
+  <h3 class="h2">CSS Custom Properties</h3>
+  <div class="callout">
+    <span class="callout-icon">💻</span>
+    <div class="callout-text" style="font-family:'Courier New',monospace;font-size:13px;line-height:2">
+      --bg: #060D08<br>
+      --surface: #0C1810<br>
+      --panel: #111F14<br>
+      --raise: #162218<br>
+      --teal: #28C873<br>
+      --glow: rgba(40,200,115,.18)<br>
+      --glowx: rgba(40,200,115,.08)<br>
+      --border: rgba(40,200,115,.12)<br>
+      --border-s: rgba(40,200,115,.07)<br>
+      --text: #E8F0EA<br>
+      --muted: rgba(232,240,234,.45)<br>
+      --dim: rgba(232,240,234,.25)<br>
+      --serif: 'DM Serif Display', Georgia, serif<br>
+      --display: 'Syne', sans-serif<br>
+      --body: 'Instrument Sans', sans-serif
+    </div>
+  </div>
+
+  <h3 class="h2">Border Radius System</h3>
+  <table class="spec-table">
+    <thead><tr><th>Component</th><th>Border Radius</th></tr></thead>
+    <tbody>
+      <tr><td>All buttons</td><td>2px</td></tr>
+      <tr><td>Form inputs</td><td>2px</td></tr>
+      <tr><td>Icon containers</td><td>2px</td></tr>
+      <tr><td>Eyebrow badges</td><td>2px</td></tr>
+      <tr><td>Navigation logomark</td><td>2px</td></tr>
+      <tr><td>Feature cards</td><td>0px (flush grid)</td></tr>
+      <tr><td>Integration cards</td><td>0px (flush grid)</td></tr>
+      <tr><td>Stat containers</td><td>3px</td></tr>
+      <tr><td>Before/After cards</td><td>3px</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="h2">Google Fonts Import</h3>
+  <div class="callout">
+    <span class="callout-icon">🔗</span>
+    <div class="callout-text" style="font-family:'Courier New',monospace;font-size:13px">
+      https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@300;400;500;600&display=swap
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <p class="muted" style="text-align:center;font-size:13px;padding-top:8px">© 2026 MillworkSuite · Orlando, Florida · Brand Identity Guide v1.0<br>Confidential — Internal Use Only</p>
+</div>
+
+</div><!-- /page-wrapper -->
+</main>
+</div><!-- /layout -->
+
+<script>
+const navItems = document.querySelectorAll('.nav-item[href^="#"]');
+const sections = document.querySelectorAll('.anchor-target, #overview');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      navItems.forEach(n => n.classList.remove('active'));
+      const m = document.querySelector('.nav-item[href="#' + e.target.id + '"]');
+      if(m) m.classList.add('active');
+    }
+  });
+}, {threshold:.25, rootMargin:'-60px 0px -40% 0px'});
+sections.forEach(s => obs.observe(s));
+
+document.querySelectorAll('.toggle').forEach(t => {
+  t.querySelector('.toggle-head').addEventListener('click', () => t.toggleAttribute('open'));
+});
+</script>
+</body>
+</html>
